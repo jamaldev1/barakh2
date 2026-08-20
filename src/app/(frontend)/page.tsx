@@ -1,5 +1,3 @@
-import { getPayload } from 'payload'
-import config from '../../payload.config'
 import Header from '@/components/Header'
 import FadeIn from '@/components/FadeIn'
 import MotionButton from '@/components/MotionButton'
@@ -9,8 +7,14 @@ import HeroBackgroundSlider from '@/components/HeroBackgroundSlider'
 import CTABanner from '@/components/CTABanner'
 import MediaGallery from '@/components/MediaGallery'
 import SolutionsSlider from '@/components/SolutionsSlider'
+import { testimonialsData } from '@/data/testimonials'
+import { galleryData } from '@/data/gallery'
 
-export const revalidate = 0
+export const metadata = {
+  title: 'Al Barakh Organics | Premium Vermicompost & Biological Agriculture',
+  description:
+    '100% pure organic vermicompost, active Eisenia fetida red worms, liquid vermiwash, and hands-on farmer training across Pakistan.',
+}
 
 const credibilityStats = [
   { value: 30, suffix: '+', label: 'Years Experience', description: 'Delivering trusted organic farming solutions for decades' },
@@ -30,48 +34,25 @@ const whatMakesUsDifferent = [
   { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-11.png', title: 'Sustainable Farming', desc: 'Long-term solutions for eco-friendly agriculture' },
 ]
 
+export default function HomePage() {
+  const galleryItems = galleryData.map((item) => ({
+    id: item.id,
+    title: item.title,
+    mediaType: item.type === 'video' ? ('video' as const) : ('photo' as const),
+    mediaUrl: item.videoUrl || item.thumbnailUrl,
+    thumbnailUrl: item.thumbnailUrl,
+    caption: `${item.location} • ${item.description}`,
+    featured: true,
+  }))
 
-
-export default async function HomePage() {
-  const payload = await getPayload({ config })
-
-  const { docs: testimonials } = await payload.find({
-    collection: 'testimonials',
-    where: { status: { equals: 'published' } },
-  })
-
-  const { docs: galleryDocs } = await payload.find({
-    collection: 'gallery',
-    where: { status: { equals: 'published' } },
-    sort: 'order',
-  })
-
-  const galleryItems = galleryDocs
-    .filter((doc: any) => doc.media && typeof doc.media === 'object' && doc.media.url)
-    .map((doc: any) => {
-      const media = doc.media
-      const thumbnail = typeof doc.thumbnail === 'object' ? doc.thumbnail : null
-      const isDocVideo =
-        doc.mediaType === 'video' ||
-        (media.mimeType && media.mimeType.startsWith('video/')) ||
-        /\.(mp4|webm|ogg|mov|m4v)($|\?)/i.test(media.url || '')
-      const isThumbVideo =
-        thumbnail?.mimeType?.startsWith('video/') ||
-        /\.(mp4|webm|ogg|mov|m4v)($|\?)/i.test(thumbnail?.url || '')
-      const validThumbnailUrl = !isThumbVideo
-        ? thumbnail?.url || media.sizes?.thumbnail?.url || undefined
-        : undefined
-
-      return {
-        id: String(doc.id),
-        title: doc.title,
-        mediaType: isDocVideo ? ('video' as const) : ('photo' as const),
-        mediaUrl: media.url,
-        thumbnailUrl: validThumbnailUrl,
-        caption: doc.caption || undefined,
-        featured: Boolean(doc.featured),
-      }
-    })
+  const testimonials = testimonialsData.map((t) => ({
+    id: t.id,
+    customerName: t.name,
+    location: `${t.location} (${t.farmName})`,
+    quote: t.quote,
+    rating: String(t.rating),
+    photoUrl: t.avatar,
+  }))
 
   return (
     <>

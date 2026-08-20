@@ -1,12 +1,9 @@
-import { getPayload } from 'payload'
-import config from '../../../payload.config'
 import Header from '@/components/Header'
 import FadeIn from '@/components/FadeIn'
 import CountUpStats from '@/components/CountUpStats'
 import TestimonialCarousel from '@/components/TestimonialCarousel'
 import CTABanner from '@/components/CTABanner'
-
-export const revalidate = 0
+import { testimonialsData } from '@/data/testimonials'
 
 export const metadata = {
   title: 'Our Impact & Field Results | Al Barakh Organics',
@@ -48,12 +45,15 @@ const galleryItems = [
   },
 ]
 
-export default async function ImpactPage() {
-  const payload = await getPayload({ config })
-  const { docs: testimonials } = await payload.find({
-    collection: 'testimonials',
-    where: { status: { equals: 'published' } },
-  })
+export default function ImpactPage() {
+  const testimonials = testimonialsData.map((t) => ({
+    id: t.id,
+    customerName: t.name,
+    location: `${t.location} (${t.farmName})`,
+    quote: t.quote,
+    rating: String(t.rating),
+    photoUrl: t.avatar,
+  }))
 
   return (
     <>

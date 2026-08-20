@@ -18,19 +18,12 @@ export default function ContactForm() {
     e.preventDefault()
     setLoading(true)
 
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    })
+    const message = `*Website Contact Inquiry*%0A%0A*Name:* ${encodeURIComponent(form.name)}%0A*Phone:* ${encodeURIComponent(form.phone)}%0A*Subject:* ${encodeURIComponent(form.subject)}%0A*Email:* ${encodeURIComponent(form.email || 'N/A')}%0A*Message:* ${encodeURIComponent(form.message)}`
+    const whatsappUrl = `https://wa.me/923000000000?text=${message}`
 
-    const data = await res.json()
+    window.open(whatsappUrl, '_blank')
     setLoading(false)
-
-    if (data.success) {
-      setSubmitted(true)
-      setForm({ name: '', email: '', phone: '', subject: '', message: '' })
-    }
+    setSubmitted(true)
   }
 
   if (submitted) {

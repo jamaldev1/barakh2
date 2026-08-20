@@ -1,11 +1,8 @@
 import Link from 'next/link'
-import { getPayload } from 'payload'
-import config from '../../../payload.config'
 import Header from '@/components/Header'
 import FadeIn from '@/components/FadeIn'
 import CTABanner from '@/components/CTABanner'
-
-export const revalidate = 0
+import { productsData } from '@/data/products'
 
 export const metadata = {
   title: 'Products | Al Barakh Organics',
@@ -41,12 +38,8 @@ const futureProducts = [
   },
 ]
 
-export default async function ProductsPage() {
-  const payload = await getPayload({ config })
-  const { docs: products } = await payload.find({
-    collection: 'products',
-    where: { status: { equals: 'published' } },
-  })
+export default function ProductsPage() {
+  const products = productsData
 
   return (
     <>
@@ -132,27 +125,20 @@ export default async function ProductsPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.map((product: any, i: number) => {
-              const firstImage = typeof product.images?.[0]?.image === 'object' ? product.images[0].image : null
+            {products.map((product, i: number) => {
+              const imageSrc = product.images?.[0] || '/images/hero-vermicompost.jpg'
               return (
                 <FadeIn key={product.id} delay={i * 0.1}>
                   <div className="bg-white rounded-3xl p-6 shadow-sm border border-brand-100 hover:border-gold-400/60 hover:shadow-lg transition-all duration-300 flex flex-col justify-between h-full group">
                     <div>
                       <div className="relative rounded-2xl overflow-hidden mb-5 bg-cream-50 aspect-square border border-brand-100/50">
-                        {firstImage?.url ? (
-                          <img
-                            src={firstImage.url}
-                            alt={firstImage.alt || product.name}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          />
-                        ) : (
-                          <div className="w-full h-full flex flex-col items-center justify-center text-brand-400 bg-cream-100">
-                            <span className="text-5xl mb-2">🌿</span>
-                            <span className="text-xs font-semibold uppercase tracking-wider text-brand-700">Al Barakh Organic</span>
-                          </div>
-                        )}
+                        <img
+                          src={imageSrc}
+                          alt={product.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
                         <span className="absolute top-3 left-3 bg-brand-900/80 backdrop-blur-md text-gold-300 text-xs font-bold px-3 py-1 rounded-full border border-white/20">
-                          100% Organic
+                          {product.badge || '100% Organic'}
                         </span>
                       </div>
 

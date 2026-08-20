@@ -1,33 +1,15 @@
-import { getPayload } from 'payload'
-import config from '../../../payload.config'
 import Header from '@/components/Header'
 import FadeIn from '@/components/FadeIn'
 import Link from 'next/link'
+import { blogPostsData } from '@/data/blog'
 
-export const revalidate = 0
-
-const categoryStyles: Record<string, string> = {
-  vermicompost: 'bg-brand-100 text-brand-700',
-  'natural-fertilizers': 'bg-gold-50 text-gold-700',
-  'farming-tips': 'bg-brand-50 text-brand-600 border border-brand-200',
-  'company-news': 'bg-brand-900 text-white',
+export const metadata = {
+  title: 'Blog & Educational Articles | Al Barakh Organics',
+  description: 'Learn about organic farming, vermicompost, and natural fertilizers.',
 }
 
-const categoryLabels: Record<string, string> = {
-  vermicompost: 'Vermicompost',
-  'natural-fertilizers': 'Natural Fertilizers',
-  'farming-tips': 'Farming Tips',
-  'company-news': 'Company News',
-}
-
-export default async function BlogPage() {
-  const payload = await getPayload({ config })
-
-  const { docs: posts } = await payload.find({
-    collection: 'blog-posts',
-    where: { status: { equals: 'published' } },
-    sort: '-publishedDate',
-  })
+export default function BlogPage() {
+  const posts = blogPostsData
 
   return (
     <>
@@ -52,11 +34,7 @@ export default async function BlogPage() {
           <p className="text-gray-500 text-center">No posts published yet.</p>
         ) : (
           <div className="flex flex-wrap justify-center gap-8">
-            {posts.map((post: any, i: number) => {
-              const cover = typeof post.coverImage === 'object' ? post.coverImage : null
-              const pillClass = categoryStyles[post.category] || 'bg-brand-100 text-brand-700'
-              const label = categoryLabels[post.category] || post.category
-
+            {posts.map((post, i: number) => {
               return (
                 <FadeIn
                   key={post.id}
@@ -64,25 +42,19 @@ export default async function BlogPage() {
                   className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.4rem)]"
                 >
                   <div className="rounded-3xl overflow-hidden bg-brand-50 h-full flex flex-col hover:-translate-y-1 transition-transform duration-200">
-                    {cover?.url && (
-                      <img
-                        src={cover.url}
-                        alt={cover.alt || post.title}
-                        className="w-full aspect-4/3 object-cover"
-                      />
-                    )}
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full aspect-4/3 object-cover"
+                    />
 
                     <div className="p-6 flex flex-col flex-1">
                       <div className="flex items-center justify-between">
-                        <span
-                          className={`text-xs font-semibold px-3 py-1 rounded-full ${pillClass}`}
-                        >
-                          {label}
+                        <span className="text-xs font-semibold px-3 py-1 rounded-full bg-gold-100 text-brand-900 border border-gold-300">
+                          {post.category}
                         </span>
                         <span className="text-xs text-gray-500">
-                          {new Date(post.publishedDate).toLocaleDateString('en-PK', {
-                            dateStyle: 'medium',
-                          })}
+                          {post.date}
                         </span>
                       </div>
 

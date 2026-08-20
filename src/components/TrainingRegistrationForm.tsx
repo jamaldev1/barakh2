@@ -24,18 +24,14 @@ export default function TrainingRegistrationForm({
     e.preventDefault()
     setLoading(true)
 
-    const res = await fetch('/api/register-training', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    })
+    const selectedSession = sessions.find((s) => s.id === form.session)?.title || form.session || 'General Training Session'
+    const message = `*Farmer Training Registration Request*%0A%0A*Name:* ${encodeURIComponent(form.fullName)}%0A*Phone:* ${encodeURIComponent(form.phone)}%0A*City:* ${encodeURIComponent(form.city)}%0A*Farm Size:* ${encodeURIComponent(form.farmSize || 'N/A')}%0A*Session:* ${encodeURIComponent(selectedSession)}%0A*Email:* ${encodeURIComponent(form.email || 'N/A')}`
 
-    const data = await res.json()
-    setLoading(false)
+    const whatsappUrl = `https://wa.me/923000000000?text=${message}`
 
-    if (data.success) {
-      router.push('/training/confirmation')
-    }
+    // Open WhatsApp in new tab and navigate to confirmation
+    window.open(whatsappUrl, '_blank')
+    router.push('/training/confirmation')
   }
 
   return (

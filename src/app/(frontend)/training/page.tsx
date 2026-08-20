@@ -1,12 +1,9 @@
-import { getPayload } from 'payload'
-import config from '../../../payload.config'
 import Header from '@/components/Header'
 import FadeIn from '@/components/FadeIn'
 import TrainingRegistrationForm from '@/components/TrainingRegistrationForm'
 import CTABanner from '@/components/CTABanner'
 import MotionButton from '@/components/MotionButton'
-
-export const revalidate = 0
+import { trainingSessionsData } from '@/data/training'
 
 export const metadata = {
   title: 'Farmer & Grower Training | Al Barakh Organics',
@@ -52,11 +49,11 @@ const trainingModules = [
 const traineePerks = [
   {
     icon: '📜',
-    title: 'Certificate of Training',
-    desc: 'Official recognized certification in sustainable agriculture techniques.',
+    title: 'Official Certificate',
+    desc: 'Authorized certificate of completion recognized by progressive agricultural forums.',
   },
   {
-    icon: '📘',
+    icon: '📚',
     title: 'Comprehensive Field Manual',
     desc: 'Complete printed handbook with dosage tables and troubleshooting guides.',
   },
@@ -72,16 +69,9 @@ const traineePerks = [
   },
 ]
 
-export default async function TrainingPage() {
-  const payload = await getPayload({ config })
-
-  const { docs: sessions } = await payload.find({
-    collection: 'training-sessions',
-    where: { status: { equals: 'upcoming' } },
-    sort: 'date',
-  })
-
-  const sessionOptions = sessions.map((s: any) => ({ id: String(s.id), title: s.title }))
+export default function TrainingPage() {
+  const sessions = trainingSessionsData
+  const sessionOptions = sessions.map((s) => ({ id: String(s.id), title: s.title }))
 
   return (
     <>
@@ -143,11 +133,11 @@ export default async function TrainingPage() {
 
           {sessions.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {sessions.map((session: any) => (
+              {sessions.map((session) => (
                 <div key={session.id} className="premium-session-card group">
                   <div className="premium-session-top">
-                    <span className="session-pill">{session.status}</span>
-                    <span className="session-tag">Limited Seats Available</span>
+                    <span className="session-pill">{session.format}</span>
+                    <span className="session-tag">{session.seatsLeft} Seats Remaining</span>
                   </div>
 
                   <div className="premium-session-content">
@@ -157,30 +147,27 @@ export default async function TrainingPage() {
                     <div className="mt-6 space-y-3 text-sm text-brand-800 font-medium">
                       <div className="session-meta-item">
                         <span className="session-meta-icon">📅</span>
-                        <span>
-                          {new Date(session.date).toLocaleString('en-US', {
-                            month: 'short',
-                            day: 'numeric',
-                            year: 'numeric',
-                            hour: 'numeric',
-                            minute: '2-digit',
-                          })}
-                        </span>
+                        <span>{session.date} • {session.duration}</span>
                       </div>
                       <div className="session-meta-item">
                         <span className="session-meta-icon">📍</span>
-                        <span>{session.location}</span>
+                        <span>{session.venue}, {session.location}</span>
                       </div>
                       <div className="session-meta-item">
-                        <span className="session-meta-icon">👥</span>
-                        <span>{session.seatsAvailable} Seats Remaining</span>
+                        <span className="session-meta-icon">💰</span>
+                        <span>{session.price}</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="premium-session-footer">
-                    <a href="#register" className="session-cta text-center inline-block w-full">
-                      Reserve Your Spot →
+                  <div className="premium-session-footer flex flex-col sm:flex-row gap-3">
+                    <a
+                      href={`https://wa.me/923000000000?text=Hi,%20I%20would%20like%20to%20register%20for%20the%20${encodeURIComponent(session.title)}%20on%20${encodeURIComponent(session.date)}.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="session-cta text-center inline-flex items-center justify-center gap-2 w-full"
+                    >
+                      <span>💬</span> Register on WhatsApp
                     </a>
                   </div>
                 </div>
