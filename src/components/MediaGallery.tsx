@@ -317,7 +317,7 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700"
                     muted
                     playsInline
-                    preload="metadata"
+                    preload="none"
                   />
                 ) : (
                   <img
