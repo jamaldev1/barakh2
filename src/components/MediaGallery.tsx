@@ -93,7 +93,6 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
   const [activeTab, setActiveTab] = useState<'all' | 'video' | 'photo'>('all')
   const [isGridView, setIsGridView] = useState(false)
   const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(null)
-  const [isVideoBuffering, setIsVideoBuffering] = useState(true)
   const sliderRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
@@ -102,7 +101,6 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
     if (activeTab === 'all') return true
     return item.mediaType === activeTab
   })
-
 
   // Update scroll arrow availability
   const checkScroll = () => {
@@ -138,9 +136,8 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
       document.body.style.overflow = ''
       return
     }
-    setIsVideoBuffering(true)
-    document.body.style.overflow = 'hidden'
 
+    document.body.style.overflow = 'hidden'
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -488,33 +485,19 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
               {/* Main Media Player Container */}
               <div className="relative flex-1 min-h-[300px] md:min-h-[480px] max-h-[60vh] bg-black flex items-center justify-center overflow-hidden">
                 {activeModalItem.mediaType === 'video' || isVideoUrl(activeModalItem.mediaUrl) ? (
-                  <>
-                    {/* Buffering Spinner */}
-                    {isVideoBuffering && (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-xs z-10 pointer-events-none">
-                        <div className="w-12 h-12 border-3 border-gold-400/30 border-t-gold-400 rounded-full animate-spin mb-3" />
-                        <span className="text-white/80 text-xs font-medium tracking-wide">Buffering Video...</span>
-                      </div>
-                    )}
-                    <video
-                      key={activeModalItem.mediaUrl}
-                      src={activeModalItem.mediaUrl}
-                      poster={
-                        activeModalItem.thumbnailUrl && !isVideoUrl(activeModalItem.thumbnailUrl)
-                          ? activeModalItem.thumbnailUrl
-                          : undefined
-                      }
-                      controls
-                      autoPlay
-                      playsInline
-                      preload="auto"
-                      onLoadStart={() => setIsVideoBuffering(true)}
-                      onWaiting={() => setIsVideoBuffering(true)}
-                      onCanPlay={() => setIsVideoBuffering(false)}
-                      onPlaying={() => setIsVideoBuffering(false)}
-                      className="w-full h-full max-h-[60vh] object-contain"
-                    />
-                  </>
+                  <video
+                    key={activeModalItem.mediaUrl}
+                    src={activeModalItem.mediaUrl}
+                    poster={
+                      activeModalItem.thumbnailUrl && !isVideoUrl(activeModalItem.thumbnailUrl)
+                        ? activeModalItem.thumbnailUrl
+                        : undefined
+                    }
+                    controls
+                    autoPlay
+                    playsInline
+                    className="w-full h-full max-h-[60vh] object-contain"
+                  />
                 ) : (
                   <img
                     src={activeModalItem.mediaUrl}
@@ -523,7 +506,6 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
                   />
                 )}
               </div>
-
 
               {/* Caption & Metadata Footer */}
               <div className="p-6 bg-brand-900/90 border-t border-white/10">
