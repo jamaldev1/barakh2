@@ -179,48 +179,50 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
             </div>
 
             <div className="flex flex-wrap items-center gap-3 self-start md:self-auto">
-              {/* Filter Pills */}
-              <div className="flex items-center gap-1.5 bg-white p-1.5 rounded-full border border-brand-100 shadow-sm">
-                <button
-                  onClick={() => {
-                    setActiveTab('all')
-                    setSelectedItemIndex(null)
-                  }}
-                  className={`px-3.5 py-1.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-200 ${
-                    activeTab === 'all'
-                      ? 'bg-brand-800 text-white shadow-sm'
-                      : 'text-brand-900/70 hover:text-brand-900 hover:bg-brand-50'
-                  }`}
-                >
-                  All ({displayItems.length})
-                </button>
-                <button
-                  onClick={() => {
-                    setActiveTab('video')
-                    setSelectedItemIndex(null)
-                  }}
-                  className={`px-3.5 py-1.5 rounded-full text-xs md:text-sm font-semibold flex items-center gap-1 transition-all duration-200 ${
-                    activeTab === 'video'
-                      ? 'bg-brand-800 text-white shadow-sm'
-                      : 'text-brand-900/70 hover:text-brand-900 hover:bg-brand-50'
-                  }`}
-                >
-                  <span>🎬</span> Videos ({displayItems.filter((i) => i.mediaType === 'video').length})
-                </button>
-                <button
-                  onClick={() => {
-                    setActiveTab('photo')
-                    setSelectedItemIndex(null)
-                  }}
-                  className={`px-3.5 py-1.5 rounded-full text-xs md:text-sm font-semibold flex items-center gap-1 transition-all duration-200 ${
-                    activeTab === 'photo'
-                      ? 'bg-brand-800 text-white shadow-sm'
-                      : 'text-brand-900/70 hover:text-brand-900 hover:bg-brand-50'
-                  }`}
-                >
-                  <span>📸</span> Photos ({displayItems.filter((i) => i.mediaType === 'photo').length})
-                </button>
-              </div>
+              {/* Filter Pills (only shown if both photos and videos exist) */}
+              {displayItems.some((i) => i.mediaType === 'photo') && (
+                <div className="flex items-center gap-1.5 bg-white p-1.5 rounded-full border border-brand-100 shadow-sm">
+                  <button
+                    onClick={() => {
+                      setActiveTab('all')
+                      setSelectedItemIndex(null)
+                    }}
+                    className={`px-3.5 py-1.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-200 ${
+                      activeTab === 'all'
+                        ? 'bg-brand-800 text-white shadow-sm'
+                        : 'text-brand-900/70 hover:text-brand-900 hover:bg-brand-50'
+                    }`}
+                  >
+                    All ({displayItems.length})
+                  </button>
+                  <button
+                    onClick={() => {
+                      setActiveTab('video')
+                      setSelectedItemIndex(null)
+                    }}
+                    className={`px-3.5 py-1.5 rounded-full text-xs md:text-sm font-semibold flex items-center gap-1 transition-all duration-200 ${
+                      activeTab === 'video'
+                        ? 'bg-brand-800 text-white shadow-sm'
+                        : 'text-brand-900/70 hover:text-brand-900 hover:bg-brand-50'
+                    }`}
+                  >
+                    <span>🎬</span> Videos ({displayItems.filter((i) => i.mediaType === 'video').length})
+                  </button>
+                  <button
+                    onClick={() => {
+                      setActiveTab('photo')
+                      setSelectedItemIndex(null)
+                    }}
+                    className={`px-3.5 py-1.5 rounded-full text-xs md:text-sm font-semibold flex items-center gap-1 transition-all duration-200 ${
+                      activeTab === 'photo'
+                        ? 'bg-brand-800 text-white shadow-sm'
+                        : 'text-brand-900/70 hover:text-brand-900 hover:bg-brand-50'
+                    }`}
+                  >
+                    <span>📸</span> Photos ({displayItems.filter((i) => i.mediaType === 'photo').length})
+                  </button>
+                </div>
+              )}
 
               {/* View Mode & Slider Arrow Navigation */}
               <div className="flex items-center gap-2">
@@ -311,11 +313,9 @@ export default function MediaGallery({ items }: MediaGalleryProps) {
                   />
                 ) : isVideo ? (
                   <video
-                    src={`${item.mediaUrl}#t=0.1`}
+                    src={`${item.mediaUrl}#t=0.5`}
                     className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-700"
                     muted
-                    autoPlay
-                    loop
                     playsInline
                     preload="metadata"
                   />

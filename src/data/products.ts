@@ -31,7 +31,7 @@ export const productsData: Product[] = [
     rating: 4.9,
     reviewsCount: 128,
     inStock: true,
-    badge: 'Best Seller',
+    badge: 'Available Now',
     shortDescription:
       'Field-tested, biologically active organic castings produced through controlled digestion of cow manure and organic biomass by pure Eisenia fetida earthworms. 100% free from weed seeds and synthetic chemicals.',
     fullDescription: `Al Barakh Premium Vermicompost is an elite, odor-free bio-organic fertilizer packed with plant-available nitrogen, phosphorus, potassium, calcium, magnesium, and essential trace minerals.
@@ -74,145 +74,43 @@ Unlike standard chemical fertilizers that deplete the soil microbiology, our ver
       },
     ],
   },
+]
+
+export interface UpcomingProduct {
+  icon: string
+  name: string
+  status: string
+  category: string
+  description: string
+}
+
+export const upcomingProductsData: UpcomingProduct[] = [
   {
-    id: 'live-red-wigglers',
-    slug: 'live-red-wigglers',
+    icon: '🪱',
     name: 'Live Red Wigglers (Eisenia Fetida)',
-    tagline: 'High-Efficiency Breeder Colonies for Commercial & Farm-Level Composting',
+    status: 'Coming Soon',
     category: 'Breeder Stock',
-    price: 3500,
-    unit: '1 kg Live Colony with Bedding',
-    rating: 5.0,
-    reviewsCount: 94,
-    inStock: true,
-    badge: 'Fast Breeder',
-    shortDescription:
-      'Acclimatized, voracious composting earthworms (Eisenia fetida) bred under high-efficiency conditions. Rapid breeders capable of consuming their own body weight in organic waste every 24 hours.',
-    fullDescription: `Kickstart your own farm-level or commercial vermicomposting system with Al Barakh’s pure, vigorous Eisenia fetida breeding stock.
-
-Every colony is carefully hand-harvested with fertile cocoons, juvenile worms, and mature breeders nestled inside microbially rich habitat bedding to ensure 100% survival during transit. Perfect for recycling cattle manure, agricultural residues, agro-industrial waste, and household organic material.`,
-    images: [
-      '/images/statssection.jpg',
-      '/images/hero-vermicompost.jpg',
-      '/images/satisfiedfarmers.jpg',
-    ],
-    keyBenefits: [
-      'High thermal tolerance acclimatized for Pakistani climate extremes',
-      'Rapid reproduction cycle (cocoons hatch every 21 days)',
-      'Consumes 50% to 100% of body weight in organic matter daily',
-      'Includes active breeding cocoons & starter microbial inoculant',
-      'Safe, temperature-controlled transit packaging with 100% live arrival guarantee',
-    ],
-    specifications: [
-      { label: 'Species', value: 'Eisenia fetida (Pure Tiger Worms)' },
-      { label: 'Population', value: '~1,000 to 1,200 worms + cocoons per kg' },
-      { label: 'Feed Source', value: 'Aged cow dung, crop residue, shredded cardboard' },
-      { label: 'Optimum Temp', value: '15°C – 32°C' },
-      { label: 'Packaging', value: 'Ventilated breathable travel crates' },
-    ],
-    applicationDosages: [
-      { crop: 'Standard Farm Composting Bed (30ft x 4ft)', dosage: '10 – 15 kg Starter Stock', frequency: 'Yields 1.5 - 2 tons vermicompost every 45-60 days' },
-      { crop: 'Home / Kitchen Waste Bin', dosage: '1 – 2 kg Colony', frequency: 'Recycles 0.5 - 1 kg food scraps daily' },
-    ],
-    faqs: [
-      {
-        question: 'What do I feed the worms once they arrive?',
-        answer: 'They thrive on pre-soaked aged cow dung, shredded cardboard, dry leaves, and non-citrus fruit/vegetable scraps. We provide a full beginner guide with every order.',
-      },
-      {
-        question: 'Do you provide live arrival guarantee?',
-        answer: 'Yes! We use specialized breathable, moisture-locked crates with express nationwide courier dispatch to ensure 100% live arrival.',
-      },
-    ],
+    description: 'Acclimatized, voracious composting earthworms bred under controlled conditions for on-farm composting colonies and recycling.',
   },
   {
-    id: 'vermiwash-liquid-gold',
-    slug: 'vermiwash-liquid-gold',
+    icon: '💧',
     name: 'Organic Vermiwash (Liquid Gold)',
-    tagline: 'Microbial Foliar Tonic & Natural Bio-Pesticide Booster',
-    category: 'Foliar Bio-Stimulants',
-    price: 850,
-    unit: '5 Liter Can',
-    rating: 4.8,
-    reviewsCount: 52,
-    inStock: true,
-    badge: 'Popular',
-    shortDescription:
-      'Liquid bio-stimulant extracted during the vermicomposting process. Rich in auxins, gibberellins, amino acids, and beneficial soil microbes for instant foliar absorption and disease immunity.',
-    fullDescription: `Al Barakh Vermiwash is a clear, amber-colored liquid bio-fertilizer collected from active vermiculture systems.
-
-Packed with plant growth-promoting hormones, water-soluble vitamins, enzymes, and live antagonistic microbes, it acts as both an invigorating foliar nutrition spray and an eco-friendly pest repellent against sucking insects, aphids, and powdery mildew.`,
-    images: [
-      '/images/satisfiedfarmers.jpg',
-      '/images/statssection.jpg',
-      '/images/hero-vermicompost.jpg',
-    ],
-    keyBenefits: [
-      'Delivers instant micronutrient replenishment through leaf stomata',
-      'Stimulates prolific flowering, reduces fruit drop, and boosts fruit size',
-      'Acts as a natural bio-protectant against fungal and insect pests',
-      '100% compatible with organic farming & drip irrigation fertigation',
-    ],
-    specifications: [
-      { label: 'Form', value: 'Aqueous Liquid Bio-Tonic' },
-      { label: 'Application Method', value: 'Foliar Spray or Drip Fertigation' },
-      { label: 'Dilution Ratio', value: '1:10 (1 liter Vermiwash in 10 liters clean water)' },
-      { label: 'Packaging', value: '5L & 20L HDPE Jerry Cans' },
-    ],
-    applicationDosages: [
-      { crop: 'Vegetables & Cotton', dosage: '2 – 3 Liters / Acre (Diluted in 100L water)', frequency: 'Every 15 days during vegetative and flowering phases' },
-      { crop: 'Fruit Orchards', dosage: '5 Liters / Acre', frequency: 'At bud burst, petal fall, and fruit development' },
-    ],
-    faqs: [
-      {
-        question: 'How is Vermiwash applied?',
-        answer: 'Mix 1 liter of Vermiwash with 10 liters of water and spray on the foliage early morning or late afternoon for maximum leaf absorption.',
-      },
-    ],
+    status: 'In Development',
+    category: 'Foliar Bio-Stimulant',
+    description: 'Liquid bio-fertilizer rich in plant growth hormones, amino acids, and micronutrients for foliar spray and fertigation.',
   },
   {
-    id: 'agricultural-biochar',
-    slug: 'agricultural-biochar',
-    name: 'Activated Agricultural Biochar',
-    tagline: 'Permanent Carbon Soil Conditioner for Maximum Water Retention',
-    category: 'Soil Conditioners',
-    price: 2200,
-    unit: '40 kg Sack',
-    rating: 4.9,
-    reviewsCount: 38,
-    inStock: true,
-    badge: 'Soil Enhancer',
-    shortDescription:
-      'High-surface-area pyrolyzed biomass biochar inoculated with beneficial microorganisms and vermicompost tea. Permanently amends sandy, saline, or degraded soils.',
-    fullDescription: `Our Activated Biochar is an organic, stable carbon matrix engineered to reside in your soil for decades. 
-
-It dramatically increases cation exchange capacity (CEC), locks in moisture during intense heatwaves, prevents fertilizer leaching, and creates millions of microscopic shelter pores for beneficial soil microbes to flourish.`,
-    images: [
-      '/images/statssection.jpg',
-      '/images/hero-vermicompost.jpg',
-      '/images/satisfiedfarmers.jpg',
-    ],
-    keyBenefits: [
-      'Reduces irrigation frequency by holding up to 5x its weight in water',
-      'Prevents nutrient wash-out in sandy soils',
-      'Buffers soil salinity and neutralizes acidic/alkaline pH extremes',
-      'Permanent one-time soil amendment lasting for years',
-    ],
-    specifications: [
-      { label: 'Fixed Carbon', value: '> 75%' },
-      { label: 'Surface Area', value: '> 300 m²/g' },
-      { label: 'Inoculation', value: 'Pre-charged with live vermi-microbiology' },
-      { label: 'Packaging', value: '40 kg Sacks' },
-    ],
-    applicationDosages: [
-      { crop: 'Field Crops', dosage: '200 – 400 kg / Acre', frequency: 'One-time application during field preparation' },
-      { crop: 'Fruit Trees', dosage: '2 – 3 kg / Tree pit', frequency: 'Mixed with soil during planting' },
-    ],
-    faqs: [
-      {
-        question: 'Does biochar need to be re-applied every year?',
-        answer: 'No! Biochar does not decompose rapidly like raw biomass; it remains in the soil structure for decades, continually retaining water and nutrients.',
-      },
-    ],
+    icon: '🔥',
+    name: 'Agricultural Activated Biochar',
+    status: 'In Research',
+    category: 'Soil Conditioner',
+    description: 'Porous carbon matrix that permanently boosts moisture retention, microbial homes, and cation exchange in sandy soils.',
+  },
+  {
+    icon: '🌱',
+    name: 'Specialized Seedling Mix',
+    status: 'In Formulation',
+    category: 'Nursery Blend',
+    description: 'Microbe-inoculated germination blend crafted specifically for plant nurseries, vegetable tunnels, and high-value crops.',
   },
 ]

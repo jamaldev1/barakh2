@@ -3,104 +3,185 @@ export interface ResourceItem {
   slug: string
   title: string
   category: string
-  type: 'PDF Guide' | 'Application Chart' | 'Research Paper' | 'Field Manual'
-  fileSize: string
+  type: string
+  date: string
+  fileSize?: string
   readTime: string
+  image: string
   summary: string
+  excerpt: string
   content: string
-  downloadUrl?: string
-  keyTakeaways: string[]
+  keyTakeaways?: string[]
 }
 
 export const resourcesData: ResourceItem[] = [
   {
-    id: 'vermicomposting-handbook',
-    slug: 'vermicomposting-handbook',
-    title: 'Complete Pakistani Farmer’s Vermiculture & Composting Handbook',
-    category: 'Field Manuals',
-    type: 'Field Manual',
-    fileSize: '4.2 MB PDF',
-    readTime: '15 min read',
-    summary: 'A step-by-step practical manual on constructing shaded beds, feeding Eisenia fetida, regulating summer moisture, and harvesting high-grade castings in local climate conditions.',
+    id: 'what-is-vermicompost',
+    slug: 'what-is-vermicompost',
+    title: 'What is Vermicompost? Everything You Need to Know',
+    category: 'Vermicompost',
+    type: 'Guide',
+    date: 'February 18, 2026',
+    readTime: '6 min read',
+    image: '/images/hero-vermicompost.jpg',
+    summary: 'Discover how organic vermiculture transforms organic farm waste into nutrient-dense black gold that revitalizes depleted soil and boosts natural plant immunity.',
+    excerpt: 'Discover how organic vermiculture transforms organic farm waste into nutrient-dense black gold that revitalizes depleted soil and boosts natural plant immunity.',
     keyTakeaways: [
-      'Optimal bed dimensions and low-cost green net shading architecture',
-      'Step-by-step raw manure pre-treatment to prevent bed overheating',
-      'Moisture benchmark (squeeze test) and aeration schedule',
-      'Cost-benefit breakdown for 5-acre to 50-acre setups',
+      'Pure organic castings containing billions of beneficial soil microbes',
+      'High concentrations of humic acids, fulvic acids, and plant growth auxins',
+      'Improves water retention in sandy and arid soils by up to 40%',
+      'Completely non-toxic, weed-seed-free, and safe for all crops',
     ],
     content: `
-# Complete Pakistani Farmer’s Vermiculture & Composting Handbook
+### What is Vermicompost?
 
-## Introduction
-Vermicomposting is the bioconversion of organic waste into nutrient-dense humus through earthworm digestion. In Pakistan's agricultural landscape, soils suffer from critically low organic matter (often below 0.5%). This handbook provides actionable instructions for commercial growers and smallholders alike.
+Vermicompost (also known as worm castings or black gold) is the end-product of the breakdown of organic matter by specialized species of earthworms, primarily *Eisenia fetida* (Red Wigglers). 
 
-### 1. Species Selection
-The only earthworm species recommended for Pakistani climatic resilience is *Eisenia fetida* (Red Wigglers). They tolerate ambient temperatures between 15°C and 35°C and reproduce rapidly in aged manure.
+Unlike standard thermal compost, vermicomposting is a cold biological process where earthworms digest organic waste along with soil microorganisms. As material passes through the worm's digestive tract, it is enriched with beneficial enzymes, friendly bacteria, and essential plant nutrients in water-soluble, immediately plant-available forms.
 
-### 2. Bed Construction
-- **Width:** 3 to 4 feet (allows easy reaching from both sides without stepping on the bed).
-- **Height:** 1.5 to 2 feet (deeper beds accumulate excessive internal heat).
-- **Length:** 20 to 50 feet depending on available space and shade.
-- **Location:** Under dense tree canopy or 75% agricultural green shade netting.
+### Why Vermicompost is Superior to Traditional FYM (Farm Yard Manure)
 
-### 3. Feedstock Preparation
-Never introduce fresh, hot cattle dung directly into worm beds. Raw manure produces excessive methane and thermal spikes (exceeding 50°C) which kill worms. Pre-soak and turn the manure for 10-14 days until temperature stabilizes under 28°C.
+Traditional raw farmyard manure often contains weed seeds, pathogen spores (like *E. coli* or *Salmonella*), and excessive ammonia that can burn plant roots. In contrast, pure vermicompost offers:
+
+1. **Rich Microbial Diversity:** Contains active colonies of nitrogen-fixing bacteria, mycorrhizal fungi, and actinomycetes that suppress soil-borne fungal diseases like *Fusarium* and *Pythium*.
+2. **Slow-Release Balanced Nutrition:** Packed with essential macronutrients (NPK) and micronutrients (Zinc, Iron, Calcium, Boron, Magnesium) that do not leach away with irrigation water.
+3. **High Humus Content:** Restores soil structure, aerates compact clay soils, and increases the water-holding capacity of sandy soils by up to 40%.
+4. **Natural Growth Hormones:** Contains natural plant growth regulators including auxins, gibberellins, and cytokinins that accelerate seed germination and root branching.
+
+### How to Apply Vermicompost on Your Farm & Garden
+
+- **Field Crops (Wheat, Rice, Cotton, Maize):** Apply 4 to 6 bags (200-300 kg) per acre during land preparation or basal furrow dressing.
+- **Fruit Orchards (Mango, Citrus, Guava):** Apply 5 to 10 kg around the drip line of each mature tree twice a year before flowering and post-harvest.
+- **Vegetables & Kitchen Gardens:** Mix 20% to 30% vermicompost into potting soil or apply a 1-inch top dressing around plants every 3 to 4 weeks.
     `,
   },
   {
-    id: 'crop-dosage-application-guide',
-    slug: 'crop-dosage-application-guide',
-    title: 'Crop-Wise Application & Dosage Charts for Organic Fertigation',
-    category: 'Dosage Charts',
-    type: 'Application Chart',
-    fileSize: '2.1 MB PDF',
-    readTime: '8 min read',
-    summary: 'Comprehensive scientific dosage tables for wheat, cotton, rice, sugarcane, citrus, mangoes, potatoes, and vegetables covering both basal and foliar stages.',
+    id: 'benefits-of-natural-fertilizers',
+    slug: 'benefits-of-natural-fertilizers',
+    title: 'Benefits of Natural Fertilizers for Sustainable Agriculture',
+    category: 'Natural Fertilizers',
+    type: 'Article',
+    date: 'February 15, 2026',
+    readTime: '7 min read',
+    image: '/images/satisfiedfarmers.jpg',
+    summary: 'Explore the long-term biological, environmental, and financial benefits of switching from chemical DAP and Urea to natural organic amendments.',
+    excerpt: 'Explore the long-term biological, environmental, and financial benefits of switching from chemical DAP and Urea to natural organic amendments.',
     keyTakeaways: [
-      'Basal furrow dressing versus broadcast spreading ratios per acre',
-      'Orchard pit filling versus post-harvest ring application methods',
-      'Foliar Vermiwash dilution protocols for peak blossom and fruit set phases',
+      'Restores native soil biodiversity and reverses chemical soil salinity',
+      'Reduces long-term farm input costs by eliminating fertilizer dependency',
+      'Significantly improves produce taste, shelf-life, and export quality',
+      'Enhances soil resilience during extreme heatwaves and dry spells',
     ],
     content: `
-# Crop-Wise Application & Dosage Charts for Organic Fertigation
+### The Need for Sustainable Soil Nutrition
 
-## Summary Dosage Table
+Decades of intensive chemical farming with synthetic fertilizers like DAP and Urea have led to a severe degradation of agricultural land across Pakistan. Soil organic matter in most farming belts has dropped below 0.6%, leading to hardpan soil crusting, declining fertilizer response, and increased pest vulnerability.
 
-| Crop Category | Vermicompost (Per Acre) | Application Timing | Foliar Vermiwash |
-| :--- | :--- | :--- | :--- |
-| **Wheat / Grains** | 4 – 6 Bags (200-300 kg) | Land Preparation / 1st Irrigation | 2L/acre at Tillering |
-| **Cotton / Cash Crops** | 6 – 8 Bags (300-400 kg) | Furrow Sowing & 2nd Irrigation | 3L/acre before Flowering |
-| **Citrus & Mango Orchards** | 5 – 10 kg / Mature Tree | Twice Yearly (Jan & July) | 5L/acre during Fruit Set |
-| **Vegetables & Tunnels** | 8 – 10 Bags (400-500 kg) | Raised Bed Preparation | 2L/acre every 15 days |
+Transitioning to natural, biological fertilizers provides a permanent solution to soil regeneration while safeguarding farmer profitability.
 
-## Maximizing Microbial Efficiency
-Always apply vermicompost into moist soil and incorporate lightly within the top 2-4 inches to shield beneficial microbes from direct UV sunlight.
+### Key Benefits of Natural Organic Fertilizers
+
+#### 1. Long-Term Soil Fertility & Structure Regeneration
+Synthetic fertilizers provide temporary chemical spikes but kill beneficial soil organisms and increase soil salinity. Natural fertilizers feed the soil biology, creating sponge-like crumb structures that allow roots to penetrate deeper and breathe freely.
+
+#### 2. Substantial Reduction in Water Requirements
+Soils rich in organic matter and worm humus retain moisture up to 48 hours longer under 40°C+ summer conditions. This drastically reduces canal and tube-well irrigation requirements, saving precious diesel and electricity costs.
+
+#### 3. Higher Crop Resilience & Natural Pest Suppression
+Plants nourished with natural organic nutrients develop thicker cellular walls and balanced internal sugar-to-mineral ratios. This natural vigor makes crops naturally resistant to sucking pests, aphids, and fungal root infections without heavy pesticide usage.
+
+#### 4. Premium Market Value & Export-Grade Quality
+Produce grown with organic amendments has higher Brix (sugar content), richer flavor, higher nutritional density, and significantly longer post-harvest shelf-life, qualifying growers for premium export and organic market pricing.
+
+### Conclusion
+
+Switching to natural organic fertilizers is not just an environmental choice—it is a smart economic strategy for every forward-thinking Pakistani farmer.
     `,
   },
   {
-    id: 'soil-microbiology-yield-study',
-    slug: 'soil-microbiology-yield-study',
-    title: 'Comparative Study: Organic Humus vs Chemical Fertilizers on Soil Health',
-    category: 'Scientific Studies',
-    type: 'Research Paper',
-    fileSize: '1.8 MB PDF',
-    readTime: '12 min read',
-    summary: 'A multi-season field study demonstrating a 40% increase in water holding capacity and significant suppression of Fusarium wilt in soils enriched with earthworm castings.',
+    id: 'rebuilding-pakistan-soil-organic-matter',
+    slug: 'rebuilding-pakistan-soil-organic-matter',
+    title: 'How Restoring Soil Organic Matter Can Save Pakistani Agriculture',
+    category: 'Soil Health',
+    type: 'Article',
+    date: 'February 10, 2026',
+    readTime: '6 min read',
+    image: '/images/hero-farm-landscape.jpg',
+    summary: 'Over 80% of agricultural soils in Pakistan have organic matter levels below 1%. Discover how biological vermiculture restores natural fertility and reduces input costs.',
+    excerpt: 'Over 80% of agricultural soils in Pakistan have organic matter levels below 1%. Discover how biological vermiculture restores natural fertility and reduces input costs.',
     keyTakeaways: [
-      'Chemical fertilizer run-off reduced by 65%',
-      'Cation exchange capacity (CEC) elevated from 12 to 28 meq/100g',
-      'Dramatic proliferation of beneficial nitrogen-fixing Azotobacter colonies',
+      'Why low organic matter causes fertilizer response failure',
+      'How earthworm humus acts as a biological probiotic for depleted fields',
+      'Cost-benefit comparisons between chemical inputs and organic enrichment',
     ],
     content: `
-# Comparative Study: Organic Humus vs Chemical Fertilizers on Soil Health
+### The Low Organic Matter Crisis in Pakistan
 
-## Abstract
-Continuous application of synthetic fertilizers without organic matter supplementation degrades soil microbial biodiversity and accelerates soil salinization in arid and semi-arid zones. This paper highlights experimental results from trials conducted across 12 commercial farms in central Punjab.
+Over 80% of arable soils across Punjab, Sindh, and Khyber Pakhtunkhwa have organic matter levels hovering below 0.6%, whereas fertile agricultural soil requires at least 2.5% to 4.0%. 
 
-## Key Findings
-1. **Soil Structure:** Bulk density decreased significantly, allowing root penetration depths to increase by 32%.
-2. **Moisture Retention:** Treated acreage retained plant-available water 48 hours longer under 42°C summer heat stress.
-3. **Biological Disease Suppression:** Incidence of root-knot nematodes and fungal root rot was suppressed by 55% due to chitinase-producing actinomycetes native to vermicompost.
+When soil organic matter is this low:
+- Applied chemical fertilizers leach away into the groundwater before roots can absorb them.
+- Soil compacts into a rock-hard crust that prevents water penetration.
+- Farmers are forced to increase chemical dosages every season just to achieve baseline yields.
+
+### The Biological Solution with Vermiculture
+
+Earthworm castings act as living inoculants that jumpstart the natural soil food web. By integrating pure vermicompost into basal soil preparation, growers reintroduce millions of beneficial microbes that unlock bound phosphorus and potassium native to Pakistani soils.
+    `,
+  },
+  {
+    id: 'summer-management-red-wiggler-colonies',
+    slug: 'summer-management-red-wiggler-colonies',
+    title: 'Essential Summer Care Tips for Live Red Wiggler Colonies',
+    category: 'Breeding Guide',
+    type: 'Guide',
+    date: 'January 28, 2026',
+    readTime: '5 min read',
+    image: '/images/farmer-training.jpg',
+    summary: 'Practical methods to safeguard your earthworm colonies from 45°C extreme heatwaves using shading, jute hessian covers, and evaporation cooling.',
+    excerpt: 'Practical methods to safeguard your earthworm colonies from 45°C extreme heatwaves using shading, jute hessian covers, and evaporation cooling.',
+    keyTakeaways: [
+      'Moist natural jute burlap covers trap humidity and cool bed surface',
+      'Micro-misting schedules for peak daylight hours (11 AM to 4 PM)',
+      'Optimal shade architecture using 75% agricultural green nets',
+    ],
+    content: `
+### Safeguarding Earthworms in Extreme Summer Heat
+
+During peak summer months in Pakistan when ambient temperatures exceed 42°C, vermiculture beds require deliberate climate management to keep earthworms active, feeding, and breeding.
+
+### Key Management Practices:
+
+1. **Jute Hessian Burlap Covers:** Keep damp natural jute sacks over the entire bed surface. This creates a cool, dark microclimate where worms can feed right at the surface.
+2. **Micro-Misting System:** Install low-cost overhead mister nozzles set on a timer for 2-3 minutes every few hours during peak afternoon heat.
+3. **Bed Height Control:** Keep bed depth below 1.5 feet to prevent internal anaerobic heat buildup.
+    `,
+  },
+  {
+    id: 'vermiwash-foliar-spray-benefits',
+    slug: 'vermiwash-foliar-spray-benefits',
+    title: 'Vermiwash vs Synthetic Foliar Sprays: The Organic Advantage',
+    category: 'Crop Nutrition',
+    type: 'Article',
+    date: 'January 20, 2026',
+    readTime: '7 min read',
+    image: '/images/statssection.jpg',
+    summary: 'Why progressive orchardists and vegetable growers are switching from expensive chemical foliar sprays to nutrient-dense liquid vermiwash.',
+    excerpt: 'Why progressive orchardists and vegetable growers are switching from expensive chemical foliar sprays to nutrient-dense liquid vermiwash.',
+    keyTakeaways: [
+      'Reduces flower and fruit drop by up to 30% in citrus and mangoes',
+      'Suppresses fungal leaf spores naturally without chemical toxicity',
+      'Completely safe for honeybees, pollinators, and farm workers',
+    ],
+    content: `
+### What is Vermiwash?
+
+Vermiwash is a nutrient-rich liquid extract collected from earthworm beds. It contains plant growth hormones, water-soluble micro-nutrients, vitamins, and natural anti-fungal enzymes.
+
+### Key Benefits for Orchards and Vegetables:
+- **Reduces Blossom Drop:** Natural auxins and cytokinins strengthen stem connections and prevent premature fruit shedding.
+- **Foliar Disease Defense:** Beneficial microorganisms coat leaf surfaces and block fungal pathogen spores from taking hold.
+- **Safe for Pollinators:** 100% organic and gentle on bees, beneficial predatory insects, and soil life.
     `,
   },
 ]

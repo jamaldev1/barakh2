@@ -59,7 +59,7 @@ export default function TestimonialCarousel({ testimonials }: { testimonials: Te
                 {'☆'.repeat(5 - Number(current.rating))}
               </div>
               <p className="text-white font-display text-base md:text-lg leading-snug mt-3 line-clamp-5">
-                "{current.quote}"
+                &ldquo;{current.quote}&rdquo;
               </p>
             </div>
 

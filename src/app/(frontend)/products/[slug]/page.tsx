@@ -40,17 +40,6 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               className="w-full rounded-[1.5rem] aspect-square object-cover"
             />
           </div>
-
-          {/* Sub-Images */}
-          {product.images && product.images.length > 1 && (
-            <div className="grid grid-cols-3 gap-3 mt-4">
-              {product.images.map((img, i) => (
-                <div key={i} className="rounded-xl overflow-hidden border border-gray-200 aspect-square">
-                  <img src={img} alt={`${product.name} thumbnail`} className="w-full h-full object-cover" />
-                </div>
-              ))}
-            </div>
-          )}
         </FadeIn>
 
         <FadeIn delay={0.15}>

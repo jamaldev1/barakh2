@@ -1,22 +1,17 @@
 export default function Footer() {
   const quickLinks = [
-    ['/', 'Home'],
     ['/about', 'About Us'],
     ['/products', 'Products'],
     ['/solutions', 'Solutions'],
-    ['/training', 'Training'],
-    ['/impact', 'Impact'],
-    ['/resources', 'Resources'],
-    ['/contact', 'Contact'],
+    ['/training', 'Farmer Training'],
+    ['/contact', 'Contact Us'],
   ]
 
   const solutionLinks = [
-    ['/products', 'Vermicompost'],
-    ['/products', 'Red Wigglers'],
-    ['/solutions', 'Organic Waste Management'],
-    ['/solutions', 'Soil Health Solutions'],
-    ['/training', 'Farmer Training'],
-    ['/solutions', 'B2B Solutions'],
+    ['/products', 'Premium Vermicompost'],
+    ['/solutions', 'Soil Health & Restoration'],
+    ['/training', 'Hands-On Workshops'],
+    ['/contact', 'Commercial Bulk Supply'],
   ]
 
   return (
@@ -93,28 +88,32 @@ export default function Footer() {
         {/* Contact */}
         <div>
           <h4 className="font-display font-bold text-white text-lg mb-5">Contact</h4>
-          <ul className="space-y-4 text-sm">
-            <li className="flex items-start gap-3">
-              <div className="icon-box w-9 h-9 text-sm">📍</div>
-              <span>Pakistan-wide Service</span>
+          <ul className="space-y-3 text-sm">
+            <li className="flex items-center gap-2.5 text-white/80">
+              <span className="text-gold-400 text-base">📍</span>
+              <span>Pakistan-Wide Service</span>
             </li>
-            <li className="flex items-start gap-3">
-              <div className="icon-box w-9 h-9 text-sm">📞</div>
-              <span>Contact via WhatsApp</span>
+            <li className="flex items-center gap-2.5 text-white/80">
+              <span className="text-gold-400 text-base">💬</span>
+              <a
+                href="https://wa.me/923000000000"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gold-400 transition-colors"
+              >
+                Chat on WhatsApp
+              </a>
             </li>
-            <li className="flex items-start gap-3">
-              <div className="icon-box w-9 h-9 text-sm">✉️</div>
-              <span>info@albarakhorganics.com</span>
+            <li className="flex items-center gap-2.5 text-white/80">
+              <span className="text-gold-400 text-base">✉️</span>
+              <a
+                href="mailto:info@albarakhorganics.com"
+                className="hover:text-gold-400 transition-colors"
+              >
+                info@albarakhorganics.com
+              </a>
             </li>
           </ul>
-          <a
-            href="https://wa.me/923000000000"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 btn-primary text-sm inline-flex"
-          >
-            💬 Talk to Us on WhatsApp
-          </a>
         </div>
       </div>
 

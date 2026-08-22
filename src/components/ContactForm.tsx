@@ -32,7 +32,7 @@ export default function ContactForm() {
         <div className="text-4xl">✅</div>
         <h3 className="text-xl font-bold text-brand-800 mt-4">Message Sent!</h3>
         <p className="text-gray-600 mt-2">
-          Thank you for reaching out. We'll get back to you shortly.
+          Thank you for reaching out. We&apos;ll get back to you shortly.
         </p>
         <button
           onClick={() => setSubmitted(false)}

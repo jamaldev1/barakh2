@@ -284,7 +284,7 @@ export default function HomePage() {
                 Common Questions Answered
               </h2>
               <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                Everything you need to know about our organic products, training programs, and services. Can't find what you're looking for? Our team is just a message away.
+                Everything you need to know about our organic products, training programs, and services. Can&apos;t find what you&apos;re looking for? Our team is just a message away.
               </p>
             </div>
           </FadeIn>

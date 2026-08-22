@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 
 type Stat = {
   value: number
@@ -79,7 +80,7 @@ export default function CountUpStats({ stats, variant = 'default' }: CountUpStat
               <p className="stats-bento-description">Trusted by farms and agribusiness clients nationwide</p>
               <div className="stats-bento-stat"><AnimatedNumber target={stats[2].value} suffix={stats[2].suffix} /><span>{stats[2].label}</span></div>
             </article>
-            <a href="/products" className="stats-bento-cta">View Our Harvest <span>→</span></a>
+            <Link href="/products" className="stats-bento-cta">View Our Harvest <span>→</span></Link>
           </div>
         </div>
         <div className="stats-bento-photo"><img src="/images/statssection.jpg" alt="Organic farmers standing in a healthy field" /></div>
