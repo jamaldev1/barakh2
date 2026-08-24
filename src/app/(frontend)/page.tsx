@@ -5,11 +5,9 @@ import TestimonialCarousel from '@/components/TestimonialCarousel'
 import CountUpStats from '@/components/CountUpStats'
 import HeroBackgroundSlider from '@/components/HeroBackgroundSlider'
 import CTABanner from '@/components/CTABanner'
-import MediaGallery from '@/components/MediaGallery'
 import SolutionsSlider from '@/components/SolutionsSlider'
 import FAQSection from '@/components/FAQSection'
 import { testimonialsData } from '@/data/testimonials'
-import { galleryData } from '@/data/gallery'
 
 export const metadata = {
   title: 'Al Barakh Organics | Premium Vermicompost & Biological Agriculture',
@@ -54,16 +52,6 @@ const whatMakesUsDifferent = [
 ]
 
 export default function HomePage() {
-  const galleryItems = galleryData.map((item) => ({
-    id: item.id,
-    title: item.title,
-    mediaType: item.type === 'video' ? ('video' as const) : ('photo' as const),
-    mediaUrl: item.videoUrl || item.thumbnailUrl,
-    thumbnailUrl: item.thumbnailUrl,
-    caption: `${item.location} • ${item.description}`,
-    featured: true,
-  }))
-
   const testimonials = testimonialsData.map((t) => ({
     id: t.id,
     customerName: t.name,
@@ -267,8 +255,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ FARM TOUR / MEDIA GALLERY ═══ */}
-      <MediaGallery items={galleryItems.length > 0 ? galleryItems : undefined} />
 
       {/* ═══ TESTIMONIALS ═══ */}
       {testimonials.length > 0 && (
