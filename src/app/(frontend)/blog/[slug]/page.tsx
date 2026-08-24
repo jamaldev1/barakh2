@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </p>
             <div className="mt-5">
               <a
-                href={`https://wa.me/923000000000?text=Hi,%20I%20read%20your%20article%20on%20${encodeURIComponent(post.title)}%20and%20want%20to%20order%20vermicompost.`}
+                href={`https://wa.me/923168803363?text=Hi,%20I%20read%20your%20article%20on%20${encodeURIComponent(post.title)}%20and%20want%20to%20order%20vermicompost.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-xs py-3 px-8 inline-flex items-center gap-2"

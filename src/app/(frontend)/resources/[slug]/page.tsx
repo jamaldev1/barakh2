@@ -146,7 +146,7 @@ export default async function ResourcePost({ params }: { params: Promise<{ slug:
                     Our team is available to discuss practical applications and dosages for your farm.
                   </p>
                   <a
-                    href={`https://wa.me/923000000000?text=Hi,%20I%20have%20a%20question%20about%20${encodeURIComponent(post.title)}.`}
+                    href={`https://wa.me/923168803363?text=Hi,%20I%20have%20a%20question%20about%20${encodeURIComponent(post.title)}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-primary inline-flex"

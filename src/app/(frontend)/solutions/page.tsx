@@ -115,7 +115,7 @@ export default function SolutionsPage() {
         primaryBtnText="Discuss Your Requirement →"
         primaryBtnHref="/contact"
         secondaryBtnText="💬 Chat on WhatsApp"
-        secondaryBtnHref="https://wa.me/923000000000?text=Hi,%20I%20would%20like%20to%20discuss%20sustainable%20agriculture%20solutions."
+        secondaryBtnHref="https://wa.me/923168803363?text=Hi,%20I%20would%20like%20to%20discuss%20sustainable%20agriculture%20solutions."
       />
     </>
   )

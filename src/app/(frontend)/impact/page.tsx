@@ -8,14 +8,14 @@ import { testimonialsData } from '@/data/testimonials'
 export const metadata = {
   title: 'Our Impact & Field Results | Al Barakh Organics',
   description:
-    'See the measurable field impact of Al Barakh Organics across 400+ acres and 50+ cities in Pakistan.',
+    'See the measurable field impact of Al Barakh Organics across 500+ acres, 10,000+ bags, and 100+ farmer training sessions in Pakistan.',
 }
 
 const impactStats = [
-  { value: 400, suffix: '+', label: 'Acres Revitalized', description: 'Agricultural land supported with organic biological inputs' },
-  { value: 10000, suffix: '+', label: 'Bags Supplied', description: 'Premium vermicompost delivered nationwide' },
-  { value: 100, suffix: '+', label: 'Growers Trained', description: 'Farmers and technical teams upskilled' },
-  { value: 50, suffix: '+', label: 'Cities Reached', description: 'Active nationwide organic agriculture network' },
+  { value: 500, suffix: '+', label: 'Acres Supported', description: 'Farmland cultivated and revitalized with organic fertilizers' },
+  { value: 10000, suffix: '+', label: 'Bags Supplied', description: 'Premium vermicompost delivered to growers & nurseries' },
+  { value: 100, suffix: '+', label: 'Trainings Conducted', description: 'Zaraat Kach’heri sessions and field masterclasses' },
+  { value: 500, suffix: '+', label: 'Farmers Empowered', description: 'Growers and farm teams trained in sustainable methods' },
 ]
 
 const galleryItems = [
@@ -203,7 +203,7 @@ export default function ImpactPage() {
         primaryBtnText="Discuss Your Requirement →"
         primaryBtnHref="/contact"
         secondaryBtnText="💬 Chat on WhatsApp"
-        secondaryBtnHref="https://wa.me/923000000000?text=Hi,%20I%20would%20like%20to%20learn%20more%20about%20your%20organic%20impact."
+        secondaryBtnHref="https://wa.me/923168803363?text=Hi,%20I%20would%20like%20to%20learn%20more%20about%20your%20organic%20impact."
       />
     </>
   )

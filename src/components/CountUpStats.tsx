@@ -7,6 +7,7 @@ type Stat = {
   value: number
   suffix: string
   label: string
+  title?: string
   description: string
 }
 
@@ -64,26 +65,39 @@ export default function CountUpStats({ stats, variant = 'default' }: CountUpStat
       <div className="stats-bento-stage">
         <div className="stats-bento-grid">
           <article className="stats-bento-card stats-bento-card-1">
-            <h3>Years of Farming<br />Excellence</h3>
-            <p className="stats-bento-description">Delivering trusted organic farming solutions for decades</p>
-            <div className="stats-bento-stat"><AnimatedNumber target={stats[0].value} suffix={stats[0].suffix} /><span>Years Experience</span></div>
+            <h3>{stats[0]?.title || 'Proven Soil & Land Impact'}</h3>
+            <p className="stats-bento-description">{stats[0]?.description || 'Real-world organic application across farms and orchards in Pakistan'}</p>
+            <div className="stats-bento-stat">
+              <AnimatedNumber target={stats[0].value} suffix={stats[0].suffix} />
+              <span>{stats[0].label}</span>
+            </div>
           </article>
           <article className="stats-bento-card stats-bento-card-2">
-            <div className="stats-bento-stat"><AnimatedNumber target={stats[1].value} suffix={stats[1].suffix} /><span>{stats[1].label}</span></div>
-            <div className="stats-bento-thumb"><img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1200&q=80" alt="Pakistani farmer working in wheat field" /></div>
-            <h3>Successful Harvest<br />Projects</h3>
-            <p className="stats-bento-description">Consistently producing high-quality crops across growing markets</p>
+            <div className="stats-bento-stat">
+              <AnimatedNumber target={stats[1].value} suffix={stats[1].suffix} />
+              <span>{stats[1].label}</span>
+            </div>
+            <div className="stats-bento-thumb">
+              <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1200&q=80" alt="Pakistani farmer working in wheat field" />
+            </div>
+            <h3>{stats[1]?.title || 'Organic Input Distribution'}</h3>
+            <p className="stats-bento-description">{stats[1]?.description || 'Premium vermicompost delivered to growers, nurseries & institutions'}</p>
           </article>
           <div className="stats-bento-side">
             <article className="stats-bento-card stats-bento-card-3">
-              <h3>Satisfied Farming<br />Partners</h3>
-              <p className="stats-bento-description">Trusted by farms and agribusiness clients nationwide</p>
-              <div className="stats-bento-stat"><AnimatedNumber target={stats[2].value} suffix={stats[2].suffix} /><span>{stats[2].label}</span></div>
+              <h3>{stats[2]?.title || 'Farmer Empowerment & Training'}</h3>
+              <p className="stats-bento-description">{stats[2]?.description || 'Practical workshops, field masterclasses & Zaraat Kach’heri sessions'}</p>
+              <div className="stats-bento-stat">
+                <AnimatedNumber target={stats[2].value} suffix={stats[2].suffix} />
+                <span>{stats[2].label}</span>
+              </div>
             </article>
-            <Link href="/products" className="stats-bento-cta">View Our Harvest <span>→</span></Link>
+            <Link href="/products" className="stats-bento-cta">View Products <span>→</span></Link>
           </div>
         </div>
-        <div className="stats-bento-photo"><img src="/images/statssection.jpg" alt="Organic farmers standing in a healthy field" /></div>
+        <div className="stats-bento-photo">
+          <img src="/images/statssection.jpg" alt="Organic farmers standing in a healthy field" />
+        </div>
       </div>
     )
   }

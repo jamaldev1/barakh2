@@ -7,27 +7,27 @@ export interface ImpactMetric {
 
 export const impactMetricsData: ImpactMetric[] = [
   {
-    label: 'Farmland Regenerated',
-    value: '450+ Acres',
-    subtext: 'Across Punjab, Sindh, KPK & Balochistan',
+    label: 'Farmland Supported',
+    value: '500+ Acres',
+    subtext: 'Cultivated and revitalized using organic fertilizers',
     icon: '🌱',
   },
   {
-    label: 'Organic Waste Upcycled',
-    value: '1,200+ Tons',
-    subtext: 'Diverted from burning & open dumping',
-    icon: '♻️',
+    label: 'Organic Bags Supplied',
+    value: '10,000+ Bags',
+    subtext: 'Premium vermicompost delivered across Pakistan',
+    icon: '📦',
   },
   {
-    label: 'Chemical Fertilizers Saved',
-    value: '45,000+ Bags',
-    subtext: 'Reduced toxic runoff into groundwater',
-    icon: '💧',
+    label: 'Trainings Conducted',
+    value: '100+ Sessions',
+    subtext: 'Zaraat Kach’heri & hands-on farmer workshops',
+    icon: '🎓',
   },
   {
-    label: 'Growers & Farmers Trained',
-    value: '650+ Farmers',
-    subtext: 'Through practical field workshops',
+    label: 'Farmers Empowered',
+    value: '500+ Growers',
+    subtext: 'Upskilled in practical sustainable agriculture',
     icon: '👨‍🌾',
   },
 ]

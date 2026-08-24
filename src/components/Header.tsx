@@ -23,38 +23,32 @@ export default function Header() {
       <div className="hidden lg:block bg-brand-800 text-white/80 text-xs">
         <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <a href="mailto:info@albarakhorganics.com" className="flex items-center gap-2 hover:text-white transition">
-              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg>
-              info@albarakhorganics.com
-            </a>
             <span className="flex items-center gap-2">
-              <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 512 512"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>
-              Mon – Sat 9:00 – 6:00, Sunday – CLOSED
-            </span>
-          </div>
-          <div className="flex items-center gap-3">
-            <a
-              href="https://wa.me/923000000000"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 font-medium hover:text-white transition mr-4 border-r border-white/20 pr-4"
-            >
               <svg className="w-3.5 h-3.5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              Multan, Punjab, Pakistan
+              <span>Branches: <strong>Tando Ghulam Ali</strong> &amp; <strong>Hyderabad</strong></span>
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="text-gold-400">🇵🇰</span>
+              <span>All Over Pakistan</span>
+            </span>
+            <span className="flex items-center gap-2">
+              <svg className="w-3.5 h-3.5 text-gold-400" fill="currentColor" viewBox="0 0 512 512"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>
+              <span>Business Hours: 09:00 – 17:00</span>
+            </span>
+          </div>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://wa.me/923168803363"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 font-medium hover:text-white transition"
+            >
+              <span className="text-gold-400">📞</span>
+              <span>WhatsApp / Call: <strong>0316 8803363</strong></span>
             </a>
-            <span className="hidden md:inline text-brand-200">Follow us:</span>
-            {[
-              { label: 'Facebook', icon: 'M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z', vb: '0 0 24 24' },
-              { label: 'Instagram', icon: 'M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z', vb: '0 0 24 24' },
-              { label: 'YouTube', icon: 'M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z', vb: '0 0 24 24' },
-            ].map(({ label, icon, vb }) => (
-              <a key={label} href="#" className="w-7 h-7 rounded-sm bg-gold-400 flex items-center justify-center text-brand-900 hover:bg-gold-300 transition" aria-label={label}>
-                <svg className="w-3 h-3" fill="currentColor" viewBox={vb}><path d={icon} /></svg>
-              </a>
-            ))}
           </div>
         </div>
       </div>
@@ -66,7 +60,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3">
             <img
               src="/images/logo.jpg"
-              alt="Al Barakah Organics logo"
+              alt="Al Barakh Organics logo"
               className="w-12 h-12 rounded-full object-cover"
             />
             <div>
@@ -92,7 +86,7 @@ export default function Header() {
           {/* CTA + Hamburger */}
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/923000000000?text=Hi,%20I%20would%20like%20to%20order%20organic%20vermicompost%20products."
+              href="https://wa.me/923168803363?text=Hi,%20I%20would%20like%20to%20order%20organic%20vermicompost%20products."
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold text-brand-900 bg-gold-400 hover:bg-gold-500 hover:text-brand-950 transition-all duration-300 shadow-sm"
@@ -129,7 +123,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="https://wa.me/923000000000?text=Hi,%20I%20would%20like%20to%20order%20organic%20vermicompost%20products."
+              href="https://wa.me/923168803363?text=Hi,%20I%20would%20like%20to%20order%20organic%20vermicompost%20products."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-sm font-semibold text-brand-900 bg-gold-400 hover:bg-gold-500 hover:text-brand-950 transition-all duration-300 w-full mt-3 shadow-sm"

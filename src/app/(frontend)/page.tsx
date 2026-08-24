@@ -7,6 +7,7 @@ import HeroBackgroundSlider from '@/components/HeroBackgroundSlider'
 import CTABanner from '@/components/CTABanner'
 import MediaGallery from '@/components/MediaGallery'
 import SolutionsSlider from '@/components/SolutionsSlider'
+import FAQSection from '@/components/FAQSection'
 import { testimonialsData } from '@/data/testimonials'
 import { galleryData } from '@/data/gallery'
 
@@ -17,21 +18,39 @@ export const metadata = {
 }
 
 const credibilityStats = [
-  { value: 30, suffix: '+', label: 'Years Experience', description: 'Delivering trusted organic farming solutions for decades' },
-  { value: 500, suffix: '+', label: 'Projects Completed', description: 'Consistently producing high-quality crops across global markets' },
-  { value: 1200, suffix: '+', label: 'Happy Clients', description: 'Trusted by farms and agribusiness clients worldwide' },
+  {
+    value: 500,
+    suffix: '+',
+    label: 'Acres Supported',
+    title: 'Proven Agricultural Impact',
+    description: 'Real-world organic application across farms and orchards in Pakistan',
+  },
+  {
+    value: 10000,
+    suffix: '+',
+    label: 'Bags Distributed',
+    title: 'Organic Fertilizer Distribution',
+    description: 'Premium vermicompost delivered to growers, nurseries & institutions',
+  },
+  {
+    value: 100,
+    suffix: '+',
+    label: 'Farmer Trainings',
+    title: 'Farmer Empowerment & Training',
+    description: 'Practical workshops, field masterclasses & Zaraat Kach’heri sessions',
+  },
 ]
 
 const featureIcons = [
-  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-1a.png', title: 'Organic Product' },
-  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-2a.png', title: 'Quality Standards' },
-  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-3a.png', title: 'Modern Farming' },
+  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-1a.png', title: 'Premium-Quality Vermicompost' },
+  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-2a.png', title: 'Farmer Empowerment & Training' },
+  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-3a.png', title: 'Zaraat Kach’heri' },
 ]
 
 const whatMakesUsDifferent = [
-  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-13.png', title: 'Professional Farmers', desc: 'Skilled experts ensuring consistent farm quality' },
-  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-12.png', title: 'Organic & Eco Solutions', desc: 'Sustainable methods for cleaner farming results' },
-  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-11.png', title: 'Sustainable Farming', desc: 'Long-term solutions for eco-friendly agriculture' },
+  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-13.png', title: 'Sustainable Agriculture', desc: 'Practical methods to rebuild soil organic matter and boost fertility' },
+  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-12.png', title: '500+ Acres Supported', desc: 'Proven field track record across commercial farms and orchards' },
+  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-11.png', title: 'Tree Donations to Schools', desc: 'Community engagement and environmental greening initiatives' },
 ]
 
 export default function HomePage() {
@@ -63,24 +82,24 @@ export default function HomePage() {
         <HeroBackgroundSlider />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-24 lg:py-32 w-full">
-          <div className="max-w-xl">
+          <div className="max-w-2xl">
             <FadeIn>
               <p className="font-cursive text-3xl md:text-4xl text-gold-400">Farm Tomorrow</p>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mt-3">
-                Growing the Future Naturally
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] mt-3">
+                Empowering Farmers.<br />Sustaining Agriculture.
               </h1>
-              <p className="mt-6 text-white/80 leading-relaxed max-w-md text-base">
-                Supporting agriculture with forward-thinking organic solutions that deliver results while protecting nature.
+              <p className="mt-6 text-white/90 leading-relaxed max-w-xl text-base md:text-lg">
+                Premium Vermicompost and Practical Agricultural Knowledge for Healthier Soil, Better Farming, and a Sustainable Future.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
                 <MotionButton
                   href="/products"
-                  className="btn-primary text-base"
+                  className="btn-primary text-base font-bold shadow-lg"
                 >
-                  Discover More →
+                  Order Now →
                 </MotionButton>
                 <MotionButton
-                  href="https://wa.me/923000000000"
+                  href="https://wa.me/923168803363"
                   className="inline-flex items-center gap-2 border-2 border-white/40 text-white px-6 py-3 rounded-md font-semibold hover:bg-white/10 transition text-sm"
                 >
                   💬 Talk to Us
@@ -109,16 +128,21 @@ export default function HomePage() {
 
             <FadeIn delay={0.1}>
               <div className="about-farm-copy mt-10">
-                <p className="eyebrow">About Our Farm</p>
+                <p className="eyebrow">Why Al Barakh?</p>
                 <h2 className="about-farm-title">
                   Rooted in Nature,<br />Driven by Sustainability
                 </h2>
-                <p className="about-farm-description">
-                  Al Barakh Organics works to make sustainable agriculture practical and accessible. We provide quality vermicompost, red wigglers, agricultural solutions and practical training for farmers, growers, nurseries, institutions and businesses across Pakistan.
+                <p className="about-farm-description text-base leading-relaxed">
+                  We go beyond vermicompost by combining premium organic solutions, farmer empowerment, and practical agricultural knowledge to build healthier soil and a more sustainable future.
                 </p>
-                <a href="/about" className="about-farm-button">
-                  Read More →
-                </a>
+                <div className="mt-6 flex flex-wrap items-center gap-4">
+                  <a href="/about" className="about-farm-button">
+                    Read Our Story →
+                  </a>
+                  <a href="/training" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-800 hover:text-brand-600 underline">
+                    Learn About Zaraat Kach’heri →
+                  </a>
+                </div>
               </div>
             </FadeIn>
           </div>
@@ -127,7 +151,7 @@ export default function HomePage() {
           <div className="self-start">
             <FadeIn delay={0.15}>
               <div className="highlight-card">
-                <h3 className="font-display text-2xl font-bold mb-6">What Makes Us Different</h3>
+                <h3 className="font-display text-2xl font-bold mb-6">Key Benefits &amp; Impact</h3>
                 <div className="space-y-5">
                   {whatMakesUsDifferent.map((item) => (
                     <div key={item.title} className="flex items-start gap-4">
@@ -152,11 +176,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="stats-bento-heading">
-              <p className="stats-bento-intro">From small farms to large agribusiness, we empower sustainable agriculture with proven systems and eco-driven innovation.</p>
+              <p className="stats-bento-intro">From smallholder farmers to commercial growers, we empower sustainable agriculture across Pakistan with proven field results.</p>
               <div>
-                <p className="eyebrow">Trusted by Organic Growers</p>
+                <p className="eyebrow">Proven Field Impact</p>
                 <h2 className="stats-bento-title">
-                  Supporting Farms<br />That Feed the Future
+                  Supporting Farms<br />That Feed Pakistan
                 </h2>
               </div>
             </div>
@@ -233,7 +257,7 @@ export default function HomePage() {
                 </ul>
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a href="/training" className="btn-primary">Request a Training →</a>
-                  <a href="https://wa.me/923000000000" target="_blank" rel="noopener noreferrer" className="btn-dark">
+                  <a href="https://wa.me/923168803363" target="_blank" rel="noopener noreferrer" className="btn-dark">
                     💬 Talk to Us
                   </a>
                 </div>
@@ -272,128 +296,18 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* ═══ FAQ SECTION WITH ACCORDION & WHATSAPP ═══ */}
-      <section className="px-6 py-16 md:py-24 lg:py-32 bg-gradient-to-b from-white via-cream-50 to-white">
-        <div className="max-w-5xl mx-auto">
-          <FadeIn>
-            <div className="text-center mb-16">
-              <div className="inline-block px-4 py-2 bg-brand-50 rounded-full mb-4">
-                <p className="text-sm font-semibold text-brand-700 uppercase tracking-wide">FAQ</p>
-              </div>
-              <h2 className="font-display text-3xl md:text-5xl font-bold text-brand-900 mt-3 mb-4">
-                Common Questions Answered
-              </h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-                Everything you need to know about our organic products, training programs, and services. Can&apos;t find what you&apos;re looking for? Our team is just a message away.
-              </p>
-            </div>
-          </FadeIn>
-
-          {/* FAQs Grid */}
-          <div className="mb-12">
-            <div className="space-y-3">
-              {[
-                {
-                  icon: '⏱️',
-                  q: 'How long does vermicompost take to show results?',
-                  a: 'Most farmers notice improved soil texture within 2-3 weeks, with visible plant growth improvements over 1-2 growing cycles. Results vary based on soil condition and application method.',
-                },
-                {
-                  icon: '🌱',
-                  q: 'How do I apply vermicompost to my crops?',
-                  a: 'Mix it into topsoil before planting, or apply as a top-dressing around existing plants. For larger farms, it can be applied using standard fertilizer application equipment. We recommend 2-5 tons per acre.',
-                },
-                {
-                  icon: '✅',
-                  q: 'Is vermicompost safe for all types of plants?',
-                  a: 'Yes — it is 100% organic and safe for vegetables, fruits, flowers, and field crops alike. It will not burn roots like synthetic fertilizers can and improves soil structure for all plant types.',
-                },
-                {
-                  icon: '🚚',
-                  q: 'Do you offer delivery across Pakistan?',
-                  a: 'Yes, we serve individual, commercial, and institutional customers across Pakistan. Please contact us on WhatsApp with your location and requirement to discuss delivery options, bulk pricing, and logistics.',
-                },
-                {
-                  icon: '🎓',
-                  q: 'How can I register for a farmer training session?',
-                  a: 'Visit our Farmer Training page to see upcoming sessions and register directly, or contact us on WhatsApp to request a customized training for your agricultural team. We offer both group and individual sessions.',
-                },
-              ].map((faq, i) => (
-                <FadeIn key={i} delay={i * 0.05}>
-                  <details className="group bg-white rounded-xl border border-brand-100/50 shadow-sm hover:shadow-md hover:border-brand-200 transition-all duration-300 overflow-hidden cursor-pointer">
-                    <summary className="flex items-start justify-between p-6 font-semibold text-brand-900 text-base select-none hover:bg-brand-50/30 transition-colors">
-                      <div className="flex items-start gap-4 flex-1">
-                        <span className="text-2xl flex-shrink-0 mt-0.5">{faq.icon}</span>
-                        <span className="leading-relaxed pt-1">{faq.q}</span>
-                      </div>
-                      <span className="text-brand-600 group-open:text-brand-700 flex-shrink-0 ml-4 text-xl transition-transform duration-300 group-open:rotate-180">
-                        ⌄
-                      </span>
-                    </summary>
-                    <div className="px-6 pb-6 pt-2 text-gray-700 text-sm leading-relaxed border-t border-brand-100/30 bg-brand-50/20 group-open:bg-brand-50/40">
-                      <p className="ml-12">{faq.a}</p>
-                    </div>
-                  </details>
-                </FadeIn>
-              ))}
-            </div>
-          </div>
-
-          {/* Premium WhatsApp Banner */}
-          <FadeIn delay={0.3}>
-            <div className="relative bg-gradient-to-r from-brand-700 via-brand-600 to-brand-700 rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mt-48"></div>
-              </div>
-              <div className="relative px-6 md:px-10 py-8 md:py-10">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
-                  <div className="flex-1 text-center md:text-left">
-                    <div className="inline-flex items-center gap-2 mb-3 md:mb-2">
-                      <span className="text-3xl">💬</span>
-                      <h3 className="font-display font-bold text-white text-xl md:text-2xl">Still Have Questions?</h3>
-                    </div>
-                    <p className="text-white/90 text-sm leading-relaxed max-w-lg">
-                      Connect with our agricultural experts for personalized advice on products, delivery, training programs, and farm consultations.
-                    </p>
-                  </div>
-                  <a
-                    href="https://wa.me/923000000000"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-shrink-0 inline-flex items-center gap-2 bg-white text-brand-700 px-8 py-4 rounded-xl font-bold hover:bg-gold-400 hover:text-brand-900 transition-all duration-300 text-sm whitespace-nowrap shadow-lg hover:shadow-xl hover:-translate-y-1"
-                  >
-                    <span>💬</span>
-                    WhatsApp Us Now
-                  </a>
-                </div>
-                <div className="mt-6 pt-6 border-t border-white/20 grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {[
-                    { label: 'Response', value: 'Within minutes' },
-                    { label: 'Available', value: 'Mon-Fri 9-5 PKT' },
-                    { label: 'Support', value: '24/7 via chat' },
-                    { label: 'Expertise', value: 'Agricultural pros' },
-                  ].map((item) => (
-                    <div key={item.label} className="text-center md:text-left">
-                      <p className="text-white/70 text-xs font-semibold uppercase tracking-wide">{item.label}</p>
-                      <p className="text-white font-semibold text-sm mt-1">{item.value}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+      {/* ═══ FAQ SECTION ═══ */}
+      <FAQSection />
 
       {/* ═══ PREMIUM CTA BANNER ═══ */}
       <CTABanner
-        eyebrow="Transform Your Farm"
-        title="Ready to Grow Sustainably?"
-        description="Whether you are a farmer, nursery, or business — talk to Al Barakh today and discover organic solutions that truly work for your farm."
-        primaryBtnText="Explore Products →"
+        eyebrow="Restore Our Soil"
+        title="Ready to Build a Sustainable Future?"
+        description="Together, let’s restore our soil, empower our farmers, and build a sustainable future for agriculture in Pakistan."
+        primaryBtnText="Order Now →"
         primaryBtnHref="/products"
-        secondaryBtnText="💬 Chat with Us"
-        secondaryBtnHref="https://wa.me/923000000000"
+        secondaryBtnText="Get In Touch →"
+        secondaryBtnHref="/contact"
       />
     </>
   )

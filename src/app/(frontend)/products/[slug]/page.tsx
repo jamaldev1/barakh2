@@ -55,17 +55,30 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             
             <p className="text-gray-600 mt-5 text-base leading-relaxed">{product.fullDescription}</p>
             
-            <div className="mt-6 pt-6 border-t border-gray-100 flex items-baseline gap-3">
+            <div className="mt-6 pt-6 border-t border-gray-100 flex flex-wrap items-baseline gap-3">
               <p className="text-brand-900 font-display font-bold text-4xl">Rs. {product.price}</p>
               <span className="text-gray-500 text-sm">/ {product.unit}</span>
-              <span className="text-xs font-semibold text-green-800 bg-green-100 px-3 py-1 rounded-full ml-auto">
+              <span className="text-xs font-semibold text-green-800 bg-green-100 px-3 py-1 rounded-full sm:ml-auto">
                 In Stock & Ready for Dispatch
               </span>
             </div>
 
+            {product.packagingOptions && (
+              <div className="mt-4 flex items-center gap-2">
+                <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">Available Sizes:</span>
+                <div className="flex flex-wrap gap-2">
+                  {product.packagingOptions.map((opt) => (
+                    <span key={opt} className="px-3 py-1 bg-cream-100 border border-brand-200 text-brand-900 text-xs font-bold rounded-lg">
+                      {opt}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
-                href={`https://wa.me/923000000000?text=Hi,%20I'm%20interested%20in%20ordering%20${encodeURIComponent(product.name)}%20(Rs.%20${product.price}%20/%20${encodeURIComponent(product.unit)}).%20Please%20share%20payment%20and%20delivery%20details.`}
+                href={`https://wa.me/923168803363?text=Hi,%20I'm%20interested%20in%20ordering%20${encodeURIComponent(product.name)}%20(Rs.%20${product.price}%20/%20${encodeURIComponent(product.unit)}).%20Please%20share%20payment%20and%20delivery%20details.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary justify-center text-base py-4 px-8 w-full sm:w-auto shadow-lg shadow-gold-400/20 flex items-center gap-2"
@@ -76,7 +89,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 Order on WhatsApp
               </a>
               <a
-                href={`https://wa.me/923000000000?text=Hi,%20I%20need%20a%20commercial%20bulk%20quote%20for%20${encodeURIComponent(product.name)}.`}
+                href={`https://wa.me/923168803363?text=Hi,%20I%20need%20a%20commercial%20bulk%20quote%20for%20${encodeURIComponent(product.name)}.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-dark justify-center text-base py-4 px-8 w-full sm:w-auto text-center"

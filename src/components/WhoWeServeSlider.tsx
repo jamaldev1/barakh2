@@ -129,7 +129,7 @@ const customerSegmentsData: SegmentItem[] = [
       'Corporate farm organic transition consulting',
       'Dedicated agricultural advisor support',
     ],
-    link: 'https://wa.me/923000000000',
+    link: 'https://wa.me/923168803363',
     linkText: 'Inquire for Enterprise',
     icon: (
       <svg className="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" strokeWidth="2">

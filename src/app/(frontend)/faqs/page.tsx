@@ -9,24 +9,28 @@ export const metadata = {
 
 const faqs = [
   {
-    q: 'How long does vermicompost take to show results?',
-    a: 'Most farmers notice improved soil texture within 2-3 weeks, with visible plant growth improvements over 1-2 growing cycles.',
+    q: 'Where are you located?',
+    a: 'We operate in Tando Ghulam Ali and Hyderabad, Sindh.',
   },
   {
-    q: 'How do I apply vermicompost to my crops?',
-    a: 'Mix it into topsoil before planting, or apply as a top-dressing around existing plants. For larger farms, it can be applied using standard fertilizer application equipment.',
+    q: 'Do you collaborate with B2B clients?',
+    a: 'Yes. We are always open to partnerships and collaborations with businesses, farms, nurseries, retailers, and other organizations.',
   },
   {
-    q: 'Is vermicompost safe for all types of plants?',
-    a: 'Yes — it is 100% organic and safe for vegetables, fruits, flowers, and field crops alike. It will not burn roots like synthetic fertilizers can.',
+    q: 'Do you offer agricultural internships?',
+    a: 'Yes. We welcome agriculture students and young learners for practical exposure and internship opportunities.',
   },
   {
-    q: 'Do you offer delivery across Pakistan?',
-    a: 'Yes, we serve individual, commercial, and institutional customers across Pakistan. Please contact us on WhatsApp with your location and requirement to discuss delivery.',
+    q: 'What products do you offer?',
+    a: 'We currently offer premium-quality vermicompost and plan to expand into vermiwash, biochar, and other sustainable agricultural solutions.',
   },
   {
-    q: 'How can I register for a farmer training session?',
-    a: 'Visit our Farmer Training page to see upcoming sessions and register directly, or contact us on WhatsApp to request a customized training for your agricultural team.',
+    q: 'Can we visit your production facility?',
+    a: 'Yes. Visitors, farmers, students, and agricultural professionals are welcome by prior appointment.',
+  },
+  {
+    q: 'Do you provide online agricultural consultancy and lectures?',
+    a: 'Yes. We provide online lectures, awareness sessions, training, and agricultural consultancy for individuals, institutions, and organizations.',
   },
 ]
 
@@ -58,7 +62,7 @@ export default function FAQsPage() {
             <h3 className="font-display font-semibold text-brand-900">Still have a question?</h3>
             <p className="text-gray-600 text-sm mt-2 mb-6">Our agricultural experts are ready to help.</p>
             <a
-              href="https://wa.me/923000000000"
+              href="https://wa.me/923168803363"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-green-700 transition"

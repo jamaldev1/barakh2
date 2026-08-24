@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import FadeIn from '@/components/FadeIn'
 import CTABanner from '@/components/CTABanner'
+import UpcomingSolutionsShowcase from '@/components/UpcomingSolutionsShowcase'
 import { productsData, upcomingProductsData } from '@/data/products'
 
 export const metadata = {
@@ -9,13 +10,6 @@ export const metadata = {
   description:
     'Quality vermicompost organic fertilizer for farms, orchards, nurseries, gardens and horticultural applications across Pakistan.',
 }
-
-const trustBadges = [
-  { icon: '🌿', title: '100% Organic Purity', desc: 'Zero chemical additives, fillers or weed seeds' },
-  { icon: '🧪', title: 'Rich Microbial Health', desc: 'Active beneficial bacteria & essential humic acids' },
-  { icon: '🚚', title: 'Pakistan-Wide Delivery', desc: 'Safe bulk packing & nationwide doorstep dispatch' },
-  { icon: '👨‍🌾', title: 'Agronomy Guidance', desc: 'Free application & dosage support for every grower' },
-]
 
 export default function ProductsPage() {
   const products = productsData
@@ -52,51 +46,19 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* ═══ TRUST & QUALITY STRIP ═══ */}
-      <section className="bg-cream-100 border-y border-brand-100/60 py-12 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gold-400/20 text-gold-700 text-xs font-bold uppercase tracking-wider mb-2.5">
-              🌿 Our Quality Guarantee
-            </span>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-brand-900">
-              Why Growers Trust Al Barakh
-            </h2>
-            <p className="text-gray-600 text-sm mt-1.5">
-              Rigorous laboratory testing, verified biological purity, and field-tested organic excellence.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {trustBadges.map((badge) => (
-              <div
-                key={badge.title}
-                className="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-brand-100 hover:border-gold-400/60 hover:shadow-md transition-all duration-300"
-              >
-                <span className="text-3xl flex-shrink-0">{badge.icon}</span>
-                <div>
-                  <h3 className="font-display font-bold text-brand-900 text-sm leading-snug">{badge.title}</h3>
-                  <p className="text-gray-500 text-xs mt-1 leading-relaxed">{badge.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ SINGLE FEATURED PRODUCT SHOWCASE ═══ */}
-      <section className="px-6 py-20 lg:py-28 max-w-6xl mx-auto">
+      {/* ═══ FEATURED PRODUCTS SHOWCASE ═══ */}
+      <section className="px-6 py-20 lg:py-28 max-w-6xl mx-auto space-y-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <FadeIn>
             <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-green-100 text-green-800 text-xs font-bold uppercase tracking-wider mb-3">
-              ● In Stock & Ready for Immediate Dispatch
+              ● Available Now • In Stock &amp; Ready for Immediate Dispatch
             </span>
-            <p className="eyebrow text-gold-500">Flagship Product</p>
+            <p className="eyebrow text-gold-500">Core Biological Inputs</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-2">
-              Premium Organic Vermicompost
+              Our Active Organic Products
             </h2>
             <p className="mt-3 text-gray-600 text-base">
-              Supplied in 50kg bags and bulk commercial freight truckloads across all provinces.
+              Premium Vermicompost (available in <strong>40 KG</strong> &amp; <strong>5 KG</strong> bags) and active <strong>Red Wiggler Worms (Eisenia fetida)</strong> starter colonies dispatched across all provinces of Pakistan.
             </p>
           </FadeIn>
         </div>
@@ -161,7 +123,7 @@ export default function ProductsPage() {
 
                       <div className="flex flex-col sm:flex-row gap-3">
                         <a
-                          href={`https://wa.me/923000000000?text=Hi,%20I'm%20interested%20in%20ordering%20${encodeURIComponent(product.name)}%20(Rs.%20${product.price}%20/%20${encodeURIComponent(product.unit)}).%20Please%20share%20order%20details.`}
+                          href={`https://wa.me/923168803363?text=Hi,%20I'm%20interested%20in%20ordering%20${encodeURIComponent(product.name)}%20(Rs.%20${product.price}%20/%20${encodeURIComponent(product.unit)}).%20Please%20share%20order%20details.`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="btn-primary text-sm py-3.5 px-8 font-bold shadow-md hover:shadow-lg flex items-center justify-center gap-2 flex-1"
@@ -189,47 +151,7 @@ export default function ProductsPage() {
       </section>
 
       {/* ═══ FUTURE PRODUCTS (PIPELINE) ═══ */}
-      <section className="bg-cream-100 px-6 py-20 lg:py-28 border-t border-brand-100">
-        <div className="max-w-6xl mx-auto">
-          <FadeIn>
-            <div className="text-center mb-16">
-              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gold-400/20 text-gold-700 text-xs font-bold uppercase tracking-wider mb-2.5">
-                🚀 Coming Soon
-              </span>
-              <p className="eyebrow text-gold-500">Innovation Pipeline</p>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-2">
-                Upcoming Organic Solutions
-              </h2>
-              <p className="mt-3 text-gray-600 text-base max-w-xl mx-auto">
-                Expanding our biological platform with next-generation organic inputs currently in research and field trials.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {futureProducts.map((product, i) => (
-              <FadeIn key={product.name} delay={i * 0.1}>
-                <div className="bg-white rounded-3xl p-6 shadow-sm border border-brand-100 h-full flex flex-col justify-between hover:border-gold-400/50 transition-all duration-300 relative overflow-hidden">
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-3xl">{product.icon}</span>
-                      <span className="bg-gold-100 text-brand-900 border border-gold-300 text-[0.65rem] font-bold px-2.5 py-1 rounded-full">
-                        {product.status}
-                      </span>
-                    </div>
-                    <span className="text-xs text-gold-600 font-semibold">{product.category}</span>
-                    <h3 className="font-display font-bold text-brand-900 text-base mt-1">{product.name}</h3>
-                    <p className="text-gray-600 mt-2.5 text-xs leading-relaxed">{product.description}</p>
-                  </div>
-                  <div className="mt-5 pt-3 border-t border-gray-100 text-[0.7rem] font-semibold text-brand-700 flex items-center gap-1">
-                    <span>🔬</span> In Research & Field Trials
-                  </div>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
-      </section>
+      <UpcomingSolutionsShowcase products={futureProducts} />
 
       {/* ═══ B2B & BULK CTA ═══ */}
       <CTABanner
@@ -239,7 +161,7 @@ export default function ProductsPage() {
         primaryBtnText="Request Bulk Quote →"
         primaryBtnHref="/contact"
         secondaryBtnText="💬 Chat on WhatsApp"
-        secondaryBtnHref="https://wa.me/923000000000?text=Hi,%20I%20am%20interested%20in%20bulk/institutional%20organic%20input%20solutions."
+        secondaryBtnHref="https://wa.me/923168803363?text=Hi,%20I%20am%20interested%20in%20bulk/institutional%20organic%20input%20solutions."
       />
     </>
   )

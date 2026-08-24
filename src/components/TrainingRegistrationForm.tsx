@@ -27,7 +27,7 @@ export default function TrainingRegistrationForm({
     const selectedSession = sessions.find((s) => s.id === form.session)?.title || form.session || 'General Training Session'
     const message = `*Farmer Training Registration Request*%0A%0A*Name:* ${encodeURIComponent(form.fullName)}%0A*Phone:* ${encodeURIComponent(form.phone)}%0A*City:* ${encodeURIComponent(form.city)}%0A*Farm Size:* ${encodeURIComponent(form.farmSize || 'N/A')}%0A*Session:* ${encodeURIComponent(selectedSession)}%0A*Email:* ${encodeURIComponent(form.email || 'N/A')}`
 
-    const whatsappUrl = `https://wa.me/923000000000?text=${message}`
+    const whatsappUrl = `https://wa.me/923168803363?text=${message}`
 
     // Open WhatsApp in new tab and navigate to confirmation
     window.open(whatsappUrl, '_blank')

@@ -20,7 +20,7 @@ export default function CTABanner({
   primaryBtnText = 'Discuss Your Requirement →',
   primaryBtnHref = '/contact',
   secondaryBtnText = '💬 Chat with Us',
-  secondaryBtnHref = 'https://wa.me/923000000000',
+  secondaryBtnHref = 'https://wa.me/923168803363',
 }: CTABannerProps) {
   return (
     <section className="relative px-6 py-20 md:py-28 text-center overflow-hidden">

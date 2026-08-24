@@ -14,6 +14,70 @@ export interface ResourceItem {
   keyTakeaways?: string[]
 }
 
+export interface DownloadableBrochure {
+  id: string
+  title: string
+  subtitle: string
+  category: string
+  format: string
+  fileSize: string
+  description: string
+  icon: string
+  downloadUrl: string
+  fileName: string
+}
+
+export const downloadableBrochuresData: DownloadableBrochure[] = [
+  {
+    id: 'al-barakh-product-catalogue',
+    title: 'Al Barakh Organics — Official Product Brochure',
+    subtitle: 'Vermicompost (40 KG & 5 KG), Red Wigglers, Facilities & Consultancy',
+    category: 'Product Catalogue',
+    format: 'PDF Guide',
+    fileSize: '3.2 MB',
+    description: 'Comprehensive overview covering pure vermicompost specifications, 40 KG & 5 KG sizes, earthworm colonies, 220+ bed facilities, and modern farming consultancy.',
+    icon: '📄',
+    downloadUrl: '/docs/al-barakh-product-catalogue.pdf',
+    fileName: 'Al-Barakh-Product-Catalogue.pdf',
+  },
+  {
+    id: 'vermicompost-application-dosage-guide',
+    title: 'Farmer’s Application & Crop Dosage Guide',
+    subtitle: 'Field Application Rates for Wheat, Cotton, Rice, Orchards & Vegetables',
+    category: 'Agronomy Chart',
+    format: 'PDF Handbook',
+    fileSize: '2.4 MB',
+    description: 'Practical charts detailing exact per-acre application rates, timing schedules, and instructions to cut chemical fertilizer expenditures by 40% to 60%.',
+    icon: '🌾',
+    downloadUrl: '/docs/vermicompost-application-dosage-guide.pdf',
+    fileName: 'Farmer-Application-Crop-Dosage-Guide.pdf',
+  },
+  {
+    id: 'zaraat-kachheri-training-syllabus',
+    title: 'Zaraat Kach’heri — Training Programme Syllabus',
+    subtitle: '12 Core Topics, Hands-On Field Modules & Institutional Booking Guidelines',
+    category: 'Training Syllabus',
+    format: 'PDF Document',
+    fileSize: '1.8 MB',
+    description: 'Detailed syllabus of our agricultural training sessions, covering soil restoration, bed setups, farm economics, and custom workshops for farmers & universities.',
+    icon: '🎓',
+    downloadUrl: '/docs/zaraat-kachheri-training-syllabus.pdf',
+    fileName: 'Zaraat-Kachheri-Training-Syllabus.pdf',
+  },
+  {
+    id: 'on-farm-vermiculture-handbook',
+    title: 'On-Farm Vermiculture & Worm Bed Setup Handbook',
+    subtitle: 'Complete Manual for Commercial and Smallholder Composting Beds',
+    category: 'Technical Manual',
+    format: 'PDF Guide',
+    fileSize: '2.9 MB',
+    description: 'Bed construction guidelines, moisture control routines, substrate pre-composting steps, and summer heat protection for live Eisenia fetida colonies.',
+    icon: '🪱',
+    downloadUrl: '/docs/on-farm-vermiculture-handbook.pdf',
+    fileName: 'On-Farm-Vermiculture-Handbook.pdf',
+  },
+]
+
 export const resourcesData: ResourceItem[] = [
   {
     id: 'what-is-vermicompost',
@@ -50,7 +114,7 @@ Traditional raw farmyard manure often contains weed seeds, pathogen spores (like
 
 ### How to Apply Vermicompost on Your Farm & Garden
 
-- **Field Crops (Wheat, Rice, Cotton, Maize):** Apply 4 to 6 bags (200-300 kg) per acre during land preparation or basal furrow dressing.
+- **Field Crops (Wheat, Rice, Cotton, Maize):** Apply 4 to 6 bags (40 KG) per acre during land preparation or basal furrow dressing.
 - **Fruit Orchards (Mango, Citrus, Guava):** Apply 5 to 10 kg around the drip line of each mature tree twice a year before flowering and post-harvest.
 - **Vegetables & Kitchen Gardens:** Mix 20% to 30% vermicompost into potting soil or apply a 1-inch top dressing around plants every 3 to 4 weeks.
     `,
