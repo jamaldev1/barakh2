@@ -1,7 +1,7 @@
 'use client'
 
 import FadeIn from '@/components/FadeIn'
-import MotionButton from '@/components/MotionButton'
+import Link from 'next/link'
 
 interface CTABannerProps {
   eyebrow?: string
@@ -23,58 +23,60 @@ export default function CTABanner({
   secondaryBtnHref = 'https://wa.me/923168803363',
 }: CTABannerProps) {
   return (
-    <section className="relative px-6 py-20 md:py-28 text-center overflow-hidden">
-      {/* Rich dark gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-950 via-brand-900 to-brand-800" />
+    <div className="w-full px-4 sm:px-6 lg:px-8 py-12 md:py-16 bg-cream-50/60 border-t border-brand-100/60">
+      <section className="relative flex flex-col items-center justify-center mx-auto max-w-5xl w-full text-center rounded-3xl py-16 md:py-24 px-6 md:px-12 bg-[url('/images/hero-farm-landscape.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden shadow-2xl border border-brand-900/10">
+        {/* Dark Luxury Brand Backdrop Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-950/90 via-brand-900/85 to-brand-950/90 backdrop-blur-[1px]" />
 
-      {/* Subtle geometric pattern overlay */}
-      <div
-        className="absolute inset-0 opacity-10 pointer-events-none"
-        style={{
-          backgroundImage:
-            'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
-        }}
-      />
+        {/* Subtle geometric dot pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(#ffca19_1px,transparent_1px)] [background-size:24px_24px] opacity-10 pointer-events-none" />
 
-      <div className="relative z-10 max-w-4xl mx-auto">
-        <FadeIn>
-          {eyebrow && (
-            <p className="font-cursive text-3xl md:text-4xl text-gold-400 mb-2">
-              {eyebrow}
-            </p>
-          )}
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2 leading-tight">
-            {title}
-          </h2>
-          {description && (
-            <p className="mt-4 text-white/80 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-              {description}
-            </p>
-          )}
-
-          <div className="mt-8 flex flex-wrap justify-center gap-4 items-center">
-            {primaryBtnText && primaryBtnHref && (
-              <MotionButton
-                href={primaryBtnHref}
-                className="btn-primary text-base font-bold shadow-lg hover:shadow-xl"
-              >
-                {primaryBtnText}
-              </MotionButton>
+        <div className="relative z-10 flex flex-col items-center max-w-3xl mx-auto">
+          <FadeIn>
+            {eyebrow && (
+              <p className="font-cursive text-2xl md:text-3xl text-gold-400 mb-1">
+                {eyebrow}
+              </p>
             )}
 
-            {secondaryBtnText && secondaryBtnHref && (
-              <a
-                href={secondaryBtnHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 backdrop-blur-sm border border-white/30 text-base shadow-lg hover:shadow-xl hover:-translate-y-0.5"
-              >
-                {secondaryBtnText}
-              </a>
+            <h2 className="text-2xl md:text-4xl font-display font-semibold text-white max-w-2xl leading-tight mt-1">
+              {title}
+            </h2>
+
+            {/* Reference-style decorative gradient divider */}
+            <div className="h-[3px] w-32 my-3.5 mx-auto bg-gradient-to-r from-transparent via-gold-400 to-transparent" />
+
+            {description && (
+              <p className="text-sm md:text-base text-white/90 max-w-xl mx-auto leading-relaxed mt-1">
+                {description}
+              </p>
             )}
-          </div>
-        </FadeIn>
-      </div>
-    </section>
+
+            <div className="mt-6 flex flex-wrap justify-center gap-4 items-center">
+              {primaryBtnText && primaryBtnHref && (
+                <Link
+                  href={primaryBtnHref}
+                  className="px-8 py-3 text-sm md:text-base font-semibold text-brand-950 bg-gradient-to-r from-gold-400 to-gold-500 hover:from-gold-300 hover:to-gold-400 hover:scale-105 transition duration-300 rounded-full shadow-lg hover:shadow-xl"
+                >
+                  {primaryBtnText}
+                </Link>
+              )}
+
+              {secondaryBtnText && secondaryBtnHref && (
+                <a
+                  href={secondaryBtnHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-7 py-3 text-sm md:text-base font-semibold text-white bg-white/15 hover:bg-white/25 hover:scale-105 border border-white/30 backdrop-blur-sm transition duration-300 rounded-full shadow-md"
+                >
+                  {secondaryBtnText}
+                </a>
+              )}
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+    </div>
   )
 }
+

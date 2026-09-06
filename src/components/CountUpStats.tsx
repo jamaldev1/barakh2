@@ -65,8 +65,8 @@ export default function CountUpStats({ stats, variant = 'default' }: CountUpStat
       <div className="stats-bento-stage">
         <div className="stats-bento-grid">
           <article className="stats-bento-card stats-bento-card-1">
-            <h3>{stats[0]?.title || 'Proven Soil & Land Impact'}</h3>
-            <p className="stats-bento-description">{stats[0]?.description || 'Real-world organic application across farms and orchards in Pakistan'}</p>
+            <h3>{stats[0]?.title || 'Proven Agricultural Impact'}</h3>
+            <p className="stats-bento-description">{stats[0]?.description || 'Farmers of 3000+ acres are part of our community'}</p>
             <div className="stats-bento-stat">
               <AnimatedNumber target={stats[0].value} suffix={stats[0].suffix} />
               <span>{stats[0].label}</span>

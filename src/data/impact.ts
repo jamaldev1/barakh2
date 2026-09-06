@@ -8,8 +8,8 @@ export interface ImpactMetric {
 export const impactMetricsData: ImpactMetric[] = [
   {
     label: 'Farmland Supported',
-    value: '500+ Acres',
-    subtext: 'Cultivated and revitalized using organic fertilizers',
+    value: '3,000+ Acres',
+    subtext: 'Farmers of 3000+ acres are part of our community',
     icon: '🌱',
   },
   {

@@ -91,12 +91,12 @@ Produced through controlled earthworm digestion of organic biomass, our vermicom
     badge: 'Breeder Stock',
     shortDescription:
       'Efficient composting worms that convert organic waste into nutrient-rich vermicompost. Acclimatized, healthy starter colonies for on-farm beds, greenhouses, and kitchen waste recycling.',
-    fullDescription: `Pure Eisenia fetida (Red Wiggler) colonies bred under optimal moisture, temperature, and feeding regimes at our Tando Ghulam Ali and Hyderabad facilities.
+    fullDescription: `Pure Eisenia fetida (Red Wiggler) colonies bred under optimal moisture, temperature, and feeding regimes across our facilities in Tando Ghulam Ali, Hyderabad, Tando Allahyar, and Badin City, Sindh.
     
 These voracious composting worms process farm residues, cow manure, and kitchen scraps with high reproductive rates, converting raw organic waste into premium biological vermicompost and liquid vermiwash right on your own land.`,
     images: [
+      '/images/hero-red-wigglers.jpg',
       '/images/statssection.jpg',
-      '/images/hero-vermicompost.jpg',
       '/images/farmer-training.jpg',
     ],
     keyBenefits: [

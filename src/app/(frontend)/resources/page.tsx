@@ -18,13 +18,13 @@ export default function ResourcesPage() {
       <Header />
 
       {/* ═══ HERO BANNER ═══ */}
-      <section className="relative min-h-[380px] lg:min-h-[440px] flex items-center overflow-hidden">
+      <section className="relative min-h-[380px] lg:min-h-[440px] flex items-center overflow-hidden w-full">
         <div className="absolute inset-0">
           <img src="/images/hero-field.jpg" alt="Knowledge Centre & Resources" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-900/80 to-brand-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-transparent to-brand-950/30" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-24 w-full text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24 w-full text-center">
           <FadeIn>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-300 font-semibold text-xs uppercase tracking-wider mb-4 backdrop-blur-sm">
               Practical Agricultural Knowledge
@@ -41,7 +41,7 @@ export default function ResourcesPage() {
       </section>
 
       {/* ═══ 1. DOWNLOADABLE GUIDES & BROCHURES ═══ */}
-      <section className="px-6 py-16 lg:py-20 bg-white border-b border-stone-200/80">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-16 lg:py-20 bg-white border-b border-stone-200/80">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="max-w-3xl mb-12">
@@ -109,7 +109,7 @@ export default function ResourcesPage() {
       </section>
 
       {/* ═══ 2. EDITORIAL JOURNAL — ARTICLES ═══ */}
-      <section className="px-6 py-16 lg:py-24 bg-[#FAF9F5] border-b border-stone-200/80">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-16 lg:py-24 bg-[#FAF9F5] border-b border-stone-200/80">
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">

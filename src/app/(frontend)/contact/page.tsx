@@ -14,7 +14,7 @@ export default function ContactPage() {
       <Header />
 
       {/* ═══ HERO BANNER ═══ */}
-      <section className="relative min-h-[420px] lg:min-h-[480px] flex items-center overflow-hidden">
+      <section className="relative min-h-[420px] lg:min-h-[480px] flex items-center overflow-hidden w-full">
         <div className="absolute inset-0">
           <img
             src="/images/hero-field.jpg"
@@ -24,7 +24,7 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-brand-950/95 via-brand-900/85 to-brand-900/70" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-transparent to-brand-950/40" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-28 w-full text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full text-center">
           <FadeIn>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-300 font-semibold text-xs uppercase tracking-wider mb-4 backdrop-blur-sm">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 href="tel:03168803363"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm backdrop-blur-sm transition"
               >
-                📞 Call Hotline: 0316 8803363
+                📞 Call Hotline: 0316 8803363 / 0333 3089886
               </a>
             </div>
           </FadeIn>
@@ -62,7 +62,7 @@ export default function ContactPage() {
       </section>
 
       {/* ═══ MAIN CONTACT & FORM SECTION ═══ */}
-      <section className="px-6 py-20 lg:py-28 bg-white">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             
@@ -102,6 +102,17 @@ export default function ContactPage() {
                     <h3 className="font-display font-bold text-brand-900 text-lg">Hyderabad Regional Office</h3>
                     <p className="text-gray-600 text-xs mt-1.5 leading-relaxed">
                       Near Jholy Lal Restaurant, New Hyderabad City Road. Regional distribution hub for Sindh and nationwide dispatch.
+                    </p>
+                  </div>
+
+                  <div className="bg-cream-50 p-6 rounded-3xl border border-brand-100/80 hover:border-gold-400/50 transition shadow-sm">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs font-mono font-bold text-gold-600 uppercase tracking-wider">Branch Network</span>
+                      <span className="px-2.5 py-0.5 rounded-full bg-emerald-800 text-emerald-100 text-[10px] font-bold">Regional Operations</span>
+                    </div>
+                    <h3 className="font-display font-bold text-brand-900 text-lg">Tando Allahyar &amp; Badin City</h3>
+                    <p className="text-gray-600 text-xs mt-1.5 leading-relaxed">
+                      On-site operations providing agricultural waste-to-vermicompost processing, farmer consultancy, and local supplies.
                     </p>
                   </div>
                 </div>

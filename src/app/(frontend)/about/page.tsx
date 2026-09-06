@@ -1,6 +1,5 @@
 import Header from '@/components/Header'
 import FadeIn from '@/components/FadeIn'
-import CountUpStats from '@/components/CountUpStats'
 import MotionButton from '@/components/MotionButton'
 import HeroBackgroundSlider from '@/components/HeroBackgroundSlider'
 import CTABanner from '@/components/CTABanner'
@@ -9,42 +8,8 @@ import CoreValuesOrbit from '@/components/CoreValuesOrbit'
 export const metadata = {
   title: 'About Us | Al Barakh Organics',
   description:
-    'Founded in 2024 by Mr. Sohaib Ahmed Khatti, Al Barakh Organics provides premium-quality vermicompost, modern farming consultancy, and Zaraat Kach’heri community training across Pakistan.',
+    'Founded in 2001 by Mr. Abdul Sattar Khatti, Al Barakh Organics provides premium-quality vermicompost, modern farming consultancy, and Zaraat Kach’heri community training across Pakistan.',
 }
-
-const impactStats = [
-  { value: 200, suffix: '+', label: 'Beds (Main Branch)', description: 'Tando Ghulam Ali vermicompost research & production facility' },
-  { value: 20, suffix: '+', label: 'Beds (Hyderabad)', description: 'Hyderabad regional distribution and production branch' },
-  { value: 500, suffix: '+', label: 'Acres Supported', description: 'Agricultural land revitalized across Sindh and Pakistan' },
-  { value: 100, suffix: '+', label: 'Farmer Trainings', description: 'Workshops & Zaraat Kach’heri community sessions conducted' },
-]
-
-const approachSteps = [
-  {
-    step: '01',
-    title: 'Soil Diagnostics & Modern Consultancy',
-    description: 'We evaluate field soil conditions, crop nutrient needs, and chemical dependency to design practical, high-yield organic solutions.',
-    icon: '🔬',
-  },
-  {
-    step: '02',
-    title: 'Premium Biological Inputs',
-    description: 'Supplying 100% pure vermicompost, liquid vermiwash, and active Red Wiggler (Eisenia fetida) colonies from our 220+ bed facilities.',
-    icon: '🌱',
-  },
-  {
-    step: '03',
-    title: 'Zaraat Kach’heri & Training',
-    description: 'Conducting community agricultural dialogues and hands-on workshops to empower farmers, women, and students with practical skills.',
-    icon: '🎓',
-  },
-  {
-    step: '04',
-    title: 'Long-Term Soil & Economic Health',
-    description: 'Rebuilding soil organic matter, cutting expensive synthetic fertilizer costs, and restoring generational agricultural profitability.',
-    icon: '📈',
-  },
-]
 
 const coreValues = [
   {
@@ -89,6 +54,90 @@ const coreValues = [
   },
 ]
 
+const executiveTeam = [
+  {
+    name: 'Zimad Khatti',
+    role: 'CEO & Business Development Head',
+    department: 'Executive Leadership',
+    initials: 'ZK',
+    badgeColor: 'bg-gold-400 text-brand-950',
+    avatarGradient: 'from-brand-800 to-brand-950',
+    bio: 'Oversees organizational growth, strategic investor and agricultural partnerships, commercial expansion, and sustainable business development nationwide.',
+    icon: '💼',
+  },
+  {
+    name: 'Sohaib Khatti',
+    role: 'COO, Al-Barakh Organics',
+    department: 'Executive Operations',
+    initials: 'SK',
+    badgeColor: 'bg-emerald-600 text-white',
+    avatarGradient: 'from-brand-900 to-emerald-950',
+    bio: 'Spearheads operational execution, research & production facilities, vermicompost quality standards, and Zaraat Kach’heri community training programs.',
+    icon: '🌱',
+  },
+  {
+    name: 'Arshad Ali',
+    role: 'Head of Marketing',
+    department: 'Marketing & Outreach',
+    initials: 'AA',
+    badgeColor: 'bg-gold-500 text-brand-950',
+    avatarGradient: 'from-amber-900 to-brand-950',
+    bio: 'Leads public outreach, brand partnerships, B2B and retail distribution networks, and farmer awareness campaigns to connect communities with sustainable inputs.',
+    icon: '📢',
+  },
+]
+
+const operationsTeam = [
+  {
+    name: 'Prem Kumar',
+    role: 'GM Operations',
+    branch: 'Tando Ghulam Ali Branch',
+    branchCode: 'TGA',
+    initials: 'PK',
+    department: 'Field Operations',
+    badgeColor: 'bg-brand-800 text-gold-300',
+    avatarGradient: 'from-brand-800 to-brand-900',
+    roleQuote: 'Day to day operations on site and making waste to vermicompost.',
+    icon: '🏭',
+  },
+  {
+    name: 'Sudheer Jat',
+    role: 'QC Supervisor',
+    branch: 'Tando Ghulam Ali Branch',
+    branchCode: 'TGA',
+    initials: 'SJ',
+    department: 'Quality Control',
+    badgeColor: 'bg-amber-500 text-white',
+    avatarGradient: 'from-emerald-800 to-brand-950',
+    roleQuote: 'We make sure that we provide our customer, what they are paying for, 100% top-notch vermicompost, gaining their trust.',
+    icon: '🔬',
+  },
+  {
+    name: 'Ghamshad',
+    role: 'GM Operations',
+    branch: 'Hyderabad Branch',
+    branchCode: 'HYD',
+    initials: 'GH',
+    department: 'Field Operations',
+    badgeColor: 'bg-brand-800 text-gold-300',
+    avatarGradient: 'from-brand-800 to-brand-900',
+    roleQuote: 'Day to day operations on site and making waste to vermicompost.',
+    icon: '🌿',
+  },
+  {
+    name: 'Raheel Qaimi',
+    role: 'GM Operations',
+    branch: 'Tando Allahyar Branch',
+    branchCode: 'TAY',
+    initials: 'RQ',
+    department: 'Field Operations',
+    badgeColor: 'bg-brand-800 text-gold-300',
+    avatarGradient: 'from-brand-800 to-brand-900',
+    roleQuote: 'Day to day operations on site and making waste to vermicompost.',
+    icon: '🚜',
+  },
+]
+
 export default function AboutPage() {
   return (
     <>
@@ -98,10 +147,10 @@ export default function AboutPage() {
       <section className="relative min-h-[440px] lg:min-h-[500px] flex items-center overflow-hidden">
         <HeroBackgroundSlider />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-brand-950/40 to-brand-950/40" />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-28 w-full text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full text-center">
           <FadeIn>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-300 font-semibold text-xs uppercase tracking-wider mb-4 backdrop-blur-sm">
-              Established in 2024 • Reviving Pakistan&apos;s Agriculture
+              Established in 2001 • Reviving Pakistan&apos;s Agriculture
             </span>
             <p className="font-cursive text-3xl md:text-4xl text-gold-400">About Al Barakh</p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-3 leading-tight max-w-4xl mx-auto">
@@ -116,8 +165,9 @@ export default function AboutPage() {
       </section>
 
       {/* ═══ OUR JOURNEY / THE PROBLEM WE ARE SOLVING ═══ */}
-      <section className="max-w-7xl mx-auto px-6 py-20 lg:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left copy */}
           <div className="lg:col-span-7">
             <FadeIn>
@@ -126,7 +176,7 @@ export default function AboutPage() {
                 Why Al Barakh Was Started
               </h2>
               <p className="mt-6 text-gray-700 leading-relaxed text-base md:text-lg">
-                <strong>Al Barakh Organics</strong> was founded in <strong>2024 by Mr. Sohaib Ahmed Khatti</strong> with a clear vision: to revive declining agriculture by restoring soil health, empowering farmers, and promoting sustainable farming through natural organic solutions.
+                <strong>Al Barakh Organics</strong> was founded in <strong>2001 by Mr. Abdul Sattar Khatti</strong> with a clear vision: to revive declining agriculture by restoring soil health, empowering farmers, and promoting sustainable farming through natural organic solutions.
               </p>
               
               <div className="mt-6 p-6 bg-cream-50 rounded-2xl border-l-4 border-gold-400 border-brand-100">
@@ -144,9 +194,9 @@ export default function AboutPage() {
               <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {[
                   { icon: '🏭', label: 'Tando Ghulam Ali (200+ Beds)' },
-                  { icon: '🌿', label: 'Hyderabad Branch (20+ Beds)' },
+                  { icon: '🌿', label: 'Hyderabad Hub (20+ Beds)' },
+                  { icon: '📍', label: 'Tando Allahyar & Badin' },
                   { icon: '🇵🇰', label: 'Serving All Over Pakistan' },
-                  { icon: '🤝', label: 'Zaraat Kach’heri Platform' },
                 ].map((badge) => (
                   <div key={badge.label} className="flex flex-col items-center text-center p-3 rounded-xl bg-cream-100 border border-brand-100">
                     <span className="text-xl mb-1">{badge.icon}</span>
@@ -195,10 +245,11 @@ export default function AboutPage() {
             </FadeIn>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* ═══ WHAT MAKES US DIFFERENT: ZARAAT KACH'HERI ═══ */}
-      <section className="bg-brand-800 text-white px-6 py-20 lg:py-24 relative overflow-hidden">
+      <section className="w-full bg-brand-800 text-white px-4 sm:px-6 lg:px-8 py-20 lg:py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
@@ -247,6 +298,11 @@ export default function AboutPage() {
                       <h4 className="text-lg font-bold text-white mt-1">Hyderabad Branch</h4>
                       <p className="text-sm text-white/70 mt-1">Production and logistics facility with <strong>20+ active beds</strong> catering to Sindh and nationwide dispatch.</p>
                     </div>
+                    <div className="p-4 bg-brand-800/80 rounded-2xl border border-white/10">
+                      <p className="text-gold-400 text-xs font-bold uppercase tracking-wider">Field Operations</p>
+                      <h4 className="text-lg font-bold text-white mt-1">Tando Allahyar &amp; Badin City</h4>
+                      <p className="text-sm text-white/70 mt-1">On-site branch operations managing farm waste conversion, vermicompost production, and regional farmer support.</p>
+                    </div>
                   </div>
                 </div>
               </FadeIn>
@@ -255,31 +311,36 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ═══ FOUNDER'S MESSAGE & LEADERSHIP PROFILES ═══ */}
-      <section className="bg-cream-100 px-6 py-20 lg:py-28">
-        <div className="max-w-6xl mx-auto">
-          {/* Founder Message */}
+      {/* ═══ FOUNDER'S MESSAGE & FULL TEAM INTRODUCTION ═══ */}
+      <section className="w-full bg-cream-100 px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative">
+        <div className="max-w-7xl mx-auto">
+          {/* Founder Message Card */}
           <FadeIn>
-            <div className="bg-white p-8 md:p-12 lg:p-14 rounded-3xl shadow-sm border border-brand-100 mb-16">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="bg-white p-8 md:p-12 lg:p-14 rounded-3xl shadow-lg border border-brand-100 mb-20 relative overflow-hidden group">
+              <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-gold-400/10 rounded-full blur-3xl pointer-events-none group-hover:bg-gold-400/20 transition-all duration-700" />
+              
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
                 <div className="lg:col-span-4 flex flex-col items-center text-center">
-                  <div className="w-44 h-44 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-brand-800 to-brand-900 flex flex-col items-center justify-center text-gold-300 shadow-md border-2 border-gold-400/30">
-                    <span className="text-5xl font-display font-bold">SAK</span>
-                    <span className="text-xs uppercase tracking-widest text-white/70 mt-2 font-medium">Founder</span>
+                  <div className="w-44 h-44 md:w-52 md:h-52 rounded-2xl bg-gradient-to-br from-brand-800 via-brand-900 to-brand-950 flex flex-col items-center justify-center text-gold-300 shadow-xl border-2 border-gold-400/40 relative overflow-hidden group-hover:border-gold-400 transition-colors">
+                    <div className="absolute inset-0 bg-[radial-gradient(#ffca19_1px,transparent_1px)] [background-size:16px_16px] opacity-10" />
+                    <span className="text-5xl font-display font-bold relative z-10 text-gold-300 tracking-wider">ASK</span>
+                    <span className="text-[0.65rem] uppercase tracking-widest text-gold-400/90 mt-2 font-bold px-3 py-0.5 rounded-full bg-brand-950/60 border border-gold-400/30">
+                      Founder
+                    </span>
                   </div>
-                  <h3 className="font-display text-xl font-bold text-brand-800 mt-4">
-                    Sohaib Ahmed Khatti
+                  <h3 className="font-display text-xl font-bold text-brand-900 mt-4">
+                    Abdul Sattar Khatti
                   </h3>
                   <p className="text-gold-600 text-sm font-semibold">Founder, Al Barakh Organics</p>
-                  <p className="text-xs text-gray-500 mt-1">Started 2024</p>
+                  <p className="text-xs text-gray-500 mt-1 font-medium">Started 2001</p>
                 </div>
 
                 <div className="lg:col-span-8">
                   <span className="eyebrow text-gold-500">Founder&apos;s &amp; Leadership Message</span>
-                  <h2 className="font-display text-2xl md:text-3xl font-bold text-brand-800 mt-1">
+                  <h2 className="font-display text-2xl md:text-3xl font-bold text-brand-900 mt-1">
                     The Vision Behind Al Barakh
                   </h2>
-                  <blockquote className="mt-6 border-l-4 border-gold-400 pl-6 py-2 bg-cream-50 rounded-r-xl">
+                  <blockquote className="mt-6 border-l-4 border-gold-400 pl-6 py-3 bg-cream-50 rounded-r-2xl border-y border-r border-brand-100">
                     <p className="text-gray-800 leading-relaxed italic text-base md:text-lg font-medium">
                       &quot;When I saw growers who had worked in agriculture for generations selling their lands, and green fields turning into incomplete plotting schemes, I started asking what was going wrong.
                     </p>
@@ -290,100 +351,154 @@ export default function AboutPage() {
                       That thinking led to Al Barakh Organics, with a simple purpose: to introduce, create awareness about and provide sustainable agriculture solutions. Vermicompost is only the beginning. Our vision is to empower farmers, improve soil health and build a more sustainable agricultural future.&quot;
                     </p>
                   </blockquote>
-                  <p className="mt-4 text-xs font-bold text-brand-700 text-right">
-                    — Sohaib Ahmed Khatti, Founder
+                  <p className="mt-4 text-sm font-bold text-brand-800 text-right">
+                    — Abdul Sattar Khatti, Founder
                   </p>
                 </div>
               </div>
             </div>
           </FadeIn>
 
-          {/* Leadership Team Cards */}
-          <FadeIn delay={0.1}>
-            <div className="text-center mb-10">
-              <span className="eyebrow text-gold-500">Leadership &amp; Management</span>
-              <h2 className="font-display text-3xl font-bold text-brand-900 mt-1">
-                The Team Driving the Movement
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Sohaib Profile */}
-              <div className="bg-white p-8 rounded-2xl border border-brand-100 shadow-sm flex items-start gap-5 hover:border-gold-400/50 transition">
-                <div className="w-16 h-16 rounded-xl bg-brand-800 text-gold-400 flex items-center justify-center text-xl font-bold flex-shrink-0">
-                  SAK
-                </div>
-                <div>
-                  <h3 className="font-display text-xl font-bold text-brand-900">Sohaib Ahmed Khatti</h3>
-                  <p className="text-gold-600 text-sm font-semibold mb-2">Founder</p>
-                  <p className="text-gray-600 text-xs leading-relaxed">
-                    Pioneered Al Barakh in 2024 to restore degraded soils, launch Zaraat Kach’heri, and make high-quality biological vermicompost accessible across Pakistan.
-                  </p>
-                </div>
+          {/* ═══ INTRODUCING OUR WHOLE TEAM ═══ */}
+          <div className="mt-8 space-y-16">
+            {/* Header */}
+            <FadeIn delay={0.1}>
+              <div className="text-center max-w-3xl mx-auto mb-12">
+                <span className="eyebrow text-gold-500">Our Dedicated Team</span>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-1">
+                  The Team Driving The Movement
+                </h2>
+                <p className="text-gray-600 text-sm md:text-base mt-3">
+                  Combining visionary leadership, dedicated marketing outreach, and passionate branch operations &amp; quality control specialists across Pakistan.
+                </p>
               </div>
+            </FadeIn>
 
-              {/* Arshad Ali Profile */}
-              <div className="bg-white p-8 rounded-2xl border border-brand-100 shadow-sm flex items-start gap-5 hover:border-gold-400/50 transition">
-                <div className="w-16 h-16 rounded-xl bg-gold-400 text-brand-950 flex items-center justify-center text-xl font-bold flex-shrink-0">
-                  AA
+            {/* 1. EXECUTIVE LEADERSHIP */}
+            <div>
+              <FadeIn delay={0.12}>
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="w-8 h-1 bg-gold-400 rounded-full" />
+                  <h3 className="font-display text-xl md:text-2xl font-bold text-brand-900">
+                    Executive &amp; Growth Leadership
+                  </h3>
                 </div>
-                <div>
-                  <h3 className="font-display text-xl font-bold text-brand-900">Arshad Ali</h3>
-                  <p className="text-gold-600 text-sm font-semibold mb-2">Marketing Head</p>
-                  <p className="text-gray-600 text-xs leading-relaxed">
-                    Leads outreach, brand partnerships, B2B and retail distribution, and farmer awareness campaigns to connect communities with sustainable organic inputs.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+              </FadeIn>
 
-      {/* ═══ OUR 4-STEP APPROACH ═══ */}
-      <section className="bg-brand-900 px-6 py-20 lg:py-28 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffca19_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {executiveTeam.map((member, idx) => (
+                  <FadeIn key={member.name} delay={0.15 + idx * 0.08}>
+                    <div className="bg-white rounded-2xl p-7 border border-brand-100 shadow-sm hover:shadow-xl hover:border-gold-400/70 transition-all duration-300 flex flex-col justify-between h-full group hover:-translate-y-1">
+                      <div>
+                        {/* Top Badge & Avatar */}
+                        <div className="flex items-start justify-between mb-5">
+                          <div className={`w-18 h-18 w-16 h-16 rounded-2xl bg-gradient-to-br ${member.avatarGradient} text-gold-300 flex flex-col items-center justify-center font-display font-bold text-2xl shadow-md border border-gold-400/30 group-hover:scale-105 transition-transform`}>
+                            <span>{member.initials}</span>
+                          </div>
+                          <span className={`text-[0.7rem] font-bold uppercase tracking-wider px-3 py-1 rounded-full ${member.badgeColor}`}>
+                            {member.department}
+                          </span>
+                        </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <FadeIn>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="font-cursive text-3xl md:text-4xl text-gold-400">Our Methodology</p>
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-2">
-                A Complete Solutions Framework,<br />
-                <span className="text-gold-300">Not Just a Product</span>
-              </h2>
-              <p className="mt-4 text-white/75 text-base md:text-lg">
-                We combine biological inputs with field education and modern farming consultancy to deliver long-term yield and soil gains.
-              </p>
-            </div>
-          </FadeIn>
+                        {/* Title & Name */}
+                        <h4 className="font-display text-xl font-bold text-brand-900 group-hover:text-gold-600 transition-colors">
+                          {member.name}
+                        </h4>
+                        <p className="text-xs font-semibold text-gold-600 mt-1 mb-3">
+                          {member.role}
+                        </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {approachSteps.map((step, index) => (
-              <FadeIn key={step.step} delay={index * 0.1}>
-                <div className="bg-brand-800/80 backdrop-blur-sm border border-white/10 rounded-2xl p-6 h-full flex flex-col justify-between hover:border-gold-400/50 hover:bg-brand-800 transition-all duration-300 hover:-translate-y-1 shadow-lg group">
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-3xl">{step.icon}</span>
-                      <span className="text-xs font-mono font-bold text-gold-400 bg-brand-900/80 px-2.5 py-1 rounded-full border border-gold-400/30">
-                        STEP {step.step}
-                      </span>
+                        {/* Bio */}
+                        <p className="text-gray-600 text-xs leading-relaxed">
+                          {member.bio}
+                        </p>
+                      </div>
+
+                      {/* Bottom decorative bar */}
+                      <div className="mt-6 pt-4 border-t border-brand-50 flex items-center justify-between text-xs text-brand-800 font-medium">
+                        <span className="inline-flex items-center gap-1.5 text-gray-500">
+                          <span>{member.icon}</span> Al Barakh Core Team
+                        </span>
+                        <span className="text-gold-500 font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+                          ★
+                        </span>
+                      </div>
                     </div>
-                    <h3 className="font-display text-lg font-bold text-white group-hover:text-gold-300 transition-colors">
-                      {step.title}
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
+
+            {/* 2. BRANCH OPERATIONS & QUALITY CONTROL */}
+            <div>
+              <FadeIn delay={0.2}>
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="w-8 h-1 bg-gold-400 rounded-full" />
+                  <div>
+                    <h3 className="font-display text-xl md:text-2xl font-bold text-brand-900">
+                      Branch Operations &amp; Quality Control
                     </h3>
-                    <p className="mt-3 text-white/70 text-sm leading-relaxed">
-                      {step.description}
+                    <p className="text-xs text-gray-500 mt-0.5">
+                      On-site supervisors and managers ensuring premium vermicompost production and strict standard adherence.
                     </p>
                   </div>
                 </div>
               </FadeIn>
-            ))}
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {operationsTeam.map((member, idx) => (
+                  <FadeIn key={member.name + member.role} delay={0.25 + idx * 0.06}>
+                    <div className="bg-white rounded-2xl p-6 border border-brand-100 shadow-sm hover:shadow-xl hover:border-gold-400/70 transition-all duration-300 flex flex-col justify-between h-full group hover:-translate-y-1">
+                      <div>
+                        {/* Header Avatar & Branch Pin */}
+                        <div className="flex items-start justify-between mb-4">
+                          <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${member.avatarGradient} text-gold-300 flex items-center justify-center font-display font-bold text-xl shadow-md border border-gold-400/30 group-hover:scale-105 transition-transform`}>
+                            {member.initials}
+                          </div>
+                          <span className="text-[0.65rem] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-cream-100 text-brand-900 border border-brand-200">
+                            {member.branchCode}
+                          </span>
+                        </div>
+
+                        {/* Name & Role */}
+                        <h4 className="font-display text-lg font-bold text-brand-900 group-hover:text-gold-600 transition-colors">
+                          {member.name}
+                        </h4>
+                        <p className="text-xs font-semibold text-gold-600 mt-0.5">
+                          {member.role}
+                        </p>
+                        <p className="text-[0.7rem] text-gray-500 mt-0.5 font-medium flex items-center gap-1">
+                          <span>📍</span> {member.branch}
+                        </p>
+
+                        {/* Focus / Quote Box */}
+                        <div className="mt-4 p-3 rounded-xl bg-cream-50/80 border border-brand-100/70">
+                          <p className="text-[0.7rem] uppercase tracking-wider font-bold text-brand-800 mb-1 flex items-center gap-1">
+                            <span>{member.icon}</span> Core Role &amp; Commitment
+                          </p>
+                          <p className="text-xs text-gray-700 leading-relaxed italic">
+                            &ldquo;{member.roleQuote}&rdquo;
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Footer Department Tag */}
+                      <div className="mt-5 pt-3 border-t border-brand-50 flex items-center justify-between text-[0.7rem] text-gray-500">
+                        <span>{member.department}</span>
+                        <span className="text-gold-500 font-bold text-xs">✓ Active</span>
+                      </div>
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+
       {/* ═══ MISSION, VISION & 8 CORE VALUES ═══ */}
-      <section className="bg-cream-100 px-6 py-20 lg:py-28 relative overflow-hidden">
+      <section className="w-full bg-white border-t border-brand-100/80 px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -396,9 +511,9 @@ export default function AboutPage() {
 
           {/* Stacked Full-Width Mission & Vision Banners */}
           <div className="space-y-10 mb-16">
-            {/* MISSION BANNER - Full-width Luxury White & Gold Flagship Box */}
+            {/* MISSION BANNER - Full-width Luxury Cream & Gold Flagship Box */}
             <FadeIn delay={0.05}>
-              <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-brand-100/90 text-brand-900 relative overflow-hidden group hover:border-gold-400 transition-all duration-500">
+              <div className="bg-cream-50/90 rounded-3xl p-8 md:p-12 shadow-md border border-brand-100/90 text-brand-900 relative overflow-hidden group hover:border-gold-400 transition-all duration-500">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl group-hover:bg-gold-400/10 transition-all duration-700 pointer-events-none" />
                 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
@@ -421,12 +536,12 @@ export default function AboutPage() {
 
                   {/* Right Column: Paragraph Content */}
                   <div className="lg:col-span-8 space-y-4">
-                    <div className="p-5 rounded-2xl bg-cream-50/80 border border-brand-100/80">
+                    <div className="p-5 rounded-2xl bg-white border border-brand-100/80 shadow-xs">
                       <p className="text-gray-700 text-sm md:text-base leading-relaxed font-normal">
                         To revive and promote sustainable, organic agriculture in Pakistan by restoring soil health, empowering farmers and communities, and making modern agricultural knowledge accessible through practical training and awareness programs.
                       </p>
                     </div>
-                    <div className="p-5 rounded-2xl bg-cream-50/80 border border-brand-100/80">
+                    <div className="p-5 rounded-2xl bg-white border border-brand-100/80 shadow-xs">
                       <p className="text-gray-600 text-sm md:text-base leading-relaxed font-normal">
                         We aim to encourage women and girls to actively participate in agriculture, creating opportunities for learning, leadership, and entrepreneurship while building a healthier and more sustainable future for generations to come.
                       </p>
@@ -436,9 +551,9 @@ export default function AboutPage() {
               </div>
             </FadeIn>
 
-            {/* VISION BANNER - Full-width Luxury White & Gold Flagship Box */}
+            {/* VISION BANNER - Full-width Luxury Cream & Gold Flagship Box */}
             <FadeIn delay={0.1}>
-              <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gold-300/80 text-brand-900 relative overflow-hidden group hover:border-gold-400 transition-all duration-500">
+              <div className="bg-cream-50/90 rounded-3xl p-8 md:p-12 shadow-md border border-gold-300/80 text-brand-900 relative overflow-hidden group hover:border-gold-400 transition-all duration-500">
                 <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl group-hover:bg-gold-400/10 transition-all duration-700 pointer-events-none" />
                 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
@@ -461,12 +576,12 @@ export default function AboutPage() {
 
                   {/* Right Column: Paragraph Content */}
                   <div className="lg:col-span-8 space-y-4">
-                    <div className="p-5 rounded-2xl bg-cream-50/80 border border-brand-100/80">
+                    <div className="p-5 rounded-2xl bg-white border border-brand-100/80 shadow-xs">
                       <p className="text-gray-700 text-sm md:text-base leading-relaxed font-normal">
                         To transform Al Barakh into a leading sustainable agriculture enterprise in Pakistan—producing vermicompost, vermiwash, biochar, and other organic solutions while becoming a hub where farmers, growers, experts, students, and communities gather, learn, discuss, and collaborate.
                       </p>
                     </div>
-                    <div className="p-5 rounded-2xl bg-cream-50/80 border border-brand-100/80">
+                    <div className="p-5 rounded-2xl bg-white border border-brand-100/80 shadow-xs">
                       <p className="text-gray-600 text-sm md:text-base leading-relaxed font-normal">
                         We envision Al Barakh as a platform for agricultural research, student internships, farmer training, and innovation, while building a trusted Pakistani brand capable of taking sustainable agricultural products to international markets.
                       </p>
@@ -479,7 +594,7 @@ export default function AboutPage() {
 
           {/* 8 Core Values Orbit Container */}
           <FadeIn delay={0.15}>
-            <div className="core-values-panel bg-white/80 backdrop-blur-sm rounded-3xl p-6 md:p-10 border border-brand-100/80 shadow-sm">
+            <div className="core-values-panel bg-cream-50/60 rounded-3xl p-6 md:p-10 border border-brand-100/80 shadow-xs">
               <div className="text-center max-w-2xl mx-auto mb-10">
                 <div className="core-values-kicker">
                   <span aria-hidden="true">◆</span> What We Stand For
@@ -490,21 +605,6 @@ export default function AboutPage() {
               </div>
               <CoreValuesOrbit values={coreValues} />
             </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* ═══ MEASURABLE SCALE STATS ═══ */}
-      <section className="px-6 py-20 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <FadeIn>
-            <div className="text-center mb-12">
-              <span className="eyebrow text-gold-500">Facility &amp; Impact Scale</span>
-              <h2 className="font-display text-3xl font-bold text-brand-900 mt-2">
-                Our Operational Footprint
-              </h2>
-            </div>
-            <CountUpStats stats={impactStats} />
           </FadeIn>
         </div>
       </section>

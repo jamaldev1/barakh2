@@ -19,24 +19,20 @@ export default function Header() {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="hidden lg:block bg-brand-800 text-white/80 text-xs">
-        <div className="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2">
-              <svg className="w-3.5 h-3.5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      {/* Top Announcement Bar */}
+      <div className="bg-brand-800 text-white/90 text-xs border-b border-brand-700/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
+          <div className="flex items-center gap-4 sm:gap-6">
+            <span className="inline-flex items-center gap-1.5 font-semibold text-white">
+              <span className="text-sm leading-none">🇵🇰</span>
+              <span>Delivery All Over Pakistan</span>
+            </span>
+            <span className="hidden sm:inline-block text-white/30">•</span>
+            <span className="hidden sm:flex items-center gap-1.5 text-white/80">
+              <svg className="w-3.5 h-3.5 text-gold-400" fill="currentColor" viewBox="0 0 512 512">
+                <path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z" />
               </svg>
-              <span>Branches: <strong>Tando Ghulam Ali</strong> &amp; <strong>Hyderabad</strong></span>
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="text-gold-400">🇵🇰</span>
-              <span>All Over Pakistan</span>
-            </span>
-            <span className="flex items-center gap-2">
-              <svg className="w-3.5 h-3.5 text-gold-400" fill="currentColor" viewBox="0 0 512 512"><path d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"/></svg>
-              <span>Business Hours: 09:00 – 17:00</span>
+              <span>Hours: 09:00 – 17:00</span>
             </span>
           </div>
           <div className="flex items-center gap-3">
@@ -44,10 +40,17 @@ export default function Header() {
               href="https://wa.me/923168803363"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 font-medium hover:text-white transition"
+              className="flex items-center gap-1.5 font-medium hover:text-gold-300 transition"
             >
               <span className="text-gold-400">📞</span>
-              <span>WhatsApp / Call: <strong>0316 8803363</strong></span>
+              <span>WhatsApp: <strong>0316 8803363</strong></span>
+            </a>
+            <span className="text-white/30 hidden sm:inline-block">|</span>
+            <a
+              href="tel:03333089886"
+              className="font-medium hover:text-gold-300 transition hidden sm:inline-block"
+            >
+              <span><strong>0333 3089886</strong></span>
             </a>
           </div>
         </div>
@@ -55,7 +58,7 @@ export default function Header() {
 
       {/* Main Navigation */}
       <header className="sticky top-0 z-50 bg-white shadow-sm">
-        <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+        <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <img

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Header from '@/components/Header'
 import FadeIn from '@/components/FadeIn'
 import MotionButton from '@/components/MotionButton'
@@ -5,7 +6,6 @@ import TestimonialCarousel from '@/components/TestimonialCarousel'
 import CountUpStats from '@/components/CountUpStats'
 import HeroBackgroundSlider from '@/components/HeroBackgroundSlider'
 import CTABanner from '@/components/CTABanner'
-import SolutionsSlider from '@/components/SolutionsSlider'
 import FAQSection from '@/components/FAQSection'
 import { testimonialsData } from '@/data/testimonials'
 
@@ -17,11 +17,11 @@ export const metadata = {
 
 const credibilityStats = [
   {
-    value: 500,
+    value: 3000,
     suffix: '+',
     label: 'Acres Supported',
     title: 'Proven Agricultural Impact',
-    description: 'Real-world organic application across farms and orchards in Pakistan',
+    description: 'Farmers of 3000+ acres are part of our community',
   },
   {
     value: 10000,
@@ -38,24 +38,50 @@ const credibilityStats = [
     description: 'Practical workshops, field masterclasses & Zaraat Kach’heri sessions',
   },
 ]
-
 const featureIcons = [
-  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-1a.png', title: 'Premium-Quality Vermicompost' },
-  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-2a.png', title: 'Farmer Empowerment & Training' },
-  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-3a.png', title: 'Zaraat Kach’heri' },
+  {
+    icon: '🎓',
+    title: 'Farmer Training & Zaraat Kach’heri',
+    desc: 'Empowering growers with modern agricultural knowledge',
+    href: '/training',
+  },
+  {
+    icon: '🌱',
+    title: 'Premium Organic Vermicompost',
+    desc: '100% pure organic biological fertilizer',
+    href: '/products',
+  },
+  {
+    icon: '🪱',
+    title: 'Active Red Wiggler Colonies',
+    desc: 'Healthy Eisenia fetida breeding stock',
+    href: '/products',
+  },
 ]
 
 const whatMakesUsDifferent = [
-  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-13.png', title: 'Sustainable Agriculture', desc: 'Practical methods to rebuild soil organic matter and boost fertility' },
-  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-12.png', title: '500+ Acres Supported', desc: 'Proven field track record across commercial farms and orchards' },
-  { icon: 'https://askit.dextheme.net/agrow/wp-content/uploads/sites/53/2026/04/icon-11.png', title: 'Tree Donations to Schools', desc: 'Community engagement and environmental greening initiatives' },
+  {
+    icon: '🌿',
+    title: 'Sustainable Soil Restoration',
+    desc: 'Practical biological solutions to rebuild organic matter and cut chemical dependency',
+  },
+  {
+    icon: '📈',
+    title: '3000+ Acres Supported',
+    desc: 'Trusted by growers, commercial orchards, and nurseries across Pakistan',
+  },
+  {
+    icon: '🤝',
+    title: 'Zaraat Kach’heri Community',
+    desc: 'Open dialogue and hands-on masterclasses empowering farmers and new-generation growers',
+  },
 ]
 
 export default function HomePage() {
   const testimonials = testimonialsData.map((t) => ({
     id: t.id,
     customerName: t.name,
-    location: `${t.location} (${t.farmName})`,
+    location: t.farmName ? `${t.location} (${t.farmName})` : t.location,
     quote: t.quote,
     rating: String(t.rating),
     photoUrl: t.avatar,
@@ -65,11 +91,11 @@ export default function HomePage() {
     <>
       <Header />
 
-      {/* ═══ HERO ═══ */}
+      {/* ═══ 1. HERO ═══ */}
       <section className="relative overflow-hidden min-h-[600px] lg:min-h-[700px] flex items-center">
         <HeroBackgroundSlider />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-24 lg:py-32 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32 w-full">
           <div className="max-w-2xl">
             <FadeIn>
               <p className="font-cursive text-3xl md:text-4xl text-gold-400">Farm Tomorrow</p>
@@ -98,30 +124,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ FEATURE ICONS + ABOUT OUR FARM + WHAT MAKES US DIFFERENT ═══ */}
-      <section className="home-feature-section max-w-7xl mx-auto px-6 -mt-16 pb-16 md:pb-24 lg:pb-32 relative z-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-6">
-          {/* Left Column: Feature Icons + About */}
+      {/* ═══ 2. FEATURE ICONS + ABOUT OUR PURPOSE ═══ */}
+      <section className="home-feature-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 pb-16 md:pb-24 lg:pb-32 relative z-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8">
+          {/* Left Column: Feature Cards + About */}
           <div className="flex flex-col">
             <FadeIn>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {featureIcons.map((item) => (
-                  <div key={item.title} className="feature-icon-card">
-                    <img src={item.icon} alt={item.title} className="feature-icon-img" />
-                    <p className="text-white font-semibold text-sm">{item.title}</p>
-                  </div>
+                  <Link
+                    key={item.title}
+                    href={item.href}
+                    className="bg-brand-900/95 hover:bg-brand-800 text-white p-5 rounded-2xl border border-gold-400/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-gold-400/20 text-gold-300 flex items-center justify-center text-2xl mb-4 border border-gold-400/30 group-hover:bg-gold-400 group-hover:text-brand-950 transition-colors">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-display font-bold text-white text-base leading-snug group-hover:text-gold-300 transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-white/70 text-xs mt-1 leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </Link>
                 ))}
               </div>
             </FadeIn>
 
             <FadeIn delay={0.1}>
               <div className="about-farm-copy mt-10">
-                <p className="eyebrow">Why Al Barakh?</p>
+                <span className="eyebrow text-gold-500">Why Al Barakh?</span>
                 <h2 className="about-farm-title">
                   Rooted in Nature,<br />Driven by Sustainability
                 </h2>
                 <p className="about-farm-description text-base leading-relaxed">
-                  We go beyond vermicompost by combining premium organic solutions, farmer empowerment, and practical agricultural knowledge to build healthier soil and a more sustainable future.
+                  We go beyond vermicompost by combining premium organic solutions, farmer empowerment, and practical agricultural knowledge to build healthier soil and a more sustainable future across Pakistan.
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-4">
                   <a href="/about" className="about-farm-button">
@@ -135,20 +174,20 @@ export default function HomePage() {
             </FadeIn>
           </div>
 
-          {/* Right Column: What Makes Us Different */}
+          {/* Right Column: Key Pillars & Impact */}
           <div className="self-start">
             <FadeIn delay={0.15}>
-              <div className="highlight-card">
-                <h3 className="font-display text-2xl font-bold mb-6">Key Benefits &amp; Impact</h3>
+              <div className="bg-white p-7 rounded-3xl border border-brand-100 shadow-md">
+                <h3 className="font-display text-2xl font-bold text-brand-900 mb-6">Key Pillars &amp; Impact</h3>
                 <div className="space-y-5">
                   {whatMakesUsDifferent.map((item) => (
                     <div key={item.title} className="flex items-start gap-4">
-                      <div className="icon-box bg-brand-800">
-                        <img src={item.icon} alt={item.title} className="w-7 h-7 object-contain" />
+                      <div className="w-11 h-11 rounded-xl bg-cream-100 border border-brand-100 flex items-center justify-center text-xl flex-shrink-0 text-brand-900 shadow-xs">
+                        {item.icon}
                       </div>
                       <div>
-                        <h4 className="font-semibold text-brand-900">{item.title}</h4>
-                        <p className="text-brand-800/70 text-sm">{item.desc}</p>
+                        <h4 className="font-display font-bold text-brand-900 text-sm">{item.title}</h4>
+                        <p className="text-gray-600 text-xs leading-relaxed mt-0.5">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -159,14 +198,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ CREDIBILITY STATS (Agrow-style bento) ═══ */}
-      <section className="bg-cream-100 px-6 py-16 md:py-24 lg:py-32">
+      {/* ═══ 3. CREDIBILITY STATS ═══ */}
+      <section className="w-full bg-cream-100 border-t border-brand-100/70 px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="stats-bento-heading">
               <p className="stats-bento-intro">From smallholder farmers to commercial growers, we empower sustainable agriculture across Pakistan with proven field results.</p>
               <div>
-                <p className="eyebrow">Proven Field Impact</p>
+                <span className="eyebrow text-gold-500">Proven Field Impact</span>
                 <h2 className="stats-bento-title">
                   Supporting Farms<br />That Feed Pakistan
                 </h2>
@@ -179,90 +218,170 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ SERVICES / SOLUTIONS SLIDER ═══ */}
-      <SolutionsSlider />
-
-      {/* ═══ FULL-WIDTH FARM BANNER ═══ */}
-      <section className="relative min-h-[500px] flex items-center">
-        <div className="absolute inset-0">
-          <img
-            src="/images/farmer-training.jpg"
-            alt="Farmers working in the field"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-brand-900/70" />
-        </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-24 lg:py-32 w-full text-center">
+      {/* ═══ 4. SOLUTIONS RECTANGULAR GRID (Center Hub + Surrounding Solutions + More Details) ═══ */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-28 bg-white border-t border-brand-100/80 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
           <FadeIn>
-            <p className="font-cursive text-3xl text-gold-400">From Our Farms to Farmers</p>
-            <h2 className="font-display text-3xl md:text-5xl font-bold text-white mt-3 max-w-3xl mx-auto">
-              Real Experience. Real Solutions.
-            </h2>
-            <p className="mt-6 text-white/80 max-w-2xl mx-auto leading-relaxed">
-              Our knowledge comes from practical field experience. Organic fertilizers have been used across 400+ acres, giving Al Barakh practical insight into the application of organic inputs under real agricultural conditions.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a href="/about" className="btn-primary">Our Story →</a>
-              <a href="/impact" className="inline-flex items-center gap-2 border-2 border-white/40 text-white px-6 py-3 rounded-md font-semibold hover:bg-white/10 transition text-sm">
-                See Our Impact
-              </a>
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <span className="eyebrow text-gold-500">What We Offer</span>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-brand-900 mt-2">
+                Our Services &amp; Agricultural Solutions
+              </h2>
             </div>
           </FadeIn>
-        </div>
-      </section>
 
-      {/* ═══ TRAINING TEASER ═══ */}
-      <section className="px-6 py-16 md:py-24 lg:py-32">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <FadeIn>
-              <div className="rounded-2xl overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1200&q=80"
-                  alt="Farmer working in a field with rich soil"
-                  className="w-full h-[450px] object-cover"
-                />
+          {/* 3x3 Rectangular Perimeter Grid with Center Hub (No Icons) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+            {/* 1. Top-Left */}
+            <FadeIn delay={0.05}>
+              <Link
+                href="/products"
+                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+              >
+                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
+                  Premium Vermicompost
+                </h3>
+                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
+                  100% Pure Bio-Nutrition
+                </span>
+              </Link>
+            </FadeIn>
+
+            {/* 2. Top-Center */}
+            <FadeIn delay={0.08}>
+              <Link
+                href="/products"
+                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+              >
+                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
+                  Active Red Wigglers
+                </h3>
+                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
+                  Breeding Colonies
+                </span>
+              </Link>
+            </FadeIn>
+
+            {/* 3. Top-Right */}
+            <FadeIn delay={0.11}>
+              <Link
+                href="/solutions"
+                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+              >
+                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
+                  Soil Health &amp; Diagnostics
+                </h3>
+                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
+                  Biological Rejuvenation
+                </span>
+              </Link>
+            </FadeIn>
+
+            {/* 4. Middle-Left */}
+            <FadeIn delay={0.14}>
+              <Link
+                href="/solutions"
+                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+              >
+                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
+                  Organic Waste Conversion
+                </h3>
+                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
+                  Farm Waste to Wealth
+                </span>
+              </Link>
+            </FadeIn>
+
+            {/* 5. CENTER HUB BOX (Middle-Center) */}
+            <FadeIn delay={0.17}>
+              <div className="bg-gradient-to-br from-brand-900 via-brand-950 to-brand-900 text-white p-8 rounded-3xl border-2 border-gold-400/40 shadow-xl flex flex-col items-center justify-center text-center h-full min-h-[200px] relative overflow-hidden group hover:border-gold-400 transition-colors">
+                <div className="absolute inset-0 bg-[radial-gradient(#ffca19_1px,transparent_1px)] [background-size:16px_16px] opacity-10" />
+                <span className="text-[0.65rem] uppercase tracking-widest text-gold-300 font-bold px-3 py-1 rounded-full bg-brand-950 border border-gold-400/30 mb-2 relative z-10">
+                  AL BARAKH
+                </span>
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-white leading-tight relative z-10">
+                  Our Services &amp;<br />
+                  <span className="text-gold-300">Solutions</span>
+                </h3>
+                <p className="text-white/70 text-xs mt-2 max-w-[200px] relative z-10 leading-relaxed">
+                  Practical biological agriculture for Pakistan
+                </p>
               </div>
             </FadeIn>
-            <FadeIn delay={0.15}>
-              <div>
-                <p className="eyebrow">Training & Capacity Building</p>
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-800 mt-2 leading-snug">
-                  Empowering Farmers with Knowledge
-                </h2>
-                <p className="mt-6 text-gray-600 leading-relaxed">
-                  Training is a major part of the Al Barakh model. We believe sustainable agriculture requires not only access to organic inputs but also practical knowledge. More than 100 farmer and grower trainings have been conducted.
+
+            {/* 6. Middle-Right */}
+            <FadeIn delay={0.2}>
+              <Link
+                href="/training"
+                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+              >
+                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
+                  Zaraat Kach’heri Training
+                </h3>
+                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
+                  Farmer Masterclasses
+                </span>
+              </Link>
+            </FadeIn>
+
+            {/* 7. Bottom-Left */}
+            <FadeIn delay={0.23}>
+              <Link
+                href="/solutions"
+                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+              >
+                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
+                  On-Farm Bed Setup
+                </h3>
+                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
+                  Commercial Infrastructure
+                </span>
+              </Link>
+            </FadeIn>
+
+            {/* 8. Bottom-Center */}
+            <FadeIn delay={0.26}>
+              <Link
+                href="/contact"
+                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+              >
+                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
+                  Commercial Bulk Supply
+                </h3>
+                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
+                  B2B &amp; Contract Supply
+                </span>
+              </Link>
+            </FadeIn>
+
+            {/* 9. Bottom-Right (LAST BLOCK - MORE DETAILS IN BRAND THEME) */}
+            <FadeIn delay={0.29}>
+              <Link
+                href="/solutions"
+                className="bg-brand-900 hover:bg-brand-950 text-white p-7 rounded-3xl border-2 border-gold-400/40 hover:border-gold-400 shadow-md hover:shadow-xl flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              >
+                <h3 className="font-display font-bold text-white text-xl leading-snug group-hover:text-gold-300 transition-colors">
+                  More Details
+                </h3>
+                <p className="text-white/70 text-xs mt-1 mb-3 leading-relaxed">
+                  View complete process &amp; audits
                 </p>
-                <ul className="mt-6 space-y-3">
-                  {['Vermicomposting', 'Organic fertilizer production', 'Soil health & sustainable agriculture', 'Farm-level composting', 'Farmer entrepreneurship'].map((topic) => (
-                    <li key={topic} className="flex items-center gap-3 text-gray-700">
-                      <svg className="w-5 h-5 text-brand-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {topic}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-8 flex flex-wrap gap-4">
-                  <a href="/training" className="btn-primary">Request a Training →</a>
-                  <a href="https://wa.me/923168803363" target="_blank" rel="noopener noreferrer" className="btn-dark">
-                    💬 Talk to Us
-                  </a>
-                </div>
-              </div>
+                <span className="inline-flex items-center gap-1.5 text-xs font-bold bg-gold-400 text-brand-950 px-4 py-1.5 rounded-full group-hover:bg-gold-300 transition-colors shadow-xs">
+                  Solutions Page →
+                </span>
+              </Link>
             </FadeIn>
           </div>
         </div>
       </section>
 
-
-      {/* ═══ TESTIMONIALS ═══ */}
+      {/* ═══ 5. TESTIMONIALS ═══ */}
       {testimonials.length > 0 && (
-        <section className="bg-cream-100 px-6 py-16 md:py-24 lg:py-32">
+        <section className="w-full bg-cream-100 border-t border-brand-100/80 px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
           <div className="max-w-7xl mx-auto">
             <FadeIn>
               <div className="text-center mb-16">
-                <p className="eyebrow">Real Feedback</p>
+                <span className="eyebrow text-gold-500">Real Feedback</span>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-800 mt-2">
                   Farmer Stories
                 </h2>
@@ -271,21 +390,16 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <TestimonialCarousel
-                testimonials={testimonials.map((t: any) => {
-                  const photo = typeof t.photo === 'object' ? t.photo : null
-                  return { id: t.id, customerName: t.customerName, location: t.location, quote: t.quote, rating: t.rating, photoUrl: photo?.url }
-                })}
-              />
+              <TestimonialCarousel testimonials={testimonials} />
             </FadeIn>
           </div>
         </section>
       )}
 
-      {/* ═══ FAQ SECTION ═══ */}
+      {/* ═══ 6. FAQ SECTION ═══ */}
       <FAQSection />
 
-      {/* ═══ PREMIUM CTA BANNER ═══ */}
+      {/* ═══ 7. PREMIUM CTA BANNER ═══ */}
       <CTABanner
         eyebrow="Restore Our Soil"
         title="Ready to Build a Sustainable Future?"

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { trainingPillars, TrainingPillar } from '@/data/training'
+import { trainingPillars } from '@/data/training'
 
 export default function SyllabusDeck() {
   const [activeIdx, setActiveIdx] = useState(0)

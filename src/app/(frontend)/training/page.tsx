@@ -1,7 +1,6 @@
 import Header from '@/components/Header'
 import FadeIn from '@/components/FadeIn'
 import CTABanner from '@/components/CTABanner'
-import { trainingSessionsData } from '@/data/training'
 import SyllabusFlipCards from '@/components/SyllabusFlipCards'
 import TrainingProgrammeCatalogue from '@/components/TrainingProgrammeCatalogue'
 import TrainingStepForm from '@/components/TrainingStepForm'
@@ -16,19 +15,16 @@ const keyTrainingStats = [
   { value: '100+', label: 'Sessions Conducted', sub: 'Practical agricultural training & dialogues' },
   { value: '500+', label: 'Farmers & Growers Trained', sub: 'Across commercial farms, orchards & nurseries' },
   { value: '12', label: 'Core Curriculum Modules', sub: 'Across 3 specialized learning pillars' },
-  { value: '2', label: 'Active Regional Facilities', sub: 'Tando Ghulam Ali & Hyderabad (+ On-Demand)' },
+  { value: '4', label: 'Operating Locations', sub: 'Tando Ghulam Ali, Hyderabad, Tando Allahyar & Badin' },
 ]
 
 export default function TrainingPage() {
-  const sessions = trainingSessionsData
-  const sessionOptions = sessions.map((s) => ({ id: String(s.id), title: s.title }))
-
   return (
     <>
       <Header />
 
       {/* ═══ HERO BANNER ═══ */}
-      <section className="relative min-h-[460px] lg:min-h-[520px] flex items-center overflow-hidden">
+      <section className="relative min-h-[460px] lg:min-h-[520px] flex items-center overflow-hidden w-full">
         <div className="absolute inset-0">
           <img
             src="/images/farmer-training.jpg"
@@ -38,7 +34,7 @@ export default function TrainingPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-900/80 to-brand-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-transparent to-brand-950/30" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-28 w-full text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full text-center">
           <FadeIn>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-300 font-semibold text-xs uppercase tracking-wider mb-4 backdrop-blur-sm">
               Community Empowerment &amp; Agricultural Knowledge
@@ -69,7 +65,7 @@ export default function TrainingPage() {
       </section>
 
       {/* ═══ KEY ACHIEVEMENTS & STATS BAR ═══ */}
-      <section className="bg-brand-900 text-white py-12 px-6 border-b border-gold-400/20">
+      <section className="w-full bg-brand-900 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-gold-400/20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
             {keyTrainingStats.map((stat) => (
@@ -84,7 +80,7 @@ export default function TrainingPage() {
       </section>
 
       {/* ═══ 3-PILLAR CURRICULUM SECTION ═══ */}
-      <section id="curriculum" className="px-6 py-20 lg:py-28 bg-cream-50/60 border-b border-brand-100/60 scroll-mt-20">
+      <section id="curriculum" className="w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-28 bg-cream-50/60 border-b border-brand-100/60 scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -107,7 +103,7 @@ export default function TrainingPage() {
       </section>
 
       {/* ═══ EDITORIAL PROGRAMME DELIVERY & AUDIENCE ═══ */}
-      <section className="px-6 py-20 lg:py-28 bg-[#FAF9F5] border-b border-stone-200/80">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-28 bg-[#FAF9F5] border-b border-stone-200/80">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             
@@ -169,7 +165,7 @@ export default function TrainingPage() {
                     {
                       num: '01',
                       title: 'Farm Visits & Live Bed Demonstrations',
-                      desc: 'Hands-on practical exposure right on active vermicomposting beds in Tando Ghulam Ali and Hyderabad.',
+                      desc: 'Hands-on practical exposure right on active vermicomposting beds across Tando Ghulam Ali, Hyderabad, Tando Allahyar, and Badin.',
                     },
                     {
                       num: '02',
@@ -228,7 +224,7 @@ export default function TrainingPage() {
       </section>
 
       {/* ═══ TRAINING PROGRAMMES CATALOGUE ═══ */}
-      <section id="sessions" className="px-6 py-10 lg:py-14 bg-white border-b border-stone-200/80 scroll-mt-20">
+      <section id="sessions" className="w-full px-4 sm:px-6 lg:px-8 py-10 lg:py-14 bg-white border-b border-stone-200/80 scroll-mt-20">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <TrainingProgrammeCatalogue />
@@ -237,7 +233,7 @@ export default function TrainingPage() {
       </section>
 
       {/* ═══ REQUEST A TRAINING SESSION — 3-STEP FORM ═══ */}
-      <section id="register" className="px-6 py-14 lg:py-20 bg-[#FAF9F5] border-t border-stone-200/80 relative overflow-hidden scroll-mt-20">
+      <section id="register" className="w-full px-4 sm:px-6 lg:px-8 py-14 lg:py-20 bg-[#FAF9F5] border-t border-stone-200/80 relative overflow-hidden scroll-mt-20">
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
 
@@ -251,7 +247,7 @@ export default function TrainingPage() {
                   Request a<br />Training Session
                 </h2>
                 <p className="mt-3 text-[#53636A] text-sm leading-relaxed max-w-md">
-                  Register your interest for our upcoming sessions at <strong className="text-brand-900">Tando Ghulam Ali</strong> or <strong className="text-brand-900">Hyderabad</strong>, or request a custom workshop for your farm team or university.
+                  Register your interest for our upcoming sessions across <strong className="text-brand-900">Tando Ghulam Ali</strong>, <strong className="text-brand-900">Hyderabad</strong>, <strong className="text-brand-900">Tando Allahyar</strong> or <strong className="text-brand-900">Badin City</strong>, or request a custom workshop for your farm team or university.
                 </p>
 
                 {/* Subtle divider */}
@@ -263,7 +259,7 @@ export default function TrainingPage() {
                     <span className="font-mono text-xs text-gold-600 font-bold">01</span>
                     <div>
                       <p className="text-[0.65rem] font-bold uppercase tracking-wider text-stone-500">Call / WhatsApp Coordinator</p>
-                      <p className="font-display text-base font-bold text-brand-900">0316 8803363</p>
+                      <p className="font-display text-base font-bold text-brand-900">0316 8803363 / 0333 3089886</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">

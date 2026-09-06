@@ -25,6 +25,11 @@ const defaultSlides: HeroSlide[] = [
     alt: 'Rich organic vermicompost and flourishing organic greenhouse crops',
     subtitle: 'Premium Vermicompost Power',
   },
+  {
+    image: '/images/hero-red-wigglers.jpg',
+    alt: 'Active Red Wiggler (Eisenia fetida) composting worms in nutrient-rich organic bedding',
+    subtitle: 'Active Red Wiggler Colonies',
+  },
 ]
 
 export default function HeroBackgroundSlider({

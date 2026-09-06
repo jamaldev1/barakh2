@@ -21,7 +21,7 @@ export default async function ResourcePost({ params }: { params: Promise<{ slug:
       <Header />
       <article>
         {/* Article Header */}
-        <section className="bg-brand-900 pt-24 pb-32 px-6">
+        <section className="w-full bg-brand-900 pt-24 pb-32 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <FadeIn>
               <Link
@@ -50,7 +50,7 @@ export default async function ResourcePost({ params }: { params: Promise<{ slug:
         </section>
 
         {/* Article Body */}
-        <section className="px-6 -mt-16 relative z-10 pb-24">
+        <section className="w-full px-4 sm:px-6 lg:px-8 -mt-16 relative z-10 pb-24">
           <div className="max-w-4xl mx-auto">
             <FadeIn delay={0.1}>
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">

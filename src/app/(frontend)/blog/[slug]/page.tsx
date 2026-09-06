@@ -19,7 +19,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <>
       <Header />
-      <main className="max-w-4xl mx-auto px-6 py-16">
+      <main className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <FadeIn>
           <Link href="/blog" className="text-brand-700 text-sm font-semibold hover:text-brand-900 transition-colors mb-6 inline-flex items-center gap-2">
             <span>←</span> Back to All Articles

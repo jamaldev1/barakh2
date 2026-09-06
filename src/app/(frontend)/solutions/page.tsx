@@ -1,7 +1,6 @@
 import Header from '@/components/Header'
 import FadeIn from '@/components/FadeIn'
 import CTABanner from '@/components/CTABanner'
-import MotionButton from '@/components/MotionButton'
 import SolutionsSlider from '@/components/SolutionsSlider'
 
 export const metadata = {
@@ -49,7 +48,7 @@ export default function SolutionsPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-900/80 to-brand-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-transparent to-brand-950/30" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-28 w-full text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full text-center">
           <FadeIn>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-300 font-semibold text-xs uppercase tracking-wider mb-4 backdrop-blur-sm">
               🌾 Practical Field Solutions • Science-Backed
@@ -69,7 +68,7 @@ export default function SolutionsPage() {
       <SolutionsSlider />
 
       {/* ═══ HOW WE DELIVER SOLUTIONS (3-Step Framework) ═══ */}
-      <section className="bg-cream-100 px-6 py-20 lg:py-28 border-t border-brand-100">
+      <section className="w-full bg-cream-100 px-4 sm:px-6 lg:px-8 py-20 lg:py-28 border-t border-brand-100">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">

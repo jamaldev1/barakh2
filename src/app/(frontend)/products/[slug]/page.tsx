@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { productsData } from '@/data/products'
 
+import CTABanner from '@/components/CTABanner'
+
 export function generateStaticParams() {
   return productsData.map((p) => ({
     slug: p.slug,
@@ -23,15 +25,15 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <Header />
       
       {/* Breadcrumb / Top Bar */}
-      <div className="bg-cream-100 py-4 px-6 border-b border-cream-200">
-        <div className="max-w-6xl mx-auto">
+      <div className="w-full bg-cream-100 py-4 px-4 sm:px-6 lg:px-8 border-b border-cream-200">
+        <div className="max-w-7xl mx-auto">
           <Link href="/products" className="text-brand-700 text-sm font-semibold hover:text-brand-900 transition-colors inline-flex items-center gap-2">
             <span>←</span> Back to Products
           </Link>
         </div>
       </div>
 
-      <main className="max-w-6xl mx-auto px-6 py-16 lg:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+      <main className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
         <FadeIn>
           <div className="rounded-[2rem] overflow-hidden shadow-xl border border-gray-100 bg-white p-2">
             <img
@@ -118,6 +120,17 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
         </FadeIn>
       </main>
+
+      {/* ═══ CTA BANNER ═══ */}
+      <CTABanner
+        eyebrow="Commercial & Institutional Supply"
+        title="Looking for Large Acreage Orders or Custom Formulation?"
+        description="We supply commercial orchards, corporate agriculture projects, and plant nurseries with scheduled dispatch nationwide."
+        primaryBtnText="Request Bulk Quote →"
+        primaryBtnHref="/contact"
+        secondaryBtnText="💬 WhatsApp Agronomist"
+        secondaryBtnHref="https://wa.me/923168803363"
+      />
     </>
   )
 }

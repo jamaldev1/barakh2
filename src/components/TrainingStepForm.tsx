@@ -1,21 +1,20 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const programmes = [
   {
     id: 'field-training',
     label: 'FIELD TRAINING',
-    title: 'Tando Ghulam Ali',
+    title: 'Tando Ghulam Ali (Main)',
     desc: 'Full Day · 200+ Bed Facility',
   },
   {
     id: 'regional-session',
-    label: 'REGIONAL SESSION',
-    title: 'Hyderabad',
-    desc: 'Half Day · Regional Branch Hub',
+    label: 'REGIONAL HUBS',
+    title: 'Hyderabad / TAY / Badin',
+    desc: 'Half Day · Regional Operations',
   },
   {
     id: 'custom-training',
@@ -47,7 +46,6 @@ const slideVariants = {
 }
 
 export default function TrainingStepForm() {
-  const router = useRouter()
   const [step, setStep] = useState(0)
   const [direction, setDirection] = useState(1)
   const [submitted, setSubmitted] = useState(false)
@@ -125,7 +123,7 @@ export default function TrainingStepForm() {
             Continue on WhatsApp →
           </a>
           <p className="text-xs text-stone-400">
-            Or call directly: <span className="font-semibold text-brand-900">0316 8803363</span>
+            Or call directly: <span className="font-semibold text-brand-900">0316 8803363 / 0333 3089886</span>
           </p>
         </div>
       </motion.div>

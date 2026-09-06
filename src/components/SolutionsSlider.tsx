@@ -27,7 +27,7 @@ const solutionsData: SolutionItem[] = [
     points: [
       'Increases root aeration & microbial activity',
       'Non-burning, safe for all crops and orchards',
-      'Field-proven results across 400+ acres',
+      'Field-proven results across 3000+ acres',
     ],
     link: '/products',
     linkText: 'Explore Fertilizer',
@@ -43,7 +43,7 @@ const solutionsData: SolutionItem[] = [
     title: 'Live Red Wigglers',
     subtitle: 'High-Efficiency Eisenia Fetida',
     desc: 'Active, healthy breeder-grade composting worms bred for rapid reproduction and superior organic matter processing in Pakistan.',
-    image: '/images/hero-farm-landscape.jpg',
+    image: '/images/hero-red-wigglers.jpg',
     points: [
       'Acclimatized productive starter colonies',
       'Complete farm-level bedding & feed guide',
@@ -103,7 +103,7 @@ const solutionsData: SolutionItem[] = [
     title: 'Organic Waste Conversion',
     subtitle: 'Zero-Waste Farm Circularity',
     desc: 'Transform animal manure, crop residues, and agro-industrial waste into high-value organic inputs instead of burning or dumping.',
-    image: '/images/statssection.jpg',
+    image: '/images/hero-farm-landscape.jpg',
     points: [
       'Eliminates harmful crop stubble burning',
       'Generates free, on-farm organic inputs',
@@ -123,7 +123,7 @@ const solutionsData: SolutionItem[] = [
     title: 'Commercial & Institutional B2B',
     subtitle: 'Bulk Supply & Corporate Programs',
     desc: 'Tailored solutions for commercial nurseries, corporate agriculture, green initiatives, and research organizations across Pakistan.',
-    image: '/images/satisfiedfarmers.jpg',
+    image: '/images/serve-commercial-b2b.jpg',
     points: [
       'Bulk tonnage supply & scheduled logistics',
       'Customized organic formulation for special crops',
@@ -190,7 +190,7 @@ export default function SolutionsSlider() {
 
   return (
     <section className="py-20 lg:py-28 bg-white overflow-hidden w-full">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -241,7 +241,7 @@ export default function SolutionsSlider() {
         {/* Sliding Card Carousel */}
         <div
           ref={sliderRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 pt-2 no-scrollbar px-6 xl:px-[calc((100vw-1280px)/2+24px)]"
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 pt-2 no-scrollbar px-4 sm:px-6 lg:px-8 xl:px-[calc((100vw-1280px)/2+32px)]"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {solutionsData.map((item, index) => {

@@ -10,7 +10,7 @@ type Props = {
 
 export default function UpcomingSolutionsShowcase({ products }: Props) {
   return (
-    <section className="bg-cream-100 px-6 py-20 lg:py-28 border-t border-brand-100/80 relative overflow-hidden">
+    <section className="w-full bg-cream-100 px-4 sm:px-6 lg:px-8 py-20 lg:py-28 border-t border-brand-100/80 relative overflow-hidden">
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Header - Site Theme Consistent */}
         <FadeIn>

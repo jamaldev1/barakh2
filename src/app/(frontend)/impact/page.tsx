@@ -8,11 +8,11 @@ import { testimonialsData } from '@/data/testimonials'
 export const metadata = {
   title: 'Our Impact & Field Results | Al Barakh Organics',
   description:
-    'See the measurable field impact of Al Barakh Organics across 500+ acres, 10,000+ bags, and 100+ farmer training sessions in Pakistan.',
+    'See the measurable field impact of Al Barakh Organics across 3000+ acres, 10,000+ bags, and 100+ farmer training sessions in Pakistan.',
 }
 
 const impactStats = [
-  { value: 500, suffix: '+', label: 'Acres Supported', description: 'Farmland cultivated and revitalized with organic fertilizers' },
+  { value: 3000, suffix: '+', label: 'Acres Supported', description: 'Farmers of 3000+ acres are part of our community' },
   { value: 10000, suffix: '+', label: 'Bags Supplied', description: 'Premium vermicompost delivered to growers & nurseries' },
   { value: 100, suffix: '+', label: 'Trainings Conducted', description: 'Zaraat Kach’heri sessions and field masterclasses' },
   { value: 500, suffix: '+', label: 'Farmers Empowered', description: 'Growers and farm teams trained in sustainable methods' },
@@ -49,7 +49,7 @@ export default function ImpactPage() {
   const testimonials = testimonialsData.map((t) => ({
     id: t.id,
     customerName: t.name,
-    location: `${t.location} (${t.farmName})`,
+    location: t.farmName ? `${t.location} (${t.farmName})` : t.location,
     quote: t.quote,
     rating: String(t.rating),
     photoUrl: t.avatar,
@@ -60,7 +60,7 @@ export default function ImpactPage() {
       <Header />
 
       {/* ═══ HERO BANNER ═══ */}
-      <section className="relative min-h-[420px] lg:min-h-[480px] flex items-center overflow-hidden">
+      <section className="relative min-h-[420px] lg:min-h-[480px] flex items-center overflow-hidden w-full">
         <div className="absolute inset-0">
           <img
             src="/images/hero-farm-landscape.jpg"
@@ -70,7 +70,7 @@ export default function ImpactPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-900/80 to-brand-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-transparent to-brand-950/30" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-28 w-full text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full text-center">
           <FadeIn>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-300 font-semibold text-xs uppercase tracking-wider mb-4 backdrop-blur-sm">
               🌾 Verified Field Metrics • Nationwide Reach
@@ -87,8 +87,8 @@ export default function ImpactPage() {
       </section>
 
       {/* ═══ 1. IMPACT STATS BAR ═══ */}
-      <section className="py-20 lg:py-24 px-6 bg-white border-b border-brand-100/60">
-        <div className="max-w-6xl mx-auto">
+      <section className="w-full py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white border-b border-brand-100/60">
+        <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto mb-14">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gold-400/20 text-gold-700 text-xs font-bold uppercase tracking-wider mb-2.5">
@@ -107,7 +107,7 @@ export default function ImpactPage() {
       </section>
 
       {/* ═══ 2. VISUAL EVIDENCE GALLERY (No Placeholders) ═══ */}
-      <section className="bg-cream-100 px-6 py-20 lg:py-28 border-b border-brand-100/60">
+      <section className="w-full bg-cream-100 px-4 sm:px-6 lg:px-8 py-20 lg:py-28 border-b border-brand-100/60">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
@@ -153,8 +153,8 @@ export default function ImpactPage() {
       </section>
 
       {/* ═══ 3. FARMER STORIES (LIGHT WHITE BACKGROUND FOR HIGH CONTRAST) ═══ */}
-      <section className="bg-white px-6 py-20 lg:py-28 border-b border-brand-100/60">
-        <div className="max-w-6xl mx-auto">
+      <section className="w-full bg-white px-4 sm:px-6 lg:px-8 py-20 lg:py-28 border-b border-brand-100/60">
+        <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-gold-400/20 text-gold-700 text-xs font-bold uppercase tracking-wider mb-2.5">
@@ -169,19 +169,7 @@ export default function ImpactPage() {
             </div>
 
             {testimonials.length > 0 ? (
-              <TestimonialCarousel
-                testimonials={testimonials.map((t: any) => {
-                  const photo = typeof t.photo === 'object' ? t.photo : null
-                  return {
-                    id: t.id,
-                    customerName: t.customerName,
-                    location: t.location,
-                    quote: t.quote,
-                    rating: t.rating,
-                    photoUrl: photo?.url,
-                  }
-                })}
-              />
+              <TestimonialCarousel testimonials={testimonials} />
             ) : (
               <div className="bg-cream-50 border border-brand-100 rounded-3xl p-12 text-center max-w-xl mx-auto text-brand-900">
                 <span className="text-4xl mb-3 inline-block">🌾</span>

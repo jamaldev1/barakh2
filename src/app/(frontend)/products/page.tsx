@@ -30,7 +30,7 @@ export default function ProductsPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-900/80 to-brand-900/60" />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-950/70 via-transparent to-brand-950/30" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-28 w-full text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full text-center">
           <FadeIn>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-300 font-semibold text-xs uppercase tracking-wider mb-4 backdrop-blur-sm">
               Certified Organic • Direct From Farm
@@ -47,7 +47,8 @@ export default function ProductsPage() {
       </section>
 
       {/* ═══ FEATURED PRODUCTS SHOWCASE ═══ */}
-      <section className="px-6 py-20 lg:py-28 max-w-6xl mx-auto space-y-12">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+        <div className="max-w-6xl mx-auto space-y-12">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <FadeIn>
             <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-green-100 text-green-800 text-xs font-bold uppercase tracking-wider mb-3">
@@ -148,6 +149,7 @@ export default function ProductsPage() {
             </FadeIn>
           )
         })}
+        </div>
       </section>
 
       {/* ═══ FUTURE PRODUCTS (PIPELINE) ═══ */}

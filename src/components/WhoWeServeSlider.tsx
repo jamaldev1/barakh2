@@ -190,7 +190,7 @@ export default function WhoWeServeSlider() {
 
   return (
     <section className="py-20 lg:py-28 bg-white overflow-hidden w-full">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -237,7 +237,7 @@ export default function WhoWeServeSlider() {
         {/* Sliding Card Carousel */}
         <div
           ref={sliderRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 pt-2 no-scrollbar px-6 xl:px-[calc((100vw-1280px)/2+24px)]"
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 pt-2 no-scrollbar px-4 sm:px-6 lg:px-8 xl:px-[calc((100vw-1280px)/2+32px)]"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
             {customerSegmentsData.map((item, index) => {
