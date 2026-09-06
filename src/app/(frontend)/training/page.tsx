@@ -6,7 +6,7 @@ import TrainingProgrammeCatalogue from '@/components/TrainingProgrammeCatalogue'
 import TrainingStepForm from '@/components/TrainingStepForm'
 
 export const metadata = {
-  title: 'Zaraat Kach’heri Training Programme | Al Barakh Organics',
+  title: 'Zaraat Kach’heri Training Programme | Al Barakah Organics',
   description:
     'Zaraat Kach’heri: Over 100+ training sessions and 500+ farmers empowered across Pakistan with practical vermicomposting, soil restoration, and modern sustainable agriculture.',
 }
@@ -28,7 +28,7 @@ export default function TrainingPage() {
         <div className="absolute inset-0">
           <img
             src="/images/farmer-training.jpg"
-            alt="Zaraat Kach’heri Farmer Training Session by Al Barakh Organics"
+            alt="Zaraat Kach’heri Farmer Training Session by Al Barakah Organics"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-900/80 to-brand-900/60" />

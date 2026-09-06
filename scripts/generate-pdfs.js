@@ -33,7 +33,7 @@ async function createBrochurePDF() {
     color: brandGreen,
   });
 
-  page.drawText('AL BARAKH ORGANICS', {
+  page.drawText('AL BARAKAH ORGANICS', {
     x: 40,
     y: 800,
     size: 20,
@@ -57,12 +57,12 @@ async function createBrochurePDF() {
     color: rgb(0.9, 0.9, 0.9),
   });
 
-  // Section 1: About Al Barakh
+  // Section 1: About Al Barakah
   let y = 705;
-  page.drawText('About Al Barakh Organics', { x: 40, y, size: 14, font: fontBold, color: brandGreen });
+  page.drawText('About Al Barakah Organics', { x: 40, y, size: 14, font: fontBold, color: brandGreen });
   y -= 18;
   const introText = [
-    'Founded in 2024 by Mr. Sohaib Ahmed Khatti, Al Barakh Organics provides premium-quality',
+    'Founded in 2024 by Mr. Sohaib Ahmed Khatti, Al Barakah Organics provides premium-quality',
     'vermicompost to farmers, growers, B2B, exporters, and retailers across Pakistan. Our vision is to',
     'revive Pakistan’s declining agricultural soils and empower farming communities.',
   ];
@@ -141,7 +141,7 @@ async function createBrochurePDF() {
     font: fontRegular,
     color: grayText,
   });
-  page.drawText('Branches: Tando Ghulam Ali & Hyderabad, Sindh | Web: www.albarakhorganics.com', {
+  page.drawText('Branches: Tando Ghulam Ali & Hyderabad, Sindh | Web: www.albarakahorganics.com', {
     x: 60,
     y: 52,
     size: 9,
@@ -150,8 +150,8 @@ async function createBrochurePDF() {
   });
 
   const pdfBytes = await doc.save();
-  fs.writeFileSync(path.join(docsDir, 'al-barakh-product-catalogue.pdf'), pdfBytes);
-  console.log('Created al-barakh-product-catalogue.pdf');
+  fs.writeFileSync(path.join(docsDir, 'al-barakah-product-catalogue.pdf'), pdfBytes);
+  console.log('Created al-barakah-product-catalogue.pdf');
 }
 
 async function createDosageGuidePDF() {
@@ -162,7 +162,7 @@ async function createDosageGuidePDF() {
 
   // Top Header Banner
   page.drawRectangle({ x: 0, y: 740, width: 595.28, height: 101.89, color: brandGreen });
-  page.drawText('AL BARAKH ORGANICS', { x: 40, y: 800, size: 20, font: fontBold, color: goldColor });
+  page.drawText('AL BARAKAH ORGANICS', { x: 40, y: 800, size: 20, font: fontBold, color: goldColor });
   page.drawText('Farmer’s Application & Crop Dosage Guide', { x: 40, y: 778, size: 12, font: fontRegular, color: rgb(1, 1, 1) });
   page.drawText('Practical Field Application Guidelines for Maximum Yield & Cost Reduction', { x: 40, y: 755, size: 9, font: fontRegular, color: rgb(0.9, 0.9, 0.9) });
 
@@ -204,8 +204,8 @@ async function createDosageGuidePDF() {
   // Footer Box
   page.drawRectangle({ x: 40, y: 40, width: 515.28, height: 70, color: lightBg, borderColor: goldColor, borderWidth: 1 });
   page.drawText('For Custom Soil Assessments & Bulk Delivery: 0316 8803363', { x: 60, y: 85, size: 11, font: fontBold, color: brandGreen });
-  page.drawText('Al Barakh Organics — Tando Ghulam Ali & Hyderabad Branches | Serving All Over Pakistan', { x: 60, y: 65, size: 9, font: fontRegular, color: grayText });
-  page.drawText('Website: www.albarakhorganics.com | Mon - Sat: 09:00 - 17:00', { x: 60, y: 50, size: 9, font: fontRegular, color: grayText });
+  page.drawText('Al Barakah Organics — Tando Ghulam Ali & Hyderabad Branches | Serving All Over Pakistan', { x: 60, y: 65, size: 9, font: fontRegular, color: grayText });
+  page.drawText('Website: www.albarakahorganics.com | Mon - Sat: 09:00 - 17:00', { x: 60, y: 50, size: 9, font: fontRegular, color: grayText });
 
   const pdfBytes = await doc.save();
   fs.writeFileSync(path.join(docsDir, 'vermicompost-application-dosage-guide.pdf'), pdfBytes);
@@ -219,7 +219,7 @@ async function createTrainingSyllabusPDF() {
   const fontRegular = await doc.embedFont(StandardFonts.Helvetica);
 
   page.drawRectangle({ x: 0, y: 740, width: 595.28, height: 101.89, color: brandGreen });
-  page.drawText('AL BARAKH ORGANICS', { x: 40, y: 800, size: 20, font: fontBold, color: goldColor });
+  page.drawText('AL BARAKAH ORGANICS', { x: 40, y: 800, size: 20, font: fontBold, color: goldColor });
   page.drawText('“Zaraat Kach’heri” — Training Programme Syllabus', { x: 40, y: 778, size: 12, font: fontRegular, color: rgb(1, 1, 1) });
   page.drawText('Over 100+ Sessions Conducted & 500+ Farmers Empowered Across Pakistan', { x: 40, y: 755, size: 9, font: fontRegular, color: rgb(0.9, 0.9, 0.9) });
 
@@ -264,7 +264,7 @@ async function createTrainingSyllabusPDF() {
   page.drawRectangle({ x: 40, y: 40, width: 515.28, height: 70, color: lightBg, borderColor: goldColor, borderWidth: 1 });
   page.drawText('To Book or Inquire About a Zaraat Kach’heri Batch: 0316 8803363', { x: 60, y: 85, size: 11, font: fontBold, color: brandGreen });
   page.drawText('WhatsApp / Call: 0316 8803363 | Hours: 09:00 - 17:00 (Mon - Sat)', { x: 60, y: 65, size: 9, font: fontRegular, color: grayText });
-  page.drawText('Al Barakh Organics — Reviving Soil Health & Empowering Agricultural Communities', { x: 60, y: 50, size: 9, font: fontRegular, color: grayText });
+  page.drawText('Al Barakah Organics — Reviving Soil Health & Empowering Agricultural Communities', { x: 60, y: 50, size: 9, font: fontRegular, color: grayText });
 
   const pdfBytes = await doc.save();
   fs.writeFileSync(path.join(docsDir, 'zaraat-kachheri-training-syllabus.pdf'), pdfBytes);
@@ -278,7 +278,7 @@ async function createHandbookPDF() {
   const fontRegular = await doc.embedFont(StandardFonts.Helvetica);
 
   page.drawRectangle({ x: 0, y: 740, width: 595.28, height: 101.89, color: brandGreen });
-  page.drawText('AL BARAKH ORGANICS', { x: 40, y: 800, size: 20, font: fontBold, color: goldColor });
+  page.drawText('AL BARAKAH ORGANICS', { x: 40, y: 800, size: 20, font: fontBold, color: goldColor });
   page.drawText('On-Farm Vermiculture & Worm Bed Setup Handbook', { x: 40, y: 778, size: 12, font: fontRegular, color: rgb(1, 1, 1) });
   page.drawText('Technical Field Manual for Eisenia Fetida Breeding & Castings Production', { x: 40, y: 755, size: 9, font: fontRegular, color: rgb(0.9, 0.9, 0.9) });
 
@@ -318,8 +318,8 @@ async function createHandbookPDF() {
   // Footer Box
   page.drawRectangle({ x: 40, y: 40, width: 515.28, height: 70, color: lightBg, borderColor: goldColor, borderWidth: 1 });
   page.drawText('For Worm Starter Colonies & Technical Bed Support: 0316 8803363', { x: 60, y: 85, size: 11, font: fontBold, color: brandGreen });
-  page.drawText('Al Barakh Organics — 200+ Beds Main Facility Tando Ghulam Ali & Hyderabad Branch', { x: 60, y: 65, size: 9, font: fontRegular, color: grayText });
-  page.drawText('Website: www.albarakhorganics.com | All Over Pakistan Delivery', { x: 60, y: 50, size: 9, font: fontRegular, color: grayText });
+  page.drawText('Al Barakah Organics — 200+ Beds Main Facility Tando Ghulam Ali & Hyderabad Branch', { x: 60, y: 65, size: 9, font: fontRegular, color: grayText });
+  page.drawText('Website: www.albarakahorganics.com | All Over Pakistan Delivery', { x: 60, y: 50, size: 9, font: fontRegular, color: grayText });
 
   const pdfBytes = await doc.save();
   fs.writeFileSync(path.join(docsDir, 'on-farm-vermiculture-handbook.pdf'), pdfBytes);

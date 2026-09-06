@@ -6,9 +6,9 @@ import CTABanner from '@/components/CTABanner'
 import { testimonialsData } from '@/data/testimonials'
 
 export const metadata = {
-  title: 'Our Impact & Field Results | Al Barakh Organics',
+  title: 'Our Impact & Field Results | Al Barakah Organics',
   description:
-    'See the measurable field impact of Al Barakh Organics across 3000+ acres, 10,000+ bags, and 100+ farmer training sessions in Pakistan.',
+    'See the measurable field impact of Al Barakah Organics across 3000+ acres, 10,000+ bags, and 100+ farmer training sessions in Pakistan.',
 }
 
 const impactStats = [
@@ -64,7 +64,7 @@ export default function ImpactPage() {
         <div className="absolute inset-0">
           <img
             src="/images/hero-farm-landscape.jpg"
-            alt="Field Impact of Al Barakh Organics"
+            alt="Field Impact of Al Barakah Organics"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-900/80 to-brand-900/60" />
@@ -164,7 +164,7 @@ export default function ImpactPage() {
                 Farmer Stories & Case Studies
               </h2>
               <p className="mt-2.5 text-gray-600 text-base">
-                Discover how growers and commercial agriculturalists across Pakistan are transforming their harvests with Al Barakh.
+                Discover how growers and commercial agriculturalists across Pakistan are transforming their harvests with Al Barakah.
               </p>
             </div>
 

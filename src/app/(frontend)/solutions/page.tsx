@@ -4,7 +4,7 @@ import CTABanner from '@/components/CTABanner'
 import SolutionsSlider from '@/components/SolutionsSlider'
 
 export const metadata = {
-  title: 'Sustainable Agriculture Solutions | Al Barakh Organics',
+  title: 'Sustainable Agriculture Solutions | Al Barakah Organics',
   description:
     'Practical, field-tested sustainable agriculture solutions for farms, commercial growers, nurseries, institutions, and agribusinesses across Pakistan.',
 }

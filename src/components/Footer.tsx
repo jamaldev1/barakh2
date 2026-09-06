@@ -23,11 +23,11 @@ export default function Footer() {
           <div className="flex items-center gap-3 mb-5">
             <img
               src="/images/logo.jpg"
-              alt="Al Barakh Organics logo"
+              alt="Al Barakah Organics logo"
               className="w-10 h-10 rounded-full object-cover"
             />
             <div>
-              <span className="font-display text-lg font-bold text-white leading-none block">AL BARAKH</span>
+              <span className="font-display text-lg font-bold text-white leading-none block">AL BARAKAH</span>
               <span className="text-[0.6rem] tracking-[0.2em] text-gold-400 font-medium uppercase">Organics</span>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:pr-24 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40 text-center md:text-left">
-            © {new Date().getFullYear()} Al Barakh Organics. All rights reserved.
+            © {new Date().getFullYear()} Al Barakah Organics. All rights reserved.
           </p>
           <p className="font-cursive text-2xl text-gold-400/60 text-center md:text-right">
             Healthier Soil. Better Future.

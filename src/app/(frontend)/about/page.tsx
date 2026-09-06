@@ -6,9 +6,9 @@ import CTABanner from '@/components/CTABanner'
 import CoreValuesOrbit from '@/components/CoreValuesOrbit'
 
 export const metadata = {
-  title: 'About Us | Al Barakh Organics',
+  title: 'About Us | Al Barakah Organics',
   description:
-    'Founded in 2001 by Mr. Abdul Sattar Khatti, Al Barakh Organics provides premium-quality vermicompost, modern farming consultancy, and Zaraat Kach’heri community training across Pakistan.',
+    'Founded in 2001 by Mr. Abdul Sattar Khatti, Al Barakah Organics provides premium-quality vermicompost, modern farming consultancy, and Zaraat Kach’heri community training across Pakistan.',
 }
 
 const coreValues = [
@@ -67,7 +67,7 @@ const executiveTeam = [
   },
   {
     name: 'Sohaib Khatti',
-    role: 'COO, Al-Barakh Organics',
+    role: 'COO, Al-Barakah Organics',
     department: 'Executive Operations',
     initials: 'SK',
     badgeColor: 'bg-emerald-600 text-white',
@@ -152,13 +152,13 @@ export default function AboutPage() {
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-400/20 border border-gold-400/40 text-gold-300 font-semibold text-xs uppercase tracking-wider mb-4 backdrop-blur-sm">
               Established in 2001 • Reviving Pakistan&apos;s Agriculture
             </span>
-            <p className="font-cursive text-3xl md:text-4xl text-gold-400">About Al Barakh</p>
+            <p className="font-cursive text-3xl md:text-4xl text-gold-400">About Al Barakah</p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-3 leading-tight max-w-4xl mx-auto">
               Reviving Soil Health &amp;<br />
               <span className="text-gold-300">Empowering Agricultural Communities</span>
             </h1>
             <p className="mt-6 text-white/90 max-w-3xl mx-auto text-base md:text-lg leading-relaxed">
-              Al Barakh Organics provides premium-quality vermicompost to farmers, growers, B2B, exporters and retailers, with a vision to help revive Pakistan’s declining agricultural landscape through sustainable organic solutions, modern farming consultancy, and practical training.
+              Al Barakah Organics provides premium-quality vermicompost to farmers, growers, B2B, exporters and retailers, with a vision to help revive Pakistan’s declining agricultural landscape through sustainable organic solutions, modern farming consultancy, and practical training.
             </p>
           </FadeIn>
         </div>
@@ -173,10 +173,10 @@ export default function AboutPage() {
             <FadeIn>
               <span className="eyebrow text-gold-500">Our Origin &amp; Purpose</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-2 leading-tight">
-                Why Al Barakh Was Started
+                Why Al Barakah Was Started
               </h2>
               <p className="mt-6 text-gray-700 leading-relaxed text-base md:text-lg">
-                <strong>Al Barakh Organics</strong> was founded in <strong>2001 by Mr. Abdul Sattar Khatti</strong> with a clear vision: to revive declining agriculture by restoring soil health, empowering farmers, and promoting sustainable farming through natural organic solutions.
+                <strong>Al Barakah Organics</strong> was founded in <strong>2001 by Mr. Abdul Sattar Khatti</strong> with a clear vision: to revive declining agriculture by restoring soil health, empowering farmers, and promoting sustainable farming through natural organic solutions.
               </p>
               
               <div className="mt-6 p-6 bg-cream-50 rounded-2xl border-l-4 border-gold-400 border-brand-100">
@@ -226,7 +226,7 @@ export default function AboutPage() {
                 <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                   <img
                     src="/images/farmer-training.jpg"
-                    alt="Al Barakh Organics farmer training and vermicompost beds"
+                    alt="Al Barakah Organics farmer training and vermicompost beds"
                     className="w-full h-[450px] object-cover"
                   />
                 </div>
@@ -255,7 +255,7 @@ export default function AboutPage() {
             <div className="lg:col-span-7">
               <FadeIn>
                 <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-400/20 text-gold-300 font-semibold text-xs uppercase tracking-wider mb-4 border border-gold-400/30">
-                  What Makes Al Barakh Different
+                  What Makes Al Barakah Different
                 </span>
                 <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                   We Go Beyond Selling Inputs:<br />
@@ -331,14 +331,14 @@ export default function AboutPage() {
                   <h3 className="font-display text-xl font-bold text-brand-900 mt-4">
                     Abdul Sattar Khatti
                   </h3>
-                  <p className="text-gold-600 text-sm font-semibold">Founder, Al Barakh Organics</p>
+                  <p className="text-gold-600 text-sm font-semibold">Founder, Al Barakah Organics</p>
                   <p className="text-xs text-gray-500 mt-1 font-medium">Started 2001</p>
                 </div>
 
                 <div className="lg:col-span-8">
                   <span className="eyebrow text-gold-500">Founder&apos;s &amp; Leadership Message</span>
                   <h2 className="font-display text-2xl md:text-3xl font-bold text-brand-900 mt-1">
-                    The Vision Behind Al Barakh
+                    The Vision Behind Al Barakah
                   </h2>
                   <blockquote className="mt-6 border-l-4 border-gold-400 pl-6 py-3 bg-cream-50 rounded-r-2xl border-y border-r border-brand-100">
                     <p className="text-gray-800 leading-relaxed italic text-base md:text-lg font-medium">
@@ -348,7 +348,7 @@ export default function AboutPage() {
                       The answer was clear: expensive fertilizers, lack of practical knowledge and limited awareness of modern farming methods.
                     </p>
                     <p className="text-gray-800 leading-relaxed italic text-base md:text-lg font-medium mt-3">
-                      That thinking led to Al Barakh Organics, with a simple purpose: to introduce, create awareness about and provide sustainable agriculture solutions. Vermicompost is only the beginning. Our vision is to empower farmers, improve soil health and build a more sustainable agricultural future.&quot;
+                      That thinking led to Al Barakah Organics, with a simple purpose: to introduce, create awareness about and provide sustainable agriculture solutions. Vermicompost is only the beginning. Our vision is to empower farmers, improve soil health and build a more sustainable agricultural future.&quot;
                     </p>
                   </blockquote>
                   <p className="mt-4 text-sm font-bold text-brand-800 text-right">
@@ -417,7 +417,7 @@ export default function AboutPage() {
                       {/* Bottom decorative bar */}
                       <div className="mt-6 pt-4 border-t border-brand-50 flex items-center justify-between text-xs text-brand-800 font-medium">
                         <span className="inline-flex items-center gap-1.5 text-gray-500">
-                          <span>{member.icon}</span> Al Barakh Core Team
+                          <span>{member.icon}</span> Al Barakah Core Team
                         </span>
                         <span className="text-gold-500 font-bold opacity-0 group-hover:opacity-100 transition-opacity">
                           ★
@@ -578,12 +578,12 @@ export default function AboutPage() {
                   <div className="lg:col-span-8 space-y-4">
                     <div className="p-5 rounded-2xl bg-white border border-brand-100/80 shadow-xs">
                       <p className="text-gray-700 text-sm md:text-base leading-relaxed font-normal">
-                        To transform Al Barakh into a leading sustainable agriculture enterprise in Pakistan—producing vermicompost, vermiwash, biochar, and other organic solutions while becoming a hub where farmers, growers, experts, students, and communities gather, learn, discuss, and collaborate.
+                        To transform Al Barakah into a leading sustainable agriculture enterprise in Pakistan—producing vermicompost, vermiwash, biochar, and other organic solutions while becoming a hub where farmers, growers, experts, students, and communities gather, learn, discuss, and collaborate.
                       </p>
                     </div>
                     <div className="p-5 rounded-2xl bg-white border border-brand-100/80 shadow-xs">
                       <p className="text-gray-600 text-sm md:text-base leading-relaxed font-normal">
-                        We envision Al Barakh as a platform for agricultural research, student internships, farmer training, and innovation, while building a trusted Pakistani brand capable of taking sustainable agricultural products to international markets.
+                        We envision Al Barakah as a platform for agricultural research, student internships, farmer training, and innovation, while building a trusted Pakistani brand capable of taking sustainable agricultural products to international markets.
                       </p>
                     </div>
                   </div>

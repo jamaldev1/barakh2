@@ -17,7 +17,7 @@ export default function CoreValuesOrbit({ values }: CoreValuesOrbitProps) {
   const selectedValue = values[selectedIndex]
 
   return (
-    <div className="core-values-orbit" aria-label="Al Barakh core values">
+    <div className="core-values-orbit" aria-label="Al Barakah core values">
       <div className="core-values-orbit-center" aria-live="polite">
         <span className="core-values-orbit-center-mark">AL BARAKAH</span>
         <span className="core-values-orbit-center-label">OUR PRINCIPLES</span>

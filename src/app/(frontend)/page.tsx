@@ -10,7 +10,7 @@ import FAQSection from '@/components/FAQSection'
 import { testimonialsData } from '@/data/testimonials'
 
 export const metadata = {
-  title: 'Al Barakh Organics | Premium Vermicompost & Biological Agriculture',
+  title: 'Al Barakah Organics | Premium Vermicompost & Biological Agriculture',
   description:
     '100% pure organic vermicompost, active Eisenia fetida red worms, liquid vermiwash, and hands-on farmer training across Pakistan.',
 }
@@ -155,7 +155,7 @@ export default function HomePage() {
 
             <FadeIn delay={0.1}>
               <div className="about-farm-copy mt-10">
-                <span className="eyebrow text-gold-500">Why Al Barakh?</span>
+                <span className="eyebrow text-gold-500">Why Al Barakah?</span>
                 <h2 className="about-farm-title">
                   Rooted in Nature,<br />Driven by Sustainability
                 </h2>
@@ -297,7 +297,7 @@ export default function HomePage() {
               <div className="bg-gradient-to-br from-brand-900 via-brand-950 to-brand-900 text-white p-8 rounded-3xl border-2 border-gold-400/40 shadow-xl flex flex-col items-center justify-center text-center h-full min-h-[200px] relative overflow-hidden group hover:border-gold-400 transition-colors">
                 <div className="absolute inset-0 bg-[radial-gradient(#ffca19_1px,transparent_1px)] [background-size:16px_16px] opacity-10" />
                 <span className="text-[0.65rem] uppercase tracking-widest text-gold-300 font-bold px-3 py-1 rounded-full bg-brand-950 border border-gold-400/30 mb-2 relative z-10">
-                  AL BARAKH
+                  AL BARAKAH
                 </span>
                 <h3 className="font-display text-2xl md:text-3xl font-bold text-white leading-tight relative z-10">
                   Our Services &amp;<br />
@@ -386,7 +386,7 @@ export default function HomePage() {
                   Farmer Stories
                 </h2>
                 <p className="text-gray-500 mt-3 max-w-lg mx-auto">
-                  Real experiences from farmers and growers who use Al Barakh solutions
+                  Real experiences from farmers and growers who use Al Barakah solutions
                 </p>
               </div>
 

@@ -29,16 +29,16 @@ export interface DownloadableBrochure {
 
 export const downloadableBrochuresData: DownloadableBrochure[] = [
   {
-    id: 'al-barakh-product-catalogue',
-    title: 'Al Barakh Organics — Official Product Brochure',
+    id: 'al-barakah-product-catalogue',
+    title: 'Al Barakah Organics — Official Product Brochure',
     subtitle: 'Vermicompost (40 KG & 5 KG), Red Wigglers, Facilities & Consultancy',
     category: 'Product Catalogue',
     format: 'PDF Guide',
     fileSize: '3.2 MB',
     description: 'Comprehensive overview covering pure vermicompost specifications, 40 KG & 5 KG sizes, earthworm colonies, 220+ bed facilities, and modern farming consultancy.',
     icon: '📄',
-    downloadUrl: '/docs/al-barakh-product-catalogue.pdf',
-    fileName: 'Al-Barakh-Product-Catalogue.pdf',
+    downloadUrl: '/docs/al-barakah-product-catalogue.pdf',
+    fileName: 'Al-Barakah-Product-Catalogue.pdf',
   },
   {
     id: 'vermicompost-application-dosage-guide',

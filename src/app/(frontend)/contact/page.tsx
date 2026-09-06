@@ -3,9 +3,9 @@ import FadeIn from '@/components/FadeIn'
 import ContactForm from '@/components/ContactForm'
 
 export const metadata = {
-  title: 'Contact Us | Al Barakh Organics',
+  title: 'Contact Us | Al Barakah Organics',
   description:
-    'Talk to Al Barakh Organics. Contact us for vermicompost orders, soil consultancy, Zaraat Kach’heri training, or bulk inquiries via WhatsApp, email or phone.',
+    'Talk to Al Barakah Organics. Contact us for vermicompost orders, soil consultancy, Zaraat Kach’heri training, or bulk inquiries via WhatsApp, email or phone.',
 }
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
         <div className="absolute inset-0">
           <img
             src="/images/hero-field.jpg"
-            alt="Contact Al Barakh Organics"
+            alt="Contact Al Barakah Organics"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-950/95 via-brand-900/85 to-brand-900/70" />
@@ -32,7 +32,7 @@ export default function ContactPage() {
             </span>
             <p className="font-cursive text-3xl md:text-4xl text-gold-400">Get In Touch</p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-2 leading-tight">
-              Connect With Al Barakh Organics
+              Connect With Al Barakah Organics
             </h1>
             <p className="mt-4 text-white/80 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
               Direct connection to Pakistan’s premier biological organic producers. Reach out for vermicompost orders, technical crop advisory, or Zaraat Kach’heri community workshops.

@@ -6,7 +6,7 @@ import UpcomingSolutionsShowcase from '@/components/UpcomingSolutionsShowcase'
 import { productsData, upcomingProductsData } from '@/data/products'
 
 export const metadata = {
-  title: 'Products | Al Barakh Organics',
+  title: 'Products | Al Barakah Organics',
   description:
     'Quality vermicompost organic fertilizer for farms, orchards, nurseries, gardens and horticultural applications across Pakistan.',
 }

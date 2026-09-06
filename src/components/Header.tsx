@@ -63,11 +63,11 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3">
             <img
               src="/images/logo.jpg"
-              alt="Al Barakh Organics logo"
+              alt="Al Barakah Organics logo"
               className="w-12 h-12 rounded-full object-cover"
             />
             <div>
-              <span className="font-display text-xl font-bold text-brand-800 leading-none block">AL BARAKH</span>
+              <span className="font-display text-xl font-bold text-brand-800 leading-none block">AL BARAKAH</span>
               <span className="text-[0.65rem] tracking-[0.2em] text-brand-500 font-medium uppercase">Organics</span>
             </div>
           </Link>

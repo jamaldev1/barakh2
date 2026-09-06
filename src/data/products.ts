@@ -36,7 +36,7 @@ export const productsData: Product[] = [
     badge: 'Core Product',
     shortDescription:
       'Premium-quality organic fertilizer produced through vermicomposting, enriched with natural nutrients and organic matter to improve soil health, enhance plant growth, and support sustainable agriculture.',
-    fullDescription: `Al Barakh Premium-Quality Vermicompost is an elite, odor-free bio-organic fertilizer packed with plant-available nutrients, organic matter, and beneficial soil microbiology.
+    fullDescription: `Al Barakah Premium-Quality Vermicompost is an elite, odor-free bio-organic fertilizer packed with plant-available nutrients, organic matter, and beneficial soil microbiology.
     
 Produced through controlled earthworm digestion of organic biomass, our vermicompost introduces living microbial networks and humic acids that rebuild tired soil, enhance water retention, and deliver healthy crop yields across all grain, vegetable, cash crop, and orchard acreage in Pakistan.`,
     images: [

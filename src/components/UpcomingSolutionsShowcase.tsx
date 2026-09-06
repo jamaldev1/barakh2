@@ -76,7 +76,7 @@ export default function UpcomingSolutionsShowcase({ products }: Props) {
 
                   <a
                     href={`https://wa.me/923168803363?text=${encodeURIComponent(
-                      `Hi Al Barakh Organics, I am interested in testing or learning more about your upcoming product: ${product.name}. Please share details.`
+                      `Hi Al Barakah Organics, I am interested in testing or learning more about your upcoming product: ${product.name}. Please share details.`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"

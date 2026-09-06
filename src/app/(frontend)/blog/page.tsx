@@ -5,7 +5,7 @@ import CTABanner from '@/components/CTABanner'
 import { blogPostsData } from '@/data/blog'
 
 export const metadata = {
-  title: 'Blog & Educational Articles | Al Barakh Organics',
+  title: 'Blog & Educational Articles | Al Barakah Organics',
   description: 'Learn about organic farming, vermicompost, soil health, and practical agricultural techniques in Pakistan.',
 }
 
@@ -21,7 +21,7 @@ export default function BlogPage() {
         <div className="absolute inset-0">
           <img
             src="/images/hero-field.jpg"
-            alt="Al Barakh Organics Blog & Insights"
+            alt="Al Barakah Organics Blog & Insights"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-900/80 to-brand-900/60" />

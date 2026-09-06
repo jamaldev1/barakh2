@@ -51,7 +51,7 @@ export default function FAQsPage() {
         <div className="absolute inset-0">
           <img
             src="/images/hero-farm-landscape.jpg"
-            alt="Al Barakh Organics FAQs"
+            alt="Al Barakah Organics FAQs"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-950/90 via-brand-900/80 to-brand-900/60" />
@@ -83,7 +83,7 @@ export default function FAQsPage() {
                 Common Inquiries
               </h2>
               <p className="text-gray-600 text-sm md:text-base mt-2">
-                Everything you need to know about partnering with Al Barakh Organics.
+                Everything you need to know about partnering with Al Barakah Organics.
               </p>
             </div>
           </FadeIn>

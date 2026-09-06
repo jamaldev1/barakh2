@@ -41,7 +41,7 @@ export default async function ResourcePost({ params }: { params: Promise<{ slug:
               <div className="mt-8 flex items-center justify-center gap-4 text-white/60 text-sm">
                 <span>{post.date}</span>
                 <span>•</span>
-                <span>Al Barakh Organics</span>
+                <span>Al Barakah Organics</span>
                 <span>•</span>
                 <span>{post.readTime}</span>
               </div>
@@ -167,10 +167,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const post = resourcesData.find((r) => r.slug === slug)
 
-  if (!post) return { title: 'Resource Not Found | Al Barakh Organics' }
+  if (!post) return { title: 'Resource Not Found | Al Barakah Organics' }
 
   return {
-    title: `${post.title} | Al Barakh Organics`,
+    title: `${post.title} | Al Barakah Organics`,
     description: post.excerpt,
   }
 }

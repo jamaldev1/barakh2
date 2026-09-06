@@ -5,8 +5,8 @@ import CTABanner from '@/components/CTABanner'
 import { resourcesData, downloadableBrochuresData } from '@/data/resources'
 
 export const metadata = {
-  title: 'Knowledge Centre & Downloadable Guides | Al Barakh Organics',
-  description: 'Download official brochures, vermicompost dosage guides, and explore practical guides on vermicomposting, soil health, and sustainable farming from Al Barakh Organics.',
+  title: 'Knowledge Centre & Downloadable Guides | Al Barakah Organics',
+  description: 'Download official brochures, vermicompost dosage guides, and explore practical guides on vermicomposting, soil health, and sustainable farming from Al Barakah Organics.',
 }
 
 export default function ResourcesPage() {
