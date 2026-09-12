@@ -96,20 +96,9 @@ export default function ProductsPage() {
                         {product.name}
                       </h3>
                       <p className="text-gold-600 font-medium text-sm mt-1">{product.tagline}</p>
-
-                      <p className="text-gray-600 mt-4 text-sm leading-relaxed">
+                      <p className="text-gray-600 mt-3 text-sm leading-relaxed line-clamp-2">
                         {product.shortDescription}
                       </p>
-
-                      {/* Key benefits list */}
-                      <div className="mt-6 space-y-2">
-                        {product.keyBenefits?.slice(0, 4).map((b, i) => (
-                          <div key={i} className="flex items-center gap-2.5 text-xs text-gray-700 font-medium">
-                            <span className="text-gold-500 font-bold">✓</span>
-                            <span>{b}</span>
-                          </div>
-                        ))}
-                      </div>
                     </div>
 
                     {/* Price & Action Strip */}

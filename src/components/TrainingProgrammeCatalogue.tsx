@@ -147,51 +147,50 @@ export default function TrainingProgrammeCatalogue() {
               </span>
             </div>
 
-            {/* Description */}
-            <p className="text-[#53636A] text-xs leading-relaxed">
+            {/* Short Description */}
+            <p className="text-[#53636A] text-xs sm:text-sm leading-relaxed">
               {activeSessionData.description}
             </p>
 
             {/* Key Logistics Metadata */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 my-4">
               <div className="p-2.5 rounded-xl bg-cream-50/80 border border-stone-200/70">
-                <p className="text-[0.62rem] uppercase tracking-wider text-stone-500 font-bold">Location &amp; Venue</p>
+                <p className="text-[0.6rem] uppercase tracking-wider text-stone-500 font-bold">Venue</p>
                 <p className="font-bold text-xs text-brand-900 mt-0.5">{activeProgramme.location}</p>
               </div>
 
               <div className="p-2.5 rounded-xl bg-cream-50/80 border border-stone-200/70">
-                <p className="text-[0.62rem] uppercase tracking-wider text-stone-500 font-bold">Session Duration</p>
+                <p className="text-[0.6rem] uppercase tracking-wider text-stone-500 font-bold">Duration</p>
                 <p className="font-bold text-xs text-brand-900 mt-0.5">{activeProgramme.duration}</p>
               </div>
 
               <div className="p-2.5 rounded-xl bg-cream-50/80 border border-stone-200/70">
-                <p className="text-[0.62rem] uppercase tracking-wider text-stone-500 font-bold">Target Audience</p>
+                <p className="text-[0.6rem] uppercase tracking-wider text-stone-500 font-bold">Audience</p>
                 <p className="font-bold text-xs text-brand-900 mt-0.5 truncate">{activeProgramme.audience}</p>
               </div>
             </div>
 
-            {/* Curriculum Highlights Checklist */}
-            <div className="space-y-2 pb-4 mb-4 border-b border-stone-100">
-              <p className="text-[0.65rem] font-bold uppercase tracking-wider text-brand-800">
-                Curriculum &amp; Hands-on Modules:
+            {/* Key Highlights (Concise 3 items) */}
+            <div className="space-y-1.5 pb-4 mb-4 border-b border-stone-100">
+              <p className="text-[0.65rem] font-bold uppercase tracking-wider text-brand-800 mb-2">
+                Session Highlights:
               </p>
-              <div className="space-y-1.5 text-xs text-brand-950">
-                {activeSessionData.curriculum.map((item, i) => (
-                  <div key={i} className="flex items-start gap-2">
-                    <span className="text-gold-600 font-bold text-xs flex-shrink-0">✓</span>
-                    <span className="leading-tight">{item}</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-brand-950">
+                {activeSessionData.curriculum.slice(0, 4).map((item, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <span className="text-gold-600 font-bold text-xs">✓</span>
+                    <span className="leading-tight truncate">{item}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Bottom Actions & Discrete Availability */}
+            {/* Bottom Actions & Availability */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
               <div>
                 <p className="text-xs text-stone-500">
-                  <span className="font-semibold text-brand-900">{activeSessionData.seatsLeft} places</span> open for upcoming batch
+                  <span className="font-semibold text-brand-900">{activeSessionData.seatsLeft} slots</span> available • <span className="text-stone-700 font-medium">{activeSessionData.price}</span>
                 </p>
-                <p className="text-[0.68rem] text-stone-400 mt-0.5">{activeSessionData.price}</p>
               </div>
 
               <div className="flex items-center gap-2.5">

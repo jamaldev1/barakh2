@@ -199,7 +199,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══ 3. CREDIBILITY STATS ═══ */}
-      <section className="w-full bg-cream-100 border-t border-brand-100/70 px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+      <section className="w-full bg-cream-100 border-t border-brand-100/70 px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="stats-bento-heading">
@@ -218,7 +218,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ 4. SOLUTIONS RECTANGULAR GRID (Center Hub + Surrounding Solutions + More Details) ═══ */}
+      {/* ═══ 4. PICTURE-FIRST 3x3 SOLUTIONS GRID (Real Image Backgrounds) ═══ */}
       <section className="w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-28 bg-white border-t border-brand-100/80 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <FadeIn>
@@ -230,71 +230,103 @@ export default function HomePage() {
             </div>
           </FadeIn>
 
-          {/* 3x3 Rectangular Perimeter Grid with Center Hub (No Icons) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
-            {/* 1. Top-Left */}
+          {/* 3x3 Visual Photo Grid with Center Hub */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {/* 1. Top-Left: Vermicompost */}
             <FadeIn delay={0.05}>
               <Link
                 href="/products"
-                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+                className="relative rounded-3xl overflow-hidden group shadow-sm hover:shadow-xl border border-brand-100 h-full min-h-[190px] flex flex-col justify-end p-6 hover:-translate-y-1 transition-all duration-500"
               >
-                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
-                  Premium Vermicompost
-                </h3>
-                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
-                  100% Pure Bio-Nutrition
-                </span>
+                <img
+                  src="/images/albarakah2.jpeg"
+                  alt="Premium Vermicompost"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-950/95 via-brand-950/60 to-transparent" />
+                <div className="relative z-10">
+                  <span className="text-[0.68rem] uppercase tracking-wider font-bold text-brand-950 bg-gold-400 px-2.5 py-0.5 rounded-full inline-block mb-1.5">
+                    100% Bio-Nutrition
+                  </span>
+                  <h3 className="font-display font-bold text-white text-xl leading-snug group-hover:text-gold-300 transition-colors">
+                    Premium Vermicompost
+                  </h3>
+                </div>
               </Link>
             </FadeIn>
 
-            {/* 2. Top-Center */}
+            {/* 2. Top-Center: Live Red Wigglers */}
             <FadeIn delay={0.08}>
               <Link
                 href="/products"
-                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+                className="relative rounded-3xl overflow-hidden group shadow-sm hover:shadow-xl border border-brand-100 h-full min-h-[190px] flex flex-col justify-end p-6 hover:-translate-y-1 transition-all duration-500"
               >
-                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
-                  Active Red Wigglers
-                </h3>
-                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
-                  Breeding Colonies
-                </span>
+                <img
+                  src="/images/albarakah4.jpeg"
+                  alt="Active Red Wigglers"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-950/95 via-brand-950/60 to-transparent" />
+                <div className="relative z-10">
+                  <span className="text-[0.68rem] uppercase tracking-wider font-bold text-brand-950 bg-gold-400 px-2.5 py-0.5 rounded-full inline-block mb-1.5">
+                    Breeding Stock
+                  </span>
+                  <h3 className="font-display font-bold text-white text-xl leading-snug group-hover:text-gold-300 transition-colors">
+                    Active Red Wigglers
+                  </h3>
+                </div>
               </Link>
             </FadeIn>
 
-            {/* 3. Top-Right */}
+            {/* 3. Top-Right: Soil Health & Diagnostics */}
             <FadeIn delay={0.11}>
               <Link
                 href="/solutions"
-                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+                className="relative rounded-3xl overflow-hidden group shadow-sm hover:shadow-xl border border-brand-100 h-full min-h-[190px] flex flex-col justify-end p-6 hover:-translate-y-1 transition-all duration-500"
               >
-                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
-                  Soil Health &amp; Diagnostics
-                </h3>
-                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
-                  Biological Rejuvenation
-                </span>
+                <img
+                  src="/images/soil-testing-field.jpg"
+                  alt="Soil Health Diagnostics"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-950/95 via-brand-950/60 to-transparent" />
+                <div className="relative z-10">
+                  <span className="text-[0.68rem] uppercase tracking-wider font-bold text-brand-950 bg-gold-400 px-2.5 py-0.5 rounded-full inline-block mb-1.5">
+                    Biological Rejuvenation
+                  </span>
+                  <h3 className="font-display font-bold text-white text-xl leading-snug group-hover:text-gold-300 transition-colors">
+                    Soil Health &amp; Diagnostics
+                  </h3>
+                </div>
               </Link>
             </FadeIn>
 
-            {/* 4. Middle-Left */}
+            {/* 4. Middle-Left: Organic Waste Conversion */}
             <FadeIn delay={0.14}>
               <Link
                 href="/solutions"
-                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+                className="relative rounded-3xl overflow-hidden group shadow-sm hover:shadow-xl border border-brand-100 h-full min-h-[190px] flex flex-col justify-end p-6 hover:-translate-y-1 transition-all duration-500"
               >
-                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
-                  Organic Waste Conversion
-                </h3>
-                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
-                  Farm Waste to Wealth
-                </span>
+                <img
+                  src="/images/albarakah3.jpeg"
+                  alt="Organic Waste Conversion"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-950/95 via-brand-950/60 to-transparent" />
+                <div className="relative z-10">
+                  <span className="text-[0.68rem] uppercase tracking-wider font-bold text-brand-950 bg-gold-400 px-2.5 py-0.5 rounded-full inline-block mb-1.5">
+                    Farm Waste to Wealth
+                  </span>
+                  <h3 className="font-display font-bold text-white text-xl leading-snug group-hover:text-gold-300 transition-colors">
+                    Organic Waste Conversion
+                  </h3>
+                </div>
               </Link>
             </FadeIn>
 
             {/* 5. CENTER HUB BOX (Middle-Center) */}
             <FadeIn delay={0.17}>
-              <div className="bg-gradient-to-br from-brand-900 via-brand-950 to-brand-900 text-white p-8 rounded-3xl border-2 border-gold-400/40 shadow-xl flex flex-col items-center justify-center text-center h-full min-h-[200px] relative overflow-hidden group hover:border-gold-400 transition-colors">
+              <div className="bg-gradient-to-br from-brand-900 via-brand-950 to-brand-900 text-white p-8 rounded-3xl border-2 border-gold-400/40 shadow-xl flex flex-col items-center justify-center text-center h-full min-h-[190px] relative overflow-hidden group hover:border-gold-400 transition-colors">
                 <div className="absolute inset-0 bg-[radial-gradient(#ffca19_1px,transparent_1px)] [background-size:16px_16px] opacity-10" />
                 <span className="text-[0.65rem] uppercase tracking-widest text-gold-300 font-bold px-3 py-1 rounded-full bg-brand-950 border border-gold-400/30 mb-2 relative z-10">
                   AL BARAKAH
@@ -309,65 +341,89 @@ export default function HomePage() {
               </div>
             </FadeIn>
 
-            {/* 6. Middle-Right */}
+            {/* 6. Middle-Right: Zaraat Kach’heri Training */}
             <FadeIn delay={0.2}>
               <Link
                 href="/training"
-                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+                className="relative rounded-3xl overflow-hidden group shadow-sm hover:shadow-xl border border-brand-100 h-full min-h-[190px] flex flex-col justify-end p-6 hover:-translate-y-1 transition-all duration-500"
               >
-                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
-                  Zaraat Kach’heri Training
-                </h3>
-                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
-                  Farmer Masterclasses
-                </span>
+                <img
+                  src="/images/albarakah5.jpeg"
+                  alt="Zaraat Kach’heri Training"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-950/95 via-brand-950/60 to-transparent" />
+                <div className="relative z-10">
+                  <span className="text-[0.68rem] uppercase tracking-wider font-bold text-brand-950 bg-gold-400 px-2.5 py-0.5 rounded-full inline-block mb-1.5">
+                    Farmer Masterclasses
+                  </span>
+                  <h3 className="font-display font-bold text-white text-xl leading-snug group-hover:text-gold-300 transition-colors">
+                    Zaraat Kach’heri Training
+                  </h3>
+                </div>
               </Link>
             </FadeIn>
 
-            {/* 7. Bottom-Left */}
+            {/* 7. Bottom-Left: On-Farm Bed Setup */}
             <FadeIn delay={0.23}>
               <Link
                 href="/solutions"
-                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+                className="relative rounded-3xl overflow-hidden group shadow-sm hover:shadow-xl border border-brand-100 h-full min-h-[190px] flex flex-col justify-end p-6 hover:-translate-y-1 transition-all duration-500"
               >
-                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
-                  On-Farm Bed Setup
-                </h3>
-                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
-                  Commercial Infrastructure
-                </span>
+                <img
+                  src="/images/albarakah6.jpeg"
+                  alt="On-Farm Bed Setup"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-950/95 via-brand-950/60 to-transparent" />
+                <div className="relative z-10">
+                  <span className="text-[0.68rem] uppercase tracking-wider font-bold text-brand-950 bg-gold-400 px-2.5 py-0.5 rounded-full inline-block mb-1.5">
+                    Commercial Infrastructure
+                  </span>
+                  <h3 className="font-display font-bold text-white text-xl leading-snug group-hover:text-gold-300 transition-colors">
+                    On-Farm Bed Setup
+                  </h3>
+                </div>
               </Link>
             </FadeIn>
 
-            {/* 8. Bottom-Center */}
+            {/* 8. Bottom-Center: Commercial Bulk Supply */}
             <FadeIn delay={0.26}>
               <Link
                 href="/contact"
-                className="bg-cream-50/70 hover:bg-white p-7 rounded-3xl border border-brand-100 hover:border-gold-400/80 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1"
+                className="relative rounded-3xl overflow-hidden group shadow-sm hover:shadow-xl border border-brand-100 h-full min-h-[190px] flex flex-col justify-end p-6 hover:-translate-y-1 transition-all duration-500"
               >
-                <h3 className="font-display font-bold text-brand-900 text-xl leading-snug group-hover:text-gold-600 transition-colors">
-                  Commercial Bulk Supply
-                </h3>
-                <span className="text-[0.72rem] uppercase tracking-wider font-semibold text-gold-600 mt-2">
-                  B2B &amp; Contract Supply
-                </span>
+                <img
+                  src="/images/bulk-supply-farm.jpg"
+                  alt="Commercial Bulk Supply"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-950/95 via-brand-950/60 to-transparent" />
+                <div className="relative z-10">
+                  <span className="text-[0.68rem] uppercase tracking-wider font-bold text-brand-950 bg-gold-400 px-2.5 py-0.5 rounded-full inline-block mb-1.5">
+                    B2B &amp; Contract Supply
+                  </span>
+                  <h3 className="font-display font-bold text-white text-xl leading-snug group-hover:text-gold-300 transition-colors">
+                    Commercial Bulk Supply
+                  </h3>
+                </div>
               </Link>
             </FadeIn>
 
-            {/* 9. Bottom-Right (LAST BLOCK - MORE DETAILS IN BRAND THEME) */}
+            {/* 9. Bottom-Right: More Details */}
             <FadeIn delay={0.29}>
               <Link
                 href="/solutions"
-                className="bg-brand-900 hover:bg-brand-950 text-white p-7 rounded-3xl border-2 border-gold-400/40 hover:border-gold-400 shadow-md hover:shadow-xl flex flex-col items-center justify-center text-center h-full min-h-[160px] group hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                className="bg-brand-900 hover:bg-brand-950 text-white p-6 rounded-3xl border-2 border-gold-400/40 hover:border-gold-400 shadow-md hover:shadow-xl flex flex-col items-center justify-center text-center h-full min-h-[190px] group hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
                 <h3 className="font-display font-bold text-white text-xl leading-snug group-hover:text-gold-300 transition-colors">
-                  More Details
+                  Explore All Solutions
                 </h3>
                 <p className="text-white/70 text-xs mt-1 mb-3 leading-relaxed">
-                  View complete process &amp; audits
+                  View full technical protocols &amp; audits
                 </p>
                 <span className="inline-flex items-center gap-1.5 text-xs font-bold bg-gold-400 text-brand-950 px-4 py-1.5 rounded-full group-hover:bg-gold-300 transition-colors shadow-xs">
-                  Solutions Page →
+                  Solutions Guide →
                 </span>
               </Link>
             </FadeIn>

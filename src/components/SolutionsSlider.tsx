@@ -123,7 +123,7 @@ const solutionsData: SolutionItem[] = [
     title: 'Commercial & Institutional B2B',
     subtitle: 'Bulk Supply & Corporate Programs',
     desc: 'Tailored solutions for commercial nurseries, corporate agriculture, green initiatives, and research organizations across Pakistan.',
-    image: '/images/serve-commercial-b2b.jpg',
+    image: '/images/bulk-supply-farm.jpg',
     points: [
       'Bulk tonnage supply & scheduled logistics',
       'Customized organic formulation for special crops',

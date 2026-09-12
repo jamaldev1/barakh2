@@ -61,7 +61,7 @@ const executiveTeam = [
     department: 'Executive Leadership',
     initials: 'ZK',
     badgeColor: 'bg-gold-400 text-brand-950',
-    avatarGradient: 'from-brand-800 to-brand-950',
+    avatarGradient: 'from-brand-800 to-brand-900',
     bio: 'Oversees organizational growth, strategic investor and agricultural partnerships, commercial expansion, and sustainable business development nationwide.',
     icon: '💼',
   },
@@ -71,7 +71,7 @@ const executiveTeam = [
     department: 'Executive Operations',
     initials: 'SK',
     badgeColor: 'bg-emerald-600 text-white',
-    avatarGradient: 'from-brand-900 to-emerald-950',
+    avatarGradient: 'from-brand-800 to-brand-900',
     bio: 'Spearheads operational execution, research & production facilities, vermicompost quality standards, and Zaraat Kach’heri community training programs.',
     icon: '🌱',
   },
@@ -81,7 +81,7 @@ const executiveTeam = [
     department: 'Marketing & Outreach',
     initials: 'AA',
     badgeColor: 'bg-gold-500 text-brand-950',
-    avatarGradient: 'from-amber-900 to-brand-950',
+    avatarGradient: 'from-brand-800 to-brand-900',
     bio: 'Leads public outreach, brand partnerships, B2B and retail distribution networks, and farmer awareness campaigns to connect communities with sustainable inputs.',
     icon: '📢',
   },
@@ -107,8 +107,8 @@ const operationsTeam = [
     branchCode: 'TGA',
     initials: 'SJ',
     department: 'Quality Control',
-    badgeColor: 'bg-amber-500 text-white',
-    avatarGradient: 'from-emerald-800 to-brand-950',
+    badgeColor: 'bg-brand-800 text-gold-300',
+    avatarGradient: 'from-brand-800 to-brand-900',
     roleQuote: 'We make sure that we provide our customer, what they are paying for, 100% top-notch vermicompost, gaining their trust.',
     icon: '🔬',
   },
@@ -168,145 +168,178 @@ export default function AboutPage() {
       <section className="w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left copy */}
-          <div className="lg:col-span-7">
-            <FadeIn>
-              <span className="eyebrow text-gold-500">Our Origin &amp; Purpose</span>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-2 leading-tight">
-                Why Al Barakah Was Started
-              </h2>
-              <p className="mt-6 text-gray-700 leading-relaxed text-base md:text-lg">
-                <strong>Al Barakah Organics</strong> was founded in <strong>2001 by Mr. Abdul Sattar Khatti</strong> with a clear vision: to revive declining agriculture by restoring soil health, empowering farmers, and promoting sustainable farming through natural organic solutions.
-              </p>
-              
-              <div className="mt-6 p-6 bg-cream-50 rounded-2xl border-l-4 border-gold-400 border-brand-100">
-                <h3 className="font-display font-bold text-brand-900 text-lg mb-2">The Problem We Are Solving</h3>
-                <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                  We aim to address <strong>declining soil health, excessive dependence on expensive chemical fertilizers, rising farming costs, and the rapid loss of fertile agricultural land</strong> across Sindh and Pakistan by providing accessible organic inputs and modern, practical agricultural practices.
-                </p>
-              </div>
-
-              <p className="mt-6 text-gray-600 leading-relaxed text-base">
-                We supply individual growers, commercial nurseries, institutional farms, B2B partners, and exporters, while providing dedicated consultancy for modern sustainable farming and biological soil rejuvenation.
-              </p>
-
-              {/* Operations badges */}
-              <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {[
-                  { icon: '🏭', label: 'Tando Ghulam Ali (200+ Beds)' },
-                  { icon: '🌿', label: 'Hyderabad Hub (20+ Beds)' },
-                  { icon: '📍', label: 'Tando Allahyar & Badin' },
-                  { icon: '🇵🇰', label: 'Serving All Over Pakistan' },
-                ].map((badge) => (
-                  <div key={badge.label} className="flex flex-col items-center text-center p-3 rounded-xl bg-cream-100 border border-brand-100">
-                    <span className="text-xl mb-1">{badge.icon}</span>
-                    <span className="text-xs font-bold text-brand-900 leading-tight">{badge.label}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-8 flex flex-wrap gap-4 items-center">
-                <MotionButton href="/products" className="btn-primary">
-                  Explore Our Products →
-                </MotionButton>
-                <MotionButton
-                  href="/training"
-                  className="inline-flex items-center gap-2 border-2 border-brand-800 text-brand-800 px-6 py-3 rounded-md font-semibold hover:bg-brand-50 transition text-sm"
-                >
-                  Join Zaraat Kach’heri
-                </MotionButton>
-              </div>
-            </FadeIn>
-          </div>
-
-          {/* Right Visual Card */}
-          <div className="lg:col-span-5">
-            <FadeIn delay={0.15}>
-              <div className="relative">
-                <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                  <img
-                    src="/images/farmer-training.jpg"
-                    alt="Al Barakah Organics farmer training and vermicompost beds"
-                    className="w-full h-[450px] object-cover"
-                  />
-                </div>
-
-                {/* Floating highlight badge */}
-                <div className="absolute -bottom-6 -right-6 bg-brand-900 text-white p-5 rounded-2xl shadow-2xl border border-gold-400/30 hidden sm:flex items-center gap-3.5 z-10">
-                  <div className="w-12 h-12 rounded-xl bg-gold-400 flex items-center justify-center text-brand-950 text-xl font-bold shadow-sm">
-                    220+
-                  </div>
-                  <div>
-                    <p className="text-xs text-gold-300 font-semibold uppercase tracking-wider">Total Active Beds</p>
-                    <p className="text-sm font-bold text-white">Tando Ghulam Ali &amp; Hyderabad</p>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </div>
-    </section>
-
-      {/* ═══ WHAT MAKES US DIFFERENT: ZARAAT KACH'HERI ═══ */}
-      <section className="w-full bg-brand-800 text-white px-4 sm:px-6 lg:px-8 py-20 lg:py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left copy */}
             <div className="lg:col-span-7">
               <FadeIn>
-                <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-400/20 text-gold-300 font-semibold text-xs uppercase tracking-wider mb-4 border border-gold-400/30">
-                  What Makes Al Barakah Different
-                </span>
-                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
-                  We Go Beyond Selling Inputs:<br />
-                  <span className="text-gold-400">Introducing “Zaraat Kach’heri”</span>
+                <span className="eyebrow text-gold-500">Our Origin &amp; Purpose</span>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-2 leading-tight">
+                  Why Al Barakah Was Started
                 </h2>
-                <p className="mt-6 text-white/90 text-base md:text-lg leading-relaxed">
-                  We go beyond selling premium-quality vermicompost. We have introduced <strong>“Zaraat Kach’heri” (Agricultural Discussion)</strong> in our area — a dedicated community platform to <strong>connect, educate, and empower farmers and growers</strong> with modern, practical, and sustainable approaches to agriculture.
+                <p className="mt-6 text-gray-700 leading-relaxed text-base md:text-lg">
+                  <strong>Al Barakah Organics</strong> was founded in <strong>2001 by Mr. Abdul Sattar Khatti</strong> with a clear vision: to revive declining agriculture by restoring soil health, empowering farmers, and promoting sustainable farming through natural organic solutions.
                 </p>
-                <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/15">
-                    <span className="text-2xl">🗣️</span>
-                    <h3 className="font-bold text-sm text-gold-300 mt-2">Open Dialogue</h3>
-                    <p className="text-xs text-white/80 mt-1">Direct discussions on soil health, pest management, and crop yields.</p>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/15">
-                    <span className="text-2xl">📉</span>
-                    <h3 className="font-bold text-sm text-gold-300 mt-2">Cost Reduction</h3>
-                    <p className="text-xs text-white/80 mt-1">Techniques to reduce dependence on costly synthetic chemical fertilizers.</p>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/15">
-                    <span className="text-2xl">👩‍🌾</span>
-                    <h3 className="font-bold text-sm text-gold-300 mt-2">Inclusion &amp; Youth</h3>
-                    <p className="text-xs text-white/80 mt-1">Creating opportunities for women, students, and new-generation growers.</p>
-                  </div>
+                
+                <div className="mt-6 p-6 bg-cream-50 rounded-2xl border-l-4 border-gold-400 border-brand-100">
+                  <h3 className="font-display font-bold text-brand-900 text-lg mb-2">The Problem We Are Solving</h3>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                    We aim to address <strong>declining soil health, excessive dependence on expensive chemical fertilizers, rising farming costs, and the rapid loss of fertile agricultural land</strong> across Sindh and Pakistan by providing accessible organic inputs and modern, practical agricultural practices.
+                  </p>
+                </div>
+
+                <p className="mt-6 text-gray-600 leading-relaxed text-base">
+                  We supply individual growers, commercial nurseries, institutional farms, B2B partners, and exporters, while providing dedicated consultancy for modern sustainable farming and biological soil rejuvenation.
+                </p>
+
+                {/* Operations badges */}
+                <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  {[
+                    { icon: '🏭', label: 'Tando Ghulam Ali (200+ Beds)' },
+                    { icon: '🌿', label: 'Hyderabad Hub (20+ Beds)' },
+                    { icon: '📍', label: 'Tando Allahyar & Badin' },
+                    { icon: '🇵🇰', label: 'Serving All Over Pakistan' },
+                  ].map((badge) => (
+                    <div key={badge.label} className="flex flex-col items-center text-center p-3 rounded-xl bg-cream-100 border border-brand-100">
+                      <span className="text-xl mb-1">{badge.icon}</span>
+                      <span className="text-xs font-bold text-brand-900 leading-tight">{badge.label}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8 flex flex-wrap gap-4 items-center">
+                  <MotionButton href="/products" className="btn-primary">
+                    Explore Our Products →
+                  </MotionButton>
+                  <MotionButton
+                    href="/training"
+                    className="inline-flex items-center gap-2 border-2 border-brand-800 text-brand-800 px-6 py-3 rounded-md font-semibold hover:bg-brand-50 transition text-sm"
+                  >
+                    Join Zaraat Kach’heri
+                  </MotionButton>
                 </div>
               </FadeIn>
             </div>
+
+            {/* Right Visual Card */}
             <div className="lg:col-span-5">
               <FadeIn delay={0.15}>
-                <div className="bg-brand-900/90 p-8 rounded-3xl border border-gold-400/30 shadow-2xl">
-                  <h3 className="font-display text-2xl font-bold text-white mb-4">Current Operations &amp; Facilities</h3>
-                  <div className="space-y-4">
-                    <div className="p-4 bg-brand-800/80 rounded-2xl border border-white/10">
-                      <p className="text-gold-400 text-xs font-bold uppercase tracking-wider">Main Facility</p>
-                      <h4 className="text-lg font-bold text-white mt-1">Tando Ghulam Ali Branch</h4>
-                      <p className="text-sm text-white/70 mt-1">Active capacity of <strong>200+ vermicomposting beds</strong>, earthworm breeding rows, and farmer training grounds.</p>
+                <div className="relative">
+                  <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                    <img
+                      src="/images/farmer-training.jpg"
+                      alt="Al Barakah Organics farmer training and vermicompost beds"
+                      className="w-full h-[450px] object-cover"
+                    />
+                  </div>
+
+                  {/* Floating highlight badge */}
+                  <div className="absolute -bottom-6 -right-6 bg-brand-900 text-white p-5 rounded-2xl shadow-2xl border border-gold-400/30 hidden sm:flex items-center gap-3.5 z-10">
+                    <div className="w-12 h-12 rounded-xl bg-gold-400 flex items-center justify-center text-brand-950 text-xl font-bold shadow-sm">
+                      220+
                     </div>
-                    <div className="p-4 bg-brand-800/80 rounded-2xl border border-white/10">
-                      <p className="text-gold-400 text-xs font-bold uppercase tracking-wider">Regional Hub</p>
-                      <h4 className="text-lg font-bold text-white mt-1">Hyderabad Branch</h4>
-                      <p className="text-sm text-white/70 mt-1">Production and logistics facility with <strong>20+ active beds</strong> catering to Sindh and nationwide dispatch.</p>
-                    </div>
-                    <div className="p-4 bg-brand-800/80 rounded-2xl border border-white/10">
-                      <p className="text-gold-400 text-xs font-bold uppercase tracking-wider">Field Operations</p>
-                      <h4 className="text-lg font-bold text-white mt-1">Tando Allahyar &amp; Badin City</h4>
-                      <p className="text-sm text-white/70 mt-1">On-site branch operations managing farm waste conversion, vermicompost production, and regional farmer support.</p>
+                    <div>
+                      <p className="font-display font-bold text-sm text-white">Commercial Beds</p>
+                      <p className="text-gold-300 text-xs">Tando Ghulam Ali &amp; Hubs</p>
                     </div>
                   </div>
                 </div>
               </FadeIn>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ WHAT MAKES US DIFFERENT: ZARAAT KACH'HERI & FACILITIES SPOTLIGHT ═══ */}
+      <section className="w-full bg-brand-900 text-white px-4 sm:px-6 lg:px-8 py-20 lg:py-24 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <FadeIn>
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-400/20 text-gold-300 font-semibold text-xs uppercase tracking-wider mb-3 border border-gold-400/30">
+                Community Movement &amp; Production Hubs
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                Beyond Selling Inputs:<br />
+                <span className="text-gold-400">“Zaraat Kach’heri” &amp; Nationwide Hubs</span>
+              </h2>
+              <p className="mt-4 text-white/80 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+                We empower growers directly in their fields with actionable knowledge, while operating dedicated production facilities across Sindh.
+              </p>
+            </div>
+          </FadeIn>
+
+          {/* 3 Facility & Community Photo Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* 1. Tando Ghulam Ali */}
+            <FadeIn delay={0.08}>
+              <div className="relative rounded-3xl overflow-hidden group border border-white/15 bg-brand-800/80 shadow-xl h-full flex flex-col justify-between min-h-[340px]">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="/images/albarakah6.jpeg"
+                    alt="Tando Ghulam Ali Main Facility"
+                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                  />
+                  <span className="absolute top-3 left-3 bg-brand-950/90 text-gold-300 text-[0.65rem] font-bold px-3 py-1 rounded-full border border-gold-400/30">
+                    Main Facility • 200+ Beds
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display font-bold text-lg text-white group-hover:text-gold-300 transition-colors">
+                    Tando Ghulam Ali Branch
+                  </h3>
+                  <p className="text-white/70 text-xs mt-2 leading-relaxed">
+                    Our primary commercial production facility featuring over 200+ vermicompost beds, earthworm breeding rows, and farmer demonstration grounds.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* 2. Zaraat Kach’heri Community */}
+            <FadeIn delay={0.14}>
+              <div className="relative rounded-3xl overflow-hidden group border border-gold-400/40 bg-brand-800/80 shadow-xl h-full flex flex-col justify-between min-h-[340px]">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="/images/albarakah5.jpeg"
+                    alt="Zaraat Kach’heri Training Masterclass"
+                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                  />
+                  <span className="absolute top-3 left-3 bg-gold-400 text-brand-950 text-[0.65rem] font-bold px-3 py-1 rounded-full shadow-sm">
+                    Zaraat Kach’heri • 100+ Sessions
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display font-bold text-lg text-white group-hover:text-gold-300 transition-colors">
+                    Farmer Dialogue &amp; Masterclasses
+                  </h3>
+                  <p className="text-white/70 text-xs mt-2 leading-relaxed">
+                    Open community discussions connecting smallholder farmers, orchard managers, and youth with modern organic farming methods.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* 3. Regional Hubs & Dispatch */}
+            <FadeIn delay={0.2}>
+              <div className="relative rounded-3xl overflow-hidden group border border-white/15 bg-brand-800/80 shadow-xl h-full flex flex-col justify-between min-h-[340px]">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="/images/albarakah3.jpeg"
+                    alt="Hyderabad & Regional Branch Operations"
+                    className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                  />
+                  <span className="absolute top-3 left-3 bg-brand-950/90 text-gold-300 text-[0.65rem] font-bold px-3 py-1 rounded-full border border-gold-400/30">
+                    Regional Hubs • Nationwide
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display font-bold text-lg text-white group-hover:text-gold-300 transition-colors">
+                    Hyderabad, Tando Allahyar &amp; Badin
+                  </h3>
+                  <p className="text-white/70 text-xs mt-2 leading-relaxed">
+                    20+ beds at Hyderabad regional hub managing organic biomass conversion, quality dispatch, and logistical support across Pakistan.
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -392,7 +425,7 @@ export default function AboutPage() {
                       <div>
                         {/* Top Badge & Avatar */}
                         <div className="flex items-start justify-between mb-5">
-                          <div className={`w-18 h-18 w-16 h-16 rounded-2xl bg-gradient-to-br ${member.avatarGradient} text-gold-300 flex flex-col items-center justify-center font-display font-bold text-2xl shadow-md border border-gold-400/30 group-hover:scale-105 transition-transform`}>
+                          <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${member.avatarGradient} text-gold-300 flex flex-col items-center justify-center font-display font-bold text-2xl shadow-md border border-gold-400/30 group-hover:scale-105 transition-transform`}>
                             <span>{member.initials}</span>
                           </div>
                           <span className={`text-[0.7rem] font-bold uppercase tracking-wider px-3 py-1 rounded-full ${member.badgeColor}`}>
@@ -509,84 +542,52 @@ export default function AboutPage() {
             </div>
           </FadeIn>
 
-          {/* Stacked Full-Width Mission & Vision Banners */}
-          <div className="space-y-10 mb-16">
-            {/* MISSION BANNER - Full-width Luxury Cream & Gold Flagship Box */}
+          {/* Stacked Full-Width Mission & Vision Visual Banners */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {/* MISSION BANNER */}
             <FadeIn delay={0.05}>
-              <div className="bg-cream-50/90 rounded-3xl p-8 md:p-12 shadow-md border border-brand-100/90 text-brand-900 relative overflow-hidden group hover:border-gold-400 transition-all duration-500">
-                <div className="absolute top-0 right-0 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl group-hover:bg-gold-400/10 transition-all duration-700 pointer-events-none" />
-                
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-                  {/* Left Column: Icon & Pillar Badge */}
-                  <div className="lg:col-span-4 flex flex-col items-start border-b lg:border-b-0 lg:border-r border-brand-100 pb-6 lg:pb-0 lg:pr-8">
-                    <div className="w-20 h-20 rounded-2xl bg-gold-100 text-brand-900 border border-gold-300 flex items-center justify-center text-4xl shadow-sm mb-4">
-                      🎯
-                    </div>
-                    <span className="px-3.5 py-1 rounded-full bg-gold-100 text-brand-900 font-mono text-xs font-bold uppercase tracking-wider border border-gold-300 mb-2">
-                      OUR MISSION
-                    </span>
-                    <h3 className="font-display text-2xl font-bold text-brand-900 mt-1 leading-snug">
-                      Reviving Agriculture &amp; Empowering Communities
-                    </h3>
-                    <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-gold-600 uppercase tracking-wider">
-                      <span className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
-                      Empowering Women, Youth &amp; Farmers
-                    </div>
-                  </div>
+              <div className="relative rounded-3xl overflow-hidden group shadow-lg border border-brand-100 min-h-[360px] flex flex-col justify-end p-8">
+                <img
+                  src="/images/albarakah7.jpeg"
+                  alt="Al Barakah Mission"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-950/80 to-brand-950/30" />
 
-                  {/* Right Column: Paragraph Content */}
-                  <div className="lg:col-span-8 space-y-4">
-                    <div className="p-5 rounded-2xl bg-white border border-brand-100/80 shadow-xs">
-                      <p className="text-gray-700 text-sm md:text-base leading-relaxed font-normal">
-                        To revive and promote sustainable, organic agriculture in Pakistan by restoring soil health, empowering farmers and communities, and making modern agricultural knowledge accessible through practical training and awareness programs.
-                      </p>
-                    </div>
-                    <div className="p-5 rounded-2xl bg-white border border-brand-100/80 shadow-xs">
-                      <p className="text-gray-600 text-sm md:text-base leading-relaxed font-normal">
-                        We aim to encourage women and girls to actively participate in agriculture, creating opportunities for learning, leadership, and entrepreneurship while building a healthier and more sustainable future for generations to come.
-                      </p>
-                    </div>
-                  </div>
+                <div className="relative z-10 text-white">
+                  <span className="px-3.5 py-1 rounded-full bg-gold-400 text-brand-950 font-mono text-xs font-bold uppercase tracking-wider inline-block mb-3 shadow-sm">
+                    OUR MISSION
+                  </span>
+                  <h3 className="font-display text-2xl lg:text-3xl font-bold text-white leading-snug">
+                    Reviving Soil Health &amp; Empowering Communities
+                  </h3>
+                  <p className="text-white/85 text-sm mt-3 leading-relaxed">
+                    To revive sustainable, organic agriculture in Pakistan by restoring living soil fertility, empowering growers with modern practical training, and championing women and youth participation in green farming.
+                  </p>
                 </div>
               </div>
             </FadeIn>
 
-            {/* VISION BANNER - Full-width Luxury Cream & Gold Flagship Box */}
+            {/* VISION BANNER */}
             <FadeIn delay={0.1}>
-              <div className="bg-cream-50/90 rounded-3xl p-8 md:p-12 shadow-md border border-gold-300/80 text-brand-900 relative overflow-hidden group hover:border-gold-400 transition-all duration-500">
-                <div className="absolute bottom-0 right-0 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl group-hover:bg-gold-400/10 transition-all duration-700 pointer-events-none" />
-                
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
-                  {/* Left Column: Icon & Pillar Badge */}
-                  <div className="lg:col-span-4 flex flex-col items-start border-b lg:border-b-0 lg:border-r border-brand-100 pb-6 lg:pb-0 lg:pr-8">
-                    <div className="w-20 h-20 rounded-2xl bg-brand-900 text-gold-400 flex items-center justify-center text-4xl shadow-md mb-4">
-                      🌟
-                    </div>
-                    <span className="px-3.5 py-1 rounded-full bg-brand-900 text-gold-300 font-mono text-xs font-bold uppercase tracking-wider border border-brand-800 mb-2">
-                      OUR VISION
-                    </span>
-                    <h3 className="font-display text-2xl font-bold text-brand-900 mt-1 leading-snug">
-                      Pakistan&apos;s Leading Sustainable Enterprise &amp; Hub
-                    </h3>
-                    <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-gold-600 uppercase tracking-wider">
-                      <span className="w-2 h-2 rounded-full bg-gold-500" />
-                      Research, Internships &amp; Global Reach
-                    </div>
-                  </div>
+              <div className="relative rounded-3xl overflow-hidden group shadow-lg border border-gold-400/40 min-h-[360px] flex flex-col justify-end p-8">
+                <img
+                  src="/images/albarakah6.jpeg"
+                  alt="Al Barakah Vision"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-950/80 to-brand-950/30" />
 
-                  {/* Right Column: Paragraph Content */}
-                  <div className="lg:col-span-8 space-y-4">
-                    <div className="p-5 rounded-2xl bg-white border border-brand-100/80 shadow-xs">
-                      <p className="text-gray-700 text-sm md:text-base leading-relaxed font-normal">
-                        To transform Al Barakah into a leading sustainable agriculture enterprise in Pakistan—producing vermicompost, vermiwash, biochar, and other organic solutions while becoming a hub where farmers, growers, experts, students, and communities gather, learn, discuss, and collaborate.
-                      </p>
-                    </div>
-                    <div className="p-5 rounded-2xl bg-white border border-brand-100/80 shadow-xs">
-                      <p className="text-gray-600 text-sm md:text-base leading-relaxed font-normal">
-                        We envision Al Barakah as a platform for agricultural research, student internships, farmer training, and innovation, while building a trusted Pakistani brand capable of taking sustainable agricultural products to international markets.
-                      </p>
-                    </div>
-                  </div>
+                <div className="relative z-10 text-white">
+                  <span className="px-3.5 py-1 rounded-full bg-brand-900 text-gold-300 font-mono text-xs font-bold uppercase tracking-wider border border-gold-400/40 inline-block mb-3 shadow-sm">
+                    OUR VISION
+                  </span>
+                  <h3 className="font-display text-2xl lg:text-3xl font-bold text-white leading-snug">
+                    Pakistan&apos;s Leading Sustainable Bio-Enterprise
+                  </h3>
+                  <p className="text-white/85 text-sm mt-3 leading-relaxed">
+                    To transform Al Barakah into the premier agricultural hub—producing vermicompost, vermiwash, and bio-nutrients, leading applied research and student internships, and elevating Pakistani organic inputs to the global stage.
+                  </p>
                 </div>
               </div>
             </FadeIn>

@@ -95,9 +95,9 @@ Produced through controlled earthworm digestion of organic biomass, our vermicom
     
 These voracious composting worms process farm residues, cow manure, and kitchen scraps with high reproductive rates, converting raw organic waste into premium biological vermicompost and liquid vermiwash right on your own land.`,
     images: [
-      '/images/hero-red-wigglers.jpg',
-      '/images/statssection.jpg',
-      '/images/farmer-training.jpg',
+      '/images/albarakah4.jpeg',
+      '/images/albarakah6.jpeg',
+      '/images/albarakah3.jpeg',
     ],
     keyBenefits: [
       'Fast-acting composting earthworms with high organic conversion efficiency',

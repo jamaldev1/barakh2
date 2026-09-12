@@ -14,21 +14,21 @@ export const metadata = {
 const processSteps = [
   {
     step: '01',
+    image: '/images/albarakah7.jpeg',
     title: 'Soil & Farm Needs Audit',
-    desc: 'We assess your field soil conditions, target crops, acreage, and specific organic goals to determine the best biological approach.',
-    icon: '📋',
+    desc: 'Assessment of field soil biology, acreage, target crops, and organic restoration goals.',
   },
   {
     step: '02',
+    image: '/images/albarakah2.jpeg',
     title: 'Tailored Solution & Formulation',
-    desc: 'We supply high-potency vermicompost, active worm colonies, or waste conversion blueprints with exact application schedules.',
-    icon: '🧪',
+    desc: 'Supply of high-potency vermicompost, active worm colonies, and precise seasonal dosages.',
   },
   {
     step: '03',
+    image: '/images/albarakah3.jpeg',
     title: 'Field Execution & Growth Support',
-    desc: 'Our agronomists provide ongoing guidance, monitoring soil regeneration, water retention, and seasonal crop vigor.',
-    icon: '🌾',
+    desc: 'Hands-on Zaraat Kach’heri guidance, moisture regulation, and harvest monitoring.',
   },
 ]
 
@@ -41,7 +41,7 @@ export default function SolutionsPage() {
       <section className="relative min-h-[400px] lg:min-h-[460px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/hero-farm-landscape.jpg"
+            src="/images/albarakah7.jpeg"
             alt="Sustainable agriculture solutions"
             className="w-full h-full object-cover object-center"
           />
@@ -67,7 +67,7 @@ export default function SolutionsPage() {
       {/* ═══ SOLUTIONS SLIDER (6 Key Solutions) ═══ */}
       <SolutionsSlider />
 
-      {/* ═══ HOW WE DELIVER SOLUTIONS (3-Step Framework) ═══ */}
+      {/* ═══ HOW WE DELIVER SOLUTIONS (3-Step Photo Framework) ═══ */}
       <section className="w-full bg-cream-100 px-4 sm:px-6 lg:px-8 py-20 lg:py-28 border-t border-brand-100">
         <div className="max-w-7xl mx-auto">
           <FadeIn>
@@ -85,19 +85,31 @@ export default function SolutionsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {processSteps.map((step, index) => (
               <FadeIn key={step.step} delay={index * 0.1}>
-                <div className="bg-white rounded-3xl p-8 shadow-sm border border-brand-100 h-full flex flex-col justify-between hover:border-gold-400/50 transition-all duration-300 relative">
-                  <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-3xl">{step.icon}</span>
-                      <span className="text-xs font-mono font-bold text-brand-900 bg-gold-100 border border-gold-300 px-2.5 py-1 rounded-full">
-                        PHASE {step.step}
-                      </span>
-                    </div>
-                    <h3 className="font-display font-bold text-brand-900 text-xl mt-2">{step.title}</h3>
-                    <p className="text-gray-600 mt-3 text-sm leading-relaxed">{step.desc}</p>
+                <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-brand-100 h-full flex flex-col justify-between hover:shadow-xl hover:border-gold-400/70 transition-all duration-300 group">
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={step.image}
+                      alt={step.title}
+                      className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-950/80 via-transparent to-transparent" />
+                    <span className="absolute top-3 right-3 text-xs font-mono font-bold text-brand-950 bg-gold-400 px-3 py-1 rounded-full shadow-sm">
+                      PHASE {step.step}
+                    </span>
                   </div>
-                  <div className="mt-6 pt-4 border-t border-gray-100 text-xs font-semibold text-gold-600">
-                    Step {step.step} of 03
+
+                  <div className="p-6">
+                    <h3 className="font-display font-bold text-brand-900 text-xl group-hover:text-gold-600 transition-colors">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 mt-2.5 text-xs sm:text-sm leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
+
+                  <div className="px-6 pb-5 pt-2 border-t border-gray-100 text-xs font-semibold text-gold-600 flex items-center justify-between">
+                    <span>Step {step.step} of 03</span>
+                    <span className="text-brand-800 font-bold group-hover:translate-x-1 transition-transform">✓ Field Protocol</span>
                   </div>
                 </div>
               </FadeIn>
