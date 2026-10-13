@@ -24,7 +24,7 @@ export default function CTABanner({
 }: CTABannerProps) {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8 py-12 md:py-16 bg-cream-50/60 border-t border-brand-100/60">
-      <section className="relative flex flex-col items-center justify-center mx-auto max-w-5xl w-full text-center rounded-3xl py-16 md:py-24 px-6 md:px-12 bg-[url('/images/hero-farm-landscape.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden shadow-2xl border border-brand-900/10">
+      <section className="relative flex flex-col items-center justify-center mx-auto max-w-5xl w-full text-center rounded-3xl py-16 md:py-24 px-6 md:px-12 bg-[url('/images/pakistan-farmer-training.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden shadow-2xl border border-brand-900/10">
         {/* Dark Luxury Brand Backdrop Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-950/90 via-brand-900/85 to-brand-950/90 backdrop-blur-[1px]" />
 

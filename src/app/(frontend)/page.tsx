@@ -155,7 +155,7 @@ export default function HomePage() {
 
             <FadeIn delay={0.1}>
               <div className="about-farm-copy mt-10">
-                <span className="eyebrow text-gold-500">Why Al Barakah?</span>
+                <span className="eyebrow !text-[#7a5800] font-semibold">Why Al Barakah?</span>
                 <h2 className="about-farm-title">
                   Rooted in Nature,<br />Driven by Sustainability
                 </h2>
@@ -205,7 +205,7 @@ export default function HomePage() {
             <div className="stats-bento-heading">
               <p className="stats-bento-intro">From smallholder farmers to commercial growers, we empower sustainable agriculture across Pakistan with proven field results.</p>
               <div>
-                <span className="eyebrow text-gold-500">Proven Field Impact</span>
+                <span className="eyebrow !text-[#7a5800] font-semibold">Proven Field Impact</span>
                 <h2 className="stats-bento-title">
                   Supporting Farms<br />That Feed Pakistan
                 </h2>
@@ -223,7 +223,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="eyebrow text-gold-500">What We Offer</span>
+              <span className="eyebrow !text-[#7a5800] font-semibold">What We Offer</span>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-brand-900 mt-2">
                 Our Services &amp; Agricultural Solutions
               </h2>
@@ -437,7 +437,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto">
             <FadeIn>
               <div className="text-center mb-16">
-                <span className="eyebrow text-gold-500">Real Feedback</span>
+                <span className="eyebrow !text-[#7a5800] font-semibold">Real Feedback</span>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-800 mt-2">
                   Farmer Stories
                 </h2>

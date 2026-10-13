@@ -74,7 +74,7 @@ export default function FAQSection() {
     <section className="w-full px-4 sm:px-6 lg:px-8 py-20 lg:py-28 bg-white border-t border-brand-100/80 relative">
       <div className="max-w-3xl mx-auto flex flex-col items-center text-center">
         <FadeIn>
-          <span className="eyebrow text-gold-500">
+          <span className="eyebrow !text-[#7a5800] font-semibold">
             Got Questions? We Have Answers
           </span>
           <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-brand-900 mt-2 leading-tight">

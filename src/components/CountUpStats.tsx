@@ -78,7 +78,7 @@ export default function CountUpStats({ stats, variant = 'default' }: CountUpStat
               <span>{stats[1].label}</span>
             </div>
             <div className="stats-bento-thumb">
-              <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=1200&q=80" alt="Pakistani farmer working in wheat field" />
+              <img src="/images/soil-testing-field.jpg" alt="Pakistani farmer holding vermicompost in the field" />
             </div>
             <h3>{stats[1]?.title || 'Organic Input Distribution'}</h3>
             <p className="stats-bento-description">{stats[1]?.description || 'Premium vermicompost delivered to growers, nurseries & institutions'}</p>
@@ -96,7 +96,7 @@ export default function CountUpStats({ stats, variant = 'default' }: CountUpStat
           </div>
         </div>
         <div className="stats-bento-photo">
-          <img src="/images/statssection.jpg" alt="Organic farmers standing in a healthy field" />
+          <img src="/images/serve-farmers.jpg" alt="Three Pakistani farmers holding vermicompost in their fields" />
         </div>
       </div>
     )

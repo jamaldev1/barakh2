@@ -16,12 +16,12 @@ const defaultSlides: HeroSlide[] = [
     subtitle: 'Nurturing Soil Naturally',
   },
   {
-    image: '/images/hero-farm-landscape.jpg',
+    image: '/images/pakistan-farmer-training.jpg',
     alt: 'Lush green organic farmland and sustainable agriculture at sunrise',
     subtitle: 'Sustainable Farmland Innovation',
   },
   {
-    image: '/images/hero-vermicompost.jpg',
+    image: '/images/albarakah7.jpeg',
     alt: 'Rich organic vermicompost and flourishing organic greenhouse crops',
     subtitle: 'Premium Vermicompost Power',
   },

@@ -23,7 +23,7 @@ export default function ProductsPage() {
       <section className="relative min-h-[400px] lg:min-h-[460px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/images/hero-vermicompost.jpg"
+            src="/images/albarakah7.jpeg"
             alt="Organic agricultural inputs"
             className="w-full h-full object-cover object-center"
           />
@@ -54,7 +54,7 @@ export default function ProductsPage() {
             <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-green-100 text-green-800 text-xs font-bold uppercase tracking-wider mb-3">
               ● Available Now • In Stock &amp; Ready for Immediate Dispatch
             </span>
-            <p className="eyebrow text-gold-500">Core Biological Inputs</p>
+            <p className="eyebrow !text-[#7a5800] font-semibold">Core Biological Inputs</p>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-2">
               Our Active Organic Products
             </h2>
@@ -65,7 +65,7 @@ export default function ProductsPage() {
         </div>
 
         {products.map((product) => {
-          const mainImage = product.images?.[0] || '/images/hero-vermicompost.jpg'
+          const mainImage = product.images?.[0] || '/images/albarakah7.jpeg'
           return (
             <FadeIn key={product.id}>
               <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-md border border-brand-100/80 hover:border-gold-400/80 transition-all duration-300">

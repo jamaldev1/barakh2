@@ -87,7 +87,7 @@ export const resourcesData: ResourceItem[] = [
     type: 'Guide',
     date: 'February 18, 2026',
     readTime: '6 min read',
-    image: '/images/hero-vermicompost.jpg',
+    image: '/images/albarakah7.jpeg',
     summary: 'Discover how organic vermiculture transforms organic farm waste into nutrient-dense black gold that revitalizes depleted soil and boosts natural plant immunity.',
     excerpt: 'Discover how organic vermiculture transforms organic farm waste into nutrient-dense black gold that revitalizes depleted soil and boosts natural plant immunity.',
     keyTakeaways: [
@@ -170,7 +170,7 @@ Switching to natural organic fertilizers is not just an environmental choice—i
     type: 'Article',
     date: 'February 10, 2026',
     readTime: '6 min read',
-    image: '/images/hero-farm-landscape.jpg',
+    image: '/images/pakistan-farmer-training.jpg',
     summary: 'Over 80% of agricultural soils in Pakistan have organic matter levels below 1%. Discover how biological vermiculture restores natural fertility and reduces input costs.',
     excerpt: 'Over 80% of agricultural soils in Pakistan have organic matter levels below 1%. Discover how biological vermiculture restores natural fertility and reduces input costs.',
     keyTakeaways: [
@@ -229,7 +229,7 @@ During peak summer months in Pakistan when ambient temperatures exceed 42°C, ve
     type: 'Article',
     date: 'January 20, 2026',
     readTime: '7 min read',
-    image: '/images/statssection.jpg',
+    image: '/images/farmer2.jpeg',
     summary: 'Why progressive orchardists and vegetable growers are switching from expensive chemical foliar sprays to nutrient-dense liquid vermiwash.',
     excerpt: 'Why progressive orchardists and vegetable growers are switching from expensive chemical foliar sprays to nutrient-dense liquid vermiwash.',
     keyTakeaways: [

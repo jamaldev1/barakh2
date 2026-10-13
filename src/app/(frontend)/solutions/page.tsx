@@ -72,7 +72,7 @@ export default function SolutionsPage() {
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="eyebrow text-gold-500">Implementation Process</p>
+              <p className="eyebrow !text-[#7a5800] font-semibold">Implementation Process</p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-2">
                 How We Deliver Results for Your Farm
               </h2>

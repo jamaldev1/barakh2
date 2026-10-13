@@ -19,7 +19,7 @@ export default function UpcomingSolutionsShowcase({ products }: Props) {
               <span className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
               🚀 Coming Soon
             </span>
-            <p className="eyebrow text-gold-500">Innovation Pipeline</p>
+            <p className="eyebrow !text-[#7a5800] font-semibold">Innovation Pipeline</p>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-brand-900 mt-2 leading-tight">
               Upcoming Organic Solutions
             </h2>

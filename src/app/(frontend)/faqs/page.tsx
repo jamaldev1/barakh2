@@ -50,7 +50,7 @@ export default function FAQsPage() {
       <section className="relative min-h-[380px] lg:min-h-[440px] flex items-center overflow-hidden w-full">
         <div className="absolute inset-0">
           <img
-            src="/images/hero-farm-landscape.jpg"
+            src="/images/pakistan-farmer-training.jpg"
             alt="Al Barakah Organics FAQs"
             className="w-full h-full object-cover object-center"
           />
@@ -78,7 +78,7 @@ export default function FAQsPage() {
         <div className="max-w-3xl mx-auto flex flex-col items-center">
           <FadeIn>
             <div className="text-center mb-10 max-w-xl mx-auto">
-              <span className="eyebrow text-gold-500">Quick Clarity</span>
+              <span className="eyebrow !text-[#7a5800] font-semibold">Quick Clarity</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-2">
                 Common Inquiries
               </h2>

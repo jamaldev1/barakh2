@@ -40,8 +40,8 @@ export const productsData: Product[] = [
     
 Produced through controlled earthworm digestion of organic biomass, our vermicompost introduces living microbial networks and humic acids that rebuild tired soil, enhance water retention, and deliver healthy crop yields across all grain, vegetable, cash crop, and orchard acreage in Pakistan.`,
     images: [
-      '/images/hero-vermicompost.jpg',
-      '/images/statssection.jpg',
+      '/images/albarakah7.jpeg',
+      '/images/farmer2.jpeg',
       '/images/satisfiedfarmers.jpg',
     ],
     keyBenefits: [

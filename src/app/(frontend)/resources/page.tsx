@@ -129,7 +129,7 @@ export default function ResourcesPage() {
                 {/* Fixed Agricultural Photograph */}
                 <div className="mt-7 rounded-2xl overflow-hidden border border-stone-300/80 aspect-[4/3] bg-stone-100 shadow-xs">
                   <img
-                    src="/images/hero-vermicompost.jpg"
+                    src="/images/albarakah7.jpeg"
                     alt="Rich organic vermicompost ready for field application"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />

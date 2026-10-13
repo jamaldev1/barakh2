@@ -26,7 +26,7 @@ const galleryItems = [
     desc: 'Wheat, cotton, and vegetable fields restored with natural microbial inputs.',
   },
   {
-    image: '/images/hero-vermicompost.jpg',
+    image: '/images/albarakah7.jpeg',
     tag: 'Input Quality',
     title: 'High-Density Earthworm Castings',
     desc: 'Pure vermicompost rich in active humus, plant growth hormones, and beneficial bacteria.',
@@ -63,7 +63,7 @@ export default function ImpactPage() {
       <section className="relative min-h-[420px] lg:min-h-[480px] flex items-center overflow-hidden w-full">
         <div className="absolute inset-0">
           <img
-            src="/images/hero-farm-landscape.jpg"
+            src="/images/pakistan-farmer-training.jpg"
             alt="Field Impact of Al Barakah Organics"
             className="w-full h-full object-cover object-center"
           />
@@ -111,7 +111,7 @@ export default function ImpactPage() {
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <p className="eyebrow text-gold-500">Visual Evidence</p>
+              <p className="eyebrow !text-[#7a5800] font-semibold">Visual Evidence</p>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-2">
                 Proven Field Performance
               </h2>

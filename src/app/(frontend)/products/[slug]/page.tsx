@@ -18,7 +18,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
   if (!product) return notFound()
 
-  const mainImage = product.images?.[0] || '/images/hero-vermicompost.jpg'
+  const mainImage = product.images?.[0] || '/images/albarakah7.jpeg'
 
   return (
     <>
@@ -46,7 +46,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
         <FadeIn delay={0.15}>
           <div className="flex flex-col h-full justify-center">
-            <p className="eyebrow mb-2 text-gold-500 font-bold uppercase tracking-wider">{product.category}</p>
+            <p className="eyebrow mb-2 !text-[#7a5800] font-bold uppercase tracking-wider">{product.category}</p>
             <h1 className="font-display text-3xl lg:text-5xl font-bold text-brand-900 leading-tight">
               {product.name}
             </h1>

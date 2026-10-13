@@ -23,7 +23,7 @@ const solutionsData: SolutionItem[] = [
     title: 'Organic Vermicompost',
     subtitle: 'Premium Bio-Organic Nutrition',
     desc: '100% pure organic castings produced through controlled earthworm digestion. Packed with active microbes and balanced NPK.',
-    image: '/images/hero-vermicompost.jpg',
+    image: '/images/albarakah7.jpeg',
     points: [
       'Increases root aeration & microbial activity',
       'Non-burning, safe for all crops and orchards',
@@ -103,7 +103,7 @@ const solutionsData: SolutionItem[] = [
     title: 'Organic Waste Conversion',
     subtitle: 'Zero-Waste Farm Circularity',
     desc: 'Transform animal manure, crop residues, and agro-industrial waste into high-value organic inputs instead of burning or dumping.',
-    image: '/images/hero-farm-landscape.jpg',
+    image: '/images/pakistan-farmer-training.jpg',
     points: [
       'Eliminates harmful crop stubble burning',
       'Generates free, on-farm organic inputs',

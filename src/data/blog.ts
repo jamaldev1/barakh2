@@ -21,7 +21,7 @@ export const blogPostsData: BlogPost[] = [
     author: 'Jamal Satti (Agronomist)',
     category: 'Vermicompost',
     readTime: '6 min read',
-    image: '/images/hero-vermicompost.jpg',
+    image: '/images/albarakah7.jpeg',
     excerpt: 'Discover how organic vermiculture transforms organic farm waste into nutrient-dense black gold that revitalizes depleted soil and boosts natural plant immunity.',
     tags: ['Vermicompost', 'Soil Health', 'Organic Farming'],
     content: `
@@ -92,7 +92,7 @@ Switching to natural organic fertilizers is not just an environmental choice—i
     author: 'Jamal Satti (Founder & Agronomist)',
     category: 'Soil Health',
     readTime: '6 min read',
-    image: '/images/hero-farm-landscape.jpg',
+    image: '/images/pakistan-farmer-training.jpg',
     excerpt: 'Over 80% of agricultural soils in Pakistan have organic matter levels below 1%. Discover how biological vermiculture restores natural fertility and reduces input costs.',
     tags: ['Soil Health', 'Vermicompost', 'Regenerative Agriculture'],
     content: `
@@ -137,7 +137,7 @@ Install simple overhead micro-mister nozzles operating for 2 minutes every 3 hou
     author: 'Research & Field Trials Dept',
     category: 'Crop Nutrition',
     readTime: '7 min read',
-    image: '/images/statssection.jpg',
+    image: '/images/farmer2.jpeg',
     excerpt: 'Why progressive orchardists and vegetable growers are switching from expensive chemical foliar sprays to nutrient-dense liquid vermiwash.',
     tags: ['Vermiwash', 'Foliar Spray', 'Pest Defense'],
     content: `

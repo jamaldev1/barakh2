@@ -113,7 +113,7 @@ const operationsTeam = [
     icon: '🔬',
   },
   {
-    name: 'Ghamshad',
+    name: 'Ghamshad Ali',
     role: 'GM Operations',
     branch: 'Hyderabad Branch',
     branchCode: 'HYD',
@@ -171,7 +171,7 @@ export default function AboutPage() {
             {/* Left copy */}
             <div className="lg:col-span-7">
               <FadeIn>
-                <span className="eyebrow text-gold-500">Our Origin &amp; Purpose</span>
+                <span className="eyebrow !text-[#7a5800] font-semibold">Our Origin &amp; Purpose</span>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-2 leading-tight">
                   Why Al Barakah Was Started
                 </h2>
@@ -222,12 +222,12 @@ export default function AboutPage() {
             {/* Right Visual Card */}
             <div className="lg:col-span-5">
               <FadeIn delay={0.15}>
-                <div className="relative">
+                <div className="relative max-w-md mx-auto">
                   <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                     <img
-                      src="/images/farmer-training.jpg"
-                      alt="Al Barakah Organics farmer training and vermicompost beds"
-                      className="w-full h-[450px] object-cover"
+                      src="/images/farmer2.jpeg"
+                      alt="Pakistani farmer holding Al Barakah vermicompost in a maize field"
+                      className="w-full h-auto block"
                     />
                   </div>
 
@@ -364,27 +364,27 @@ export default function AboutPage() {
                   <h3 className="font-display text-xl font-bold text-brand-900 mt-4">
                     Abdul Sattar Khatti
                   </h3>
-                  <p className="text-gold-600 text-sm font-semibold">Founder, Al Barakah Organics</p>
-                  <p className="text-xs text-gray-500 mt-1 font-medium">Started 2001</p>
+                  <p className="text-[#7a5800] text-base font-bold">Founder, Al Barakah Organics</p>
+                  <p className="text-sm text-gray-700 mt-1 font-semibold">Started 2001</p>
                 </div>
 
                 <div className="lg:col-span-8">
-                  <span className="eyebrow text-gold-500">Founder&apos;s &amp; Leadership Message</span>
+                  <span className="eyebrow !text-[#7a5800] font-semibold">Founder&apos;s &amp; Leadership Message</span>
                   <h2 className="font-display text-2xl md:text-3xl font-bold text-brand-900 mt-1">
                     The Vision Behind Al Barakah
                   </h2>
-                  <blockquote className="mt-6 border-l-4 border-gold-400 pl-6 py-3 bg-cream-50 rounded-r-2xl border-y border-r border-brand-100">
-                    <p className="text-gray-800 leading-relaxed italic text-base md:text-lg font-medium">
+                  <blockquote className="mt-6 border-l-4 border-gold-400 pl-6 pr-5 py-3 bg-cream-50 rounded-r-2xl border-y border-r border-brand-100">
+                    <p className="text-brand-900 leading-relaxed italic text-base md:text-lg font-medium">
                       &quot;When I saw growers who had worked in agriculture for generations selling their lands, and green fields turning into incomplete plotting schemes, I started asking what was going wrong.
                     </p>
-                    <p className="text-gray-800 leading-relaxed italic text-base md:text-lg font-medium mt-3">
+                    <p className="text-brand-900 leading-relaxed italic text-base md:text-lg font-medium mt-3">
                       The answer was clear: expensive fertilizers, lack of practical knowledge and limited awareness of modern farming methods.
                     </p>
-                    <p className="text-gray-800 leading-relaxed italic text-base md:text-lg font-medium mt-3">
+                    <p className="text-brand-900 leading-relaxed italic text-base md:text-lg font-medium mt-3">
                       That thinking led to Al Barakah Organics, with a simple purpose: to introduce, create awareness about and provide sustainable agriculture solutions. Vermicompost is only the beginning. Our vision is to empower farmers, improve soil health and build a more sustainable agricultural future.&quot;
                     </p>
                   </blockquote>
-                  <p className="mt-4 text-sm font-bold text-brand-800 text-right">
+                  <p className="mt-4 text-base font-bold text-brand-900 text-right">
                     — Abdul Sattar Khatti, Founder
                   </p>
                 </div>
@@ -397,11 +397,11 @@ export default function AboutPage() {
             {/* Header */}
             <FadeIn delay={0.1}>
               <div className="text-center max-w-3xl mx-auto mb-12">
-                <span className="eyebrow text-gold-500">Our Dedicated Team</span>
+                <span className="eyebrow !text-[#7a5800] font-semibold">Our Dedicated Team</span>
                 <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-1">
                   The Team Driving The Movement
                 </h2>
-                <p className="text-gray-600 text-sm md:text-base mt-3">
+                <p className="text-gray-800 text-sm md:text-base mt-3">
                   Combining visionary leadership, dedicated marketing outreach, and passionate branch operations &amp; quality control specialists across Pakistan.
                 </p>
               </div>
@@ -437,19 +437,19 @@ export default function AboutPage() {
                         <h4 className="font-display text-xl font-bold text-brand-900 group-hover:text-gold-600 transition-colors">
                           {member.name}
                         </h4>
-                        <p className="text-xs font-semibold text-gold-600 mt-1 mb-3">
+                        <p className="text-sm font-bold text-[#7a5800] mt-1 mb-3">
                           {member.role}
                         </p>
 
                         {/* Bio */}
-                        <p className="text-gray-600 text-xs leading-relaxed">
+                        <p className="text-gray-800 text-sm leading-relaxed">
                           {member.bio}
                         </p>
                       </div>
 
                       {/* Bottom decorative bar */}
                       <div className="mt-6 pt-4 border-t border-brand-50 flex items-center justify-between text-xs text-brand-800 font-medium">
-                        <span className="inline-flex items-center gap-1.5 text-gray-500">
+                        <span className="inline-flex items-center gap-1.5 text-gray-700 font-medium">
                           <span>{member.icon}</span> Al Barakah Core Team
                         </span>
                         <span className="text-gold-500 font-bold opacity-0 group-hover:opacity-100 transition-opacity">
@@ -465,13 +465,13 @@ export default function AboutPage() {
             {/* 2. BRANCH OPERATIONS & QUALITY CONTROL */}
             <div>
               <FadeIn delay={0.2}>
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="w-8 h-1 bg-gold-400 rounded-full" />
+                <div className="flex items-start gap-3 mb-6">
+                  <span className="w-8 h-1 bg-gold-400 rounded-full shrink-0 mt-3.5" />
                   <div>
                     <h3 className="font-display text-xl md:text-2xl font-bold text-brand-900">
                       Branch Operations &amp; Quality Control
                     </h3>
-                    <p className="text-xs text-gray-500 mt-0.5">
+                    <p className="text-sm text-gray-700 mt-0.5">
                       On-site supervisors and managers ensuring premium vermicompost production and strict standard adherence.
                     </p>
                   </div>
@@ -497,10 +497,10 @@ export default function AboutPage() {
                         <h4 className="font-display text-lg font-bold text-brand-900 group-hover:text-gold-600 transition-colors">
                           {member.name}
                         </h4>
-                        <p className="text-xs font-semibold text-gold-600 mt-0.5">
+                        <p className="text-sm font-bold text-[#7a5800] mt-0.5">
                           {member.role}
                         </p>
-                        <p className="text-[0.7rem] text-gray-500 mt-0.5 font-medium flex items-center gap-1">
+                        <p className="text-xs text-gray-700 mt-0.5 font-semibold flex items-center gap-1">
                           <span>📍</span> {member.branch}
                         </p>
 
@@ -509,14 +509,14 @@ export default function AboutPage() {
                           <p className="text-[0.7rem] uppercase tracking-wider font-bold text-brand-800 mb-1 flex items-center gap-1">
                             <span>{member.icon}</span> Core Role &amp; Commitment
                           </p>
-                          <p className="text-xs text-gray-700 leading-relaxed italic">
+                          <p className="text-sm text-gray-800 leading-relaxed italic">
                             &ldquo;{member.roleQuote}&rdquo;
                           </p>
                         </div>
                       </div>
 
                       {/* Footer Department Tag */}
-                      <div className="mt-5 pt-3 border-t border-brand-50 flex items-center justify-between text-[0.7rem] text-gray-500">
+                      <div className="mt-5 pt-3 border-t border-brand-50 flex items-center justify-between text-xs text-gray-700 font-medium">
                         <span>{member.department}</span>
                         <span className="text-gold-500 font-bold text-xs">✓ Active</span>
                       </div>
@@ -535,7 +535,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <FadeIn>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="eyebrow text-gold-500">Guiding Philosophy</span>
+              <span className="eyebrow !text-[#7a5800] font-semibold">Guiding Philosophy</span>
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-brand-900 mt-2 leading-tight">
                 Our Mission, Vision &amp; Core Values
               </h2>
@@ -597,9 +597,7 @@ export default function AboutPage() {
           <FadeIn delay={0.15}>
             <div className="core-values-panel bg-cream-50/60 rounded-3xl p-6 md:p-10 border border-brand-100/80 shadow-xs">
               <div className="text-center max-w-2xl mx-auto mb-10">
-                <div className="core-values-kicker">
-                  <span aria-hidden="true">◆</span> What We Stand For
-                </div>
+                <span className="eyebrow !text-[#7a5800] font-semibold">What We Stand For</span>
                 <h3 className="core-values-heading">
                   Eight principles. One way of working.
                 </h3>

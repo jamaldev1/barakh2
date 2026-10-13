@@ -83,7 +83,7 @@ export default function TrainingPage() {
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="eyebrow text-gold-500">Core Curriculum</span>
+              <span className="eyebrow !text-[#7a5800] font-semibold">Core Curriculum</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-1">
                 3 Pillars of Practical Learning
               </h2>
@@ -210,7 +210,7 @@ export default function TrainingPage() {
         <div className="max-w-7xl mx-auto">
           <FadeIn>
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="eyebrow text-gold-500">Programme Delivery</span>
+              <span className="eyebrow !text-[#7a5800] font-semibold">Programme Delivery</span>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-1">
                 How Training Is Delivered
               </h2>

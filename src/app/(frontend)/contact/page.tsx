@@ -70,7 +70,7 @@ export default function ContactPage() {
             <div className="lg:col-span-5 space-y-8">
               <FadeIn>
                 <div>
-                  <span className="eyebrow text-gold-500">We&apos;re Here to Help</span>
+                  <span className="eyebrow !text-[#7a5800] font-semibold">We&apos;re Here to Help</span>
                   <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-900 mt-2 leading-tight">
                     Talk to Our Agronomy &amp; Support Team
                   </h2>
